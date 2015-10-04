@@ -195,7 +195,7 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
         echo       '<td>periodo'.($i + 1).'</td>';
         for($j = 0; $j< $ret[0][3]; $j++){
             if($turno1[$i]==($j + 1 ))
-                echo    '<td style="color: #468847; background-color: #DFF0D8;">'.$ret[0][5].'</td>';
+                echo    '<td style="color: #468847; background-color: #DFF0D8;">'.($ret[0][5] * $ret[0][3] ).'</td>';
             else
                 echo '<td>'.$ret[0][5].'</td>';
 
