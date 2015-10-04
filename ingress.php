@@ -167,20 +167,18 @@
 <script>
   $('.remove').on('click', function (e) {
 
-    alert("works");
-    console.log(this);
     e.preventDefault();
+    var id = $(this).attr('data-id');
+    alert(id);
 
-    /*
     $.ajax({
       type: 'post',
       url: 'createTanda.php',
-      data: $('#addTanda').serialize(),
+      data: id:id,
       success: function (json) {
           alert(json);
 
       }
-     */
   });
 </script>
 </html>
