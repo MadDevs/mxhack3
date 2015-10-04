@@ -1,35 +1,34 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title> Inicio </title>
+  <title> Ingresos </title>
 </head>
 <body>
-<!-- Square card -->
-<style>
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 320px;
-}
-.demo-card-square > .mdl-card__title {
-  color: #fff;
-  background:
-    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
-}
-</style>
 
-<div class="demo-card-square mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title mdl-card--expand">
-    <h2 class="mdl-card__title-text">Update</h2>
+  <div class="col-md-6">
+    <div class="row">Cada mes</div>
+
+    <div class="row">+ $4,000</div>
+    <div class="row">+ $3,500</div>
+
   </div>
-  <div class="mdl-card__supporting-text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Aenan convallis.
+
+  <div class="col-md-6">
+
+    <div class="row">
+      <div class="row">Enero 2015</div>
+      <div class="row">+ $150</div>
+      <div class="row">+ $100</div>
+    </div>
+
+    <div class="row">
+      <div class="row">Enero 2015</div>
+      <div class="row">+ $50</div>
+      <div class="row">+ $100</div>
+      <div class="row">+ $100</div>
+    </div>
+
   </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      View Updates
-    </a>
-  </div>
-</div>
+
 </body>
 </html>
