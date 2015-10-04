@@ -163,11 +163,16 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-
 <div class="site-wrapper">
     <div class="site-wrapper-inner">
         <div class="cover-container">
-            
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <br><br>
+                    <h3 class="masthead-brand">Inicio - Bienvenido a tu cochinito</h3>
+                </div>
+            </div>
+
             <!-- CARDS SPACE -->
             <div class="inner cover">
                 <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#4BAF4F">
