@@ -27,6 +27,8 @@ echo $row['prediccion'];
 
 // /*
 
+/*
+
 include('./includes/conn.php');
 $mysqli = con_start();
 $ret = [];
@@ -52,6 +54,8 @@ while ($smtp->fetch()) {
 
 $smtp->free_result();
 $smtp->close();
+
+*/
 
 // */
 
@@ -111,6 +115,7 @@ $smtp->close();
 </nav>
 
 <div class="container">
+
     <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
 
 
