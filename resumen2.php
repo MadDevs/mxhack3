@@ -38,20 +38,67 @@ while ($smtp->fetch()) {
 //echo "test 3";
 
 $smtp->free_result();
+//
+
+
+
+$saldos = [];
+
+/* REGRESA INGRESO TOTAL Y EGRESO TOTAL*/
+$smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a
+	LEFT JOIN mxhacks.Transaction b
+	ON a.id_trans = b.id_trans
+	AND b.type = 1 AND b.is_active = 1
+	LEFT JOIN mxhacks.Transaction c
+	on a.id_trans = c.id_trans
+	AND c.type = 2 AND c.is_active = 1");
+$smtp->execute();
+$smtp->store_result();
+
+$smtp->bind_result($ingresos, $egresos);
+
+while($smtp->fetch()){
+    $saldos[0][0] =  $ingresos;
+    $saldos[0][1] =  $egresos;
+}
+$saldo = $saldos[0][0] - $saldos[0][1];
+$smtp->free_result();
+
+
+
 $smtp->close();
 
-
-
  ?>
+
+
 
 
     <div class="container">
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
+
+
         <h1>Resumen</h1>
 
-        <h2 style="color: #468847; background-color: #DFF0D8;">Ingresos</h2>
+
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>"Detallado"</h2>
+
+
+        <h2 style="color: #468847;">Ingresos</h2>
 
 
         <table class="table table-striped">
@@ -95,7 +142,7 @@ $smtp->close();
         </table>
 
 
-        <h2 style="color: #C26047; background-color: #913F30;">Egresos</h2>
+        <h2 style="color: #C26047;">Egresos</h2>
 
 
         <table class="table table-striped">
