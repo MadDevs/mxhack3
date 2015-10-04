@@ -140,7 +140,7 @@ $smtp->close();
           url: './productoFunciones.php',
           data: {funcion: "deleteProd", idprod: id},
           success: function(dtx){
-            $('#'+dtx).remove();
+            $('tr#'+dtx).remove();
            console.log(dtx);
        },
        error: function (json) {
