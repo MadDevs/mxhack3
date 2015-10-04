@@ -69,7 +69,8 @@
         <p>&nbsp;</p>
         <h1>Tandas</h1>
         <h2>Agregar una nueva tanda</h2>
-
+        <p class="bg-success" style="display: none; border-radius: 5px; text-align: center;" id="success">Tanda agregada correctamente</p>
+        <p class="bg-error" style="display: none;   border-radius: 5px; text-align: center;" id="error">Error al agregar tanda</p>
         <form id="addTanda" class="form-horizontal" action="createTanda.php" method="POST">
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">Nombre de la tanda</label>
@@ -183,7 +184,21 @@ $('addTanda').on('submit', function (e) {
     url: 'createTanda.php',
     data: $('#addTanda').serialize(),
     success: function (json) {
-        alert(json);
+        if ($.trim(json)==0) {
+
+            setTimeout(function() {$("#success").show();}, 1000);
+            setTimeout(function() {$("#success").hide();}, 5000);
+            $('#nameTanda').val("");
+            $('#intervalo').val("");
+            $('#numRep').val("");
+            $('#cantidad').val("");
+            $('#numPeople').val("");
+
+        }
+        else {
+            setTimeout(function() {$("#error").show();}, 1000);
+            setTimeout(function() {$("#error").hide();}, 5000);   
+        }
 
     }
 });

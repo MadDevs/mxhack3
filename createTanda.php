@@ -10,7 +10,7 @@
     $today = date("Y-m-d"); //getdate converted day
     $id_user = 1;
 
-    
+    $return = 0;
 
 
 
@@ -19,10 +19,10 @@
     $smtp->bind_param("isiiiis", $id_user,$nameTanda, $intervalo, $numPeople, $numRep, $cantidad, $today);
     $smtp->execute();
     if (!$smtp->error) {
-      echo "correct"  ;
+      $return += 0;
     }
     else {
-      echo "error" . $smtp->error;
+      $return += 1;
     }
     $smtp->close();
     
@@ -53,14 +53,14 @@
       $smtp->bind_param("isi", $id_tanda,$value, $turnoPersona);
       $smtp->execute();
       if (!$smtp->error) {
-        echo "correct"  ;
+        $return += 0;
       }
       else {
-        echo "error" . $smtp->error;
+        $return += 1;
       }
       $smtp->close();
     }
 
-    
+    echo $return;
 
   ?>  
