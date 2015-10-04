@@ -12,7 +12,13 @@
     $smtp->bind_param("iiiis",$idu,$one, $amount,$one, $time);
     $smtp->execute();
 
+    if (!$smtp->error) {
+        echo "correct";
+      }
+      else {
+        echo "error";
+      }
     $smtp->close();
 
-    var_dump(error_get_last())
+
 ?>

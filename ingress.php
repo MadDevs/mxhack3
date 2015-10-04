@@ -153,14 +153,12 @@
           url: './createMonthlyTransaction.php',
           data: {idu:idu, amount: amount},
           success: function (json) {
-            alert(json);
+            if ($.trim(json)=="correct") {
+
               $(row).innerHTML += "<div class='row'>+ "+
               $(button).parent().hide();
-              console.log(button);
-
-          },
-          error: function (json) {
-            console.log(json);
+             
+            }
 
           }
       });
