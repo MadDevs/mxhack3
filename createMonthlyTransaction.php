@@ -10,7 +10,7 @@
     $mysqli = con_start();
     $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description)
       VALUES(?,?,?,?,?,?)");
-    $smtp->bind_param("iiiiss",$idu,$one, $amount,$one, $time, $desc);
+    $smtp->bind_param("iiiiss",$one ,$one, $amount,$one, $time, $desc);
     $smtp->execute();
 
     if (!$smtp->error) {
