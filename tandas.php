@@ -26,7 +26,7 @@
             <div class="form-group">
                 <label for="Intervalo" class="col-sm-2 control-label">Intervalo</label>
                 <div class="col-sm-10">
-                    <input type="number" name="intervalo" class="form-control" id="intervalo" placeholder="Cada cuando se colecta dinero">
+                    <input type="number" name="intervalo" class="form-control" id="intervalo" placeholder="Cada cuando se colecta dinero (días)">
                 </div>
             </div>
 
