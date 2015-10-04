@@ -13,7 +13,7 @@
 
     $return = 0;
 
-
+    var_dump("expression");
 
     $mysqli = con_start();
     $smtp = $mysqli->prepare("INSERT INTO Tanda(id_user, turno, name, intervalo_dias, num_personas, num_repeticiones, cantidad, fecha_inicial) VALUES (?,?,?,?,?,?,?) ");
