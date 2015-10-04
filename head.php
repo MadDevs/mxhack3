@@ -43,7 +43,7 @@
                 <li><a href="#">Resumen</a></li>
                 <li><a href="tandasView.php">Tanda</a></li>
                 <li><a href="productoView.php">Productos deseados</a></li>
-                <li><a href="#">Deudas</a></li>
+                <li><a href="deudas.php">Deudas</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
         </div><!--/.nav-collapse -->
