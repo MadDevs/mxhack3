@@ -166,7 +166,51 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
             echo '<h2>Ciclo # ' . $ret[0][4]. ' de  # ' . $ret[0][4] . '</h2>';
         }
 
+
+    /*
+     *
+     *  <table class="table table-bordered">
+        ...
+        </table>
+
+     */
+
+    echo '<table class="table table-bordered">';
+    echo    '<thead>';
+    echo        '<tr>';
+    echo        '<th>Periodos</th>';
+
+    for($i = 0; $i< $ret[0][3]; $i++){
+
+        echo        '<th>'.$nombre1[$i].'</th>';
+    }
+    echo        '</tr>';
+    echo    '</thead>';
+    echo    '<tbody>';
+
+
+    for($i = 0; $i< $ret[0][3]; $i++){
+
+        echo        '<tr>';
+        echo       '<td>periodo'.($i + 1).'</td>';
+        for($j = 0; $j< $ret[0][3]; $j++){
+            if($turno1[$i]==($i + 1))
+                echo    '<td style="color: #468847; background-color: #DFF0D8;">'.$ret[0][3].'</td>';
+            else
+                '<td>'.$ret[0][3].'</td>';
+
+        }
+        echo        '</tr>';
+
+    }
+
+    echo    '</tbody>';
+
+    echo    '</table>';
+
     ?>
+
+
 
 
 </div>
