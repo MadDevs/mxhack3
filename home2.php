@@ -33,7 +33,7 @@
 
 <div class="row"></div>
 <div class="row">
-  <div class="col-md-6 mdl-card mdl-shadow--2dp" style="height:100vh;">
+  <div class="col-md-6 mdl-card mdl-shadow--2dp">
 
       <div class="mdl-card__title mdl-card--expand">
 
