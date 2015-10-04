@@ -2,7 +2,7 @@
 <?php
 include ("includes/conn.php");
 $titulo = "Nuevo objetivo";
-include ("head.php")
+include ("head.php");
 
 $mysqli = con_start();
 $favorite = [];
@@ -20,6 +20,8 @@ while($smtp->fetch()){
 
 $smtp->free_result();
 $smtp->close();
+
+var_dump($favorite);
 ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <center>
