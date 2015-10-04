@@ -72,7 +72,6 @@ $smtp->close();
     <?php}else{?>
     <h2 id="heading" class="text-center">Tu objetivo actual es comprar: <?php echo $favorite[0][0]?> con precio de $<?php echo $favorite[0][2]?></h2>
     <p><a class="btn btn-lg btn-success center-block" href="productoChart.php" role="button">&iquest;Cuanto me falta?</a></p>
-    <?php}else{?>
     <?php} ?>
     <br>
 
