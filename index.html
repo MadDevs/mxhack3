@@ -25,7 +25,11 @@
     <link href="css/signin.css" rel="stylesheet">
 
   </head>
+  <?php include('./includes/conn.php'); 
+    $mysqli = con_start();
+    var_dump($mysqli);
 
+  ?>  
   <body>
 
     <div class="container">
