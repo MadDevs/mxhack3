@@ -16,13 +16,13 @@ $ret = [];
 $count = 0;
 
 //$id = 1;
-$smtp = $mysqli->prepare("SELECT id_tanda, name, intervalo_dias, num_personas, num_repeticiones, cantidad, id_active, fecha_inicial FROM Tanda WHERE id_user = 1 and id_tanda ='$tipo'");
+$smtp = $mysqli->prepare("SELECT id_tanda, name, intervalo_dias, num_personas, num_repeticiones, cantidad, id_active, fecha_inicial, turno FROM Tanda WHERE id_user = 1 and id_tanda ='$tipo'");
 
 
 //$smtp->bind_param("i", $id);
 $smtp->execute();
 $smtp->store_result();
-$smtp->bind_result($id_tanda, $name, $intervalo_dias, $num_personas, $num_repeticiones, $cantidad, $id_active, $fecha_inicial);
+$smtp->bind_result($id_tanda, $name, $intervalo_dias, $num_personas, $num_repeticiones, $cantidad, $id_active, $fecha_inicial, $turno);
 
 
 while ($smtp->fetch()) {
@@ -34,6 +34,7 @@ while ($smtp->fetch()) {
     $ret[$count][5] =  $cantidad;
     $ret[$count][6] =  $id_active;
     $ret[$count][7] =  $fecha_inicial;
+    $ret[$count][8] =  $turno;
 
     $count++;
 }
@@ -46,7 +47,7 @@ $mysqli = con_start();
 $ret2 = [];
 $count = 0;
 
-$smtp = $mysqli->prepare("SELECT nombre FROM UsuariosTanda WHERE id_tanda = '$tipo'");
+$smtp = $mysqli->prepare("SELECT nombre, turno FROM UsuariosTanda WHERE id_tanda = '$tipo'");
 
 $smtp->execute();
 $smtp->store_result();
@@ -55,6 +56,7 @@ $smtp->bind_result($nombre);
 
 while ($smtp->fetch()) {
     $ret2[$count][0] =  $nombre;
+    $ret2[$count][1] =  $turno;
 
     $count++;
 }
@@ -87,20 +89,29 @@ $usrActual = floor( $diasEnCicloActual / $ret[0][2]);
 
 
 
-//$datediff = strtotime("2015-10-08") - strtotime("2015-10-04");
 
-
+///$data[] = array('volume' => 67, 'edition' => 2);
 /*
-foreach($ret as $tandas){
-    echo '<form action="tandasController.php">';
-    echo '<button name="tipo" value="'.$tandas[0].'" type="submit" class="btn btn-primary btn-lg btn-block">'.$tandas[1].'</button>';
-    echo '</form>';
+$data[] = array('volume' => 86, 'edition' => 1);
+$data[] = array('volume' => 85, 'edition' => 6);
+$data[] = array('volume' => 98, 'edition' => 2);
+$data[] = array('volume' => 86, 'edition' => 6);
+$data[] = array('volume' => 67, 'edition' => 7);
+*/
+$data[] = array('nombre' => $ret[0][1], 'turno' => $ret[0][8]);
+foreach($ret2 as $adusr) {
+    $data[] = array('nombre' => $adusr[0], 'turno' => $adusr[1]);
 }
 
-*/
+// Obtain a list of columns
+foreach ($data as $key => $row) {
+    $nombre1[$key]  = $row['nombre'];
+    $turno1[$key] = $row['turno'];
+}
 
-
-
+// Sort the data with volume descending, edition ascending
+// Add $data as the last parameter, to sort by the common key
+array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
 
 ?>
 
@@ -167,8 +178,20 @@ foreach($ret as $tandas){
     <?php
 
 
-
+        /*
+         * //original sin cambios de nuevas variables
         echo '<h2>'.$ret2[$usrActual][0].'</h2>';
+
+        if($continua) {
+            echo '<h2>Ciclo # ' . ($cicloActual + 1) . ' de  # ' . $ret[0][4] . '</h2>';
+        }
+        else{
+            echo '<h2>FIN DEL CICLO</h2>';
+            echo '<h2>Ciclo # ' . $ret[0][4]. ' de  # ' . $ret[0][4] . '</h2>';
+        }
+        */
+
+        echo '<h2>'.$nombre1[$usrActual].'</h2>';
 
         if($continua) {
             echo '<h2>Ciclo # ' . ($cicloActual + 1) . ' de  # ' . $ret[0][4] . '</h2>';
