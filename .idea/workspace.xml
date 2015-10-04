@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="caea6bbc-42a6-4236-be56-2471b7636f36" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxhack3 (GitHub Desktop).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,10 +50,10 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30577576">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.85617214">
+              <caret line="154" column="47" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
               <folding>
-                <marker date="1443964976807" expanded="true" signature="259:475" placeholder="SELECT Sum(b..Transaction..." />
+                <marker date="1443965165192" expanded="true" signature="239:455" placeholder="SELECT Sum(b..Transaction..." />
               </folding>
             </state>
           </provider>
@@ -268,7 +267,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1443964976807" expanded="true" signature="259:475" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443965165192" expanded="true" signature="239:455" placeholder="SELECT Sum(b..Transaction..." />
           </folding>
         </state>
       </provider>
@@ -337,7 +336,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding>
-            <marker date="1443964976807" expanded="true" signature="259:475" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443965165192" expanded="true" signature="239:455" placeholder="SELECT Sum(b..Transaction..." />
           </folding>
         </state>
       </provider>
@@ -449,7 +448,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1443964976807" expanded="true" signature="259:475" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443965165192" expanded="true" signature="239:455" placeholder="SELECT Sum(b..Transaction..." />
           </folding>
         </state>
       </provider>
@@ -647,14 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productoView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-43.807693">
-          <caret line="67" column="87" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productoChart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769">
@@ -666,12 +657,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/productoView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-43.807693">
+          <caret line="67" column="87" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30577576">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.85617214">
+          <caret line="154" column="47" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
           <folding>
-            <marker date="1443964976807" expanded="true" signature="259:475" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443965165192" expanded="true" signature="239:455" placeholder="SELECT Sum(b..Transaction..." />
           </folding>
         </state>
       </provider>

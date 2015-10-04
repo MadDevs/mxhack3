@@ -7,7 +7,6 @@
     $producto = "";
     $deudas = 0;
 
-    echo "Empieza";
     $mysqli = con_start();
     /* REGRESA INGRESO TOTAL Y EGRESO TOTAL*/
     $smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a
@@ -18,16 +17,16 @@
 	on a.id_trans = c.id_trans
 	AND c.type = 2");
     $smtp->execute();
-    echo "done";
     $smtp->store_result();
 
     $smtp->bind_result($ingresos, $egresos);
 
-    echo "Antes while";
     while($smtp->fetch()){
         $saldos[0][0] =  $ingresos;
         $saldos[0][1] =  $egresos;
     }
+
+    $saldo = $saldos[0][0] - $saldos[0][1];
 
     $smtp->free_result();
     $smtp->close();
@@ -153,7 +152,7 @@
                         <h4>
                             Resumen<br>
                             Tu saldo real<br>
-                            $ 1,500
+                            $ <?php echo $saldo?>
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
