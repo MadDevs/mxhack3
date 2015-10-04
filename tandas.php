@@ -70,7 +70,7 @@
         <h1>Tandas</h1>
         <h2>Agregar una nueva tanda</h2>
 
-        <form class="form-horizontal">
+        <form class="form-horizontal" action="/createTanda.php" method="POST">
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">Nombre de la tanda</label>
                 <div class="col-sm-10">
@@ -84,7 +84,7 @@
                 <div class="col-sm-10">
 
 
-                    <select class="form-control" id="intervalo">
+                    <select class="form-control" id="intervalo" name="intervalo">
                         <option value="1" id="intervalo1">1 semana</option>
                         <option value="2" id="intervalo2">2 semanas</option>
                         <option value="3" id="intervalo3">1 mes</option>
@@ -95,21 +95,21 @@
             <div class="form-group">
                 <label for="numRep" class="col-sm-2 control-label">Numero de repeticiones</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="numRep" placeholder="Numero de repeticiones">
+                    <input type="number" name="numRep" class="form-control" id="numRep" placeholder="Numero de repeticiones">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="numRep" class="col-sm-2 control-label">Cantidad $</label>
+                <label for="cantidad" class="col-sm-2 control-label">Cantidad $</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="numRep" placeholder="Cantidad $">
+                    <input type="number" class="form-control" name="cantidad" id="cantidad" placeholder="Cantidad $">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="numPeople" class="col-sm-2 control-label">Numero de personas</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="numPeople" placeholder="Numero de personas">
+                    <input type="number" class="form-control" name="numPeople" id="numPeople" placeholder="Numero de personas">
                 </div>
             </div>
 
