@@ -156,8 +156,10 @@
             
             if ($.trim(json)!=0) {
               var addition = "<div class='row'>+ "+ amount+".00 <button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button></div>";
-              console.log(row);
-              row.append(row);
+              
+              console.log($(row));
+              row.append(addition);
+              $(row).append(addition);
               
              
             }
