@@ -43,7 +43,7 @@ if($tipo == "pagado"){
     $smtp->execute();
 
     $smtp->free_result();
-    $smtp->commit();
+   // $smtp->commit();
     $smtp->close();
 
 
@@ -63,7 +63,7 @@ else{
     //
 
     $smtp->free_result();
-    $smtp->commit();
+    //$smtp->commit();
 
     $smtp->close();
 
@@ -71,8 +71,8 @@ else{
 
 }
 
-//header("Location: deudas.php");
-//die();
+header("Location: deudas.php");
+die();
 
 
 ?>
