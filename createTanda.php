@@ -16,18 +16,9 @@
     echo "\n " . $cantidad . "\n";
     echo "\n " . $intervalo . "\n";
     echo "\n " . $nameTanda . "\n";
-    $now = time();
-    $num = date("w");
-    if ($num == 0)
-    { $sub = 6; }
-    else { $sub = ($num-1); }
-    $WeekMon  = mktime(0, 0, 0, date("m", $now)  , date("d", $now)-$sub, date("Y", $now));    //monday week begin calculation
-    $todayh = getdate($WeekMon); //monday week begin reconvert
 
-    $d = $todayh[mday];
-    $m = $todayh[mon];
-    $y = $todayh[year];
-    echo "$d-$m-$y"; //getdate converted day
+    echo date("Y-m-d"); //getdate converted day
+
     $mysqli = con_start();
     $ret = [];
     $count = 0;
