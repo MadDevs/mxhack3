@@ -6,9 +6,14 @@
     $numRep = $_POST['numRep'];
     $numPeople = $_POST['numPeople'];
     $cantidad = $_POST['cantidad'];
+    $turno = $_POST['turno'];
 
     foreach( $namePersona as $key => $value ) {
-      
+       var_dump($value);
+    }
+
+    foreach ($turno as $key => $value) {
+       var_dump($value);
     }
 
 

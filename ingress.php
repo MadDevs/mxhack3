@@ -13,14 +13,16 @@
     $smtp->bind_param("i", $id);
     $smtp->execute();
     $smtp->store_result();
-    $smtp->bind_result($amount, $monthly, $month, $date);
+    $smtp->bind_result($amount, $monthly, $month, $date, $idt);
 
     while ($smtp->fetch()) {
       if($monthly == 1){
-         $retM[$countM][0] =  $amount;
+         $retM[$countM][0] = $amount;
+         $retM[$countM][1] = $idt;
          $countM++;
       } elseif($monthly == 0){
          $retI[$month][] =  $amount;
+         #$retI[$month][] =  array($amount, $idt);
       }
     }
     $smtp->free_result();
@@ -104,7 +106,9 @@
         <!-- body -->
   <?php
     for($i = 0; $i < count($retM); $i++){
-        echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0])."</div>";
+      echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0]).
+        "<button class='remove' data-id='1' value='Quitar ganancia'>".
+        "</div>";
     }
   ?>
 
@@ -125,6 +129,7 @@
   <div class="col-md-6">
 
   <?php
+    var_dump(retI);
     for($i = 0; $i < 13; $i++){
       if(count($retI[$i]) > 0){
         echo
@@ -157,4 +162,22 @@
 </div>
 
 </body>
+    <script>
+    $('.remove').on('click', function (e) {
+
+      console.log(this);
+      e.preventDefault();
+
+      /*
+      $.ajax({
+        type: 'post',
+        url: 'removeTransaction.php',
+        data: $('#addTanda').serialize(),
+        success: function (json) {
+            alert(json);
+
+        }
+       */
+    });
+    </script>
 </html>

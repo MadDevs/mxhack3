@@ -151,17 +151,17 @@
 
             $("#personas").empty();
             var strDiv = "";
-            for (var i = 1; i <= number && i < 9; i++) {
-                strDiv += "<label for=\"namePersona[]\" class=\"col-sm-2 control-label\">Nombre " + i + " </label>";
-                strDiv += "<div class=\"col-sm-6\">";
-                strDiv += "<input type=\"text\" class=\"form-control\" name=\"namePersona[]\" id=\"namePersona\" placeholder=\"Nombre de la Persona " + i + "\">";
-                strDiv += "</div><label for=\"namePersona[]\" class=\"col-sm-1 control-label\">Turno</label>";
-                strDiv += "<div class=\"col-sm-3\"><select class=\"form-control\" id=\"turno" + i + "\" name=\"turno\"></select>";
+            for (var i = 1; i < number && i < 9; i++) {
+                strDiv += "<label for='namePersona[]' class='col-sm-2 control-label'>Nombre " + i + " </label>";
+                strDiv += "<div class='col-sm-6'>";
+                strDiv += "<input type='text' class='form-control' name='namePersona[]' id='namePersona' placeholder='Nombre de la Persona " + i + "'>";
+                strDiv += "</div><label for='namePersona[]' class='col-sm-1 control-label'>Turno</label>";
+                strDiv += "<div class='col-sm-3'><select class='form-control' id='turno" + i + "' name='turno[]'></select>";
                 strDiv += "</div><br><br>";
             };
             $("#personas").append(strDiv);
 
-            for (var i = 1; i <= number && i < 9; i++) {
+            for (var i = 1; i < number && i < 9; i++) {
                 $("#turno" + i).empty();
                 for (var j = 1; j <= number && j < 9; j++) {
                     $('#turno' + i).append($('<option>', {
@@ -174,7 +174,7 @@
 
 
 
-$('#addTanda').on('submit', function (e) {
+$('addTanda').on('submit', function (e) {
 
   e.preventDefault();
 
