@@ -38,10 +38,12 @@ if($tipo == "pagado"){
     $smtp->close();
 
     $mysqli = con_start();
+
     $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = '.$id_deudor.'");
     $smtp->execute();
-    $smtp->commit();
+
     $smtp->free_result();
+    $smtp->commit();
     $smtp->close();
 
 
@@ -49,7 +51,7 @@ if($tipo == "pagado"){
 else{
 
 
-    echo $id_deudor;
+    //echo $id_deudor;
 
 
     $mysqli = con_start();
@@ -58,9 +60,10 @@ else{
 
     $smtp->execute();
 
-    $smtp->commit();
+    //
 
     $smtp->free_result();
+    $smtp->commit();
 
     $smtp->close();
 
