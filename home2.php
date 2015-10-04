@@ -39,7 +39,7 @@
       <div class="mdl-card__title mdl-card--expand">
 
         <!-- title -->
-        <h2 class="mdl-card__title-text">Cada mes</h2>
+        <h2 class="mdl-card__title-text">Ganancia de cada mes</h2>
 
       </div>
       <div class="mdl-card__supporting-text">
@@ -50,28 +50,67 @@
 
       </div>
       <div class="mdl-card__actions mdl-card--border">
+
         <!-- button -->
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
           Agrega dinero
         </a>
+
       </div>
     </div>
   </div>
 
   <div class="col-md-6">
 
-    <div class="row">
-      <div class="row">Enero 2015</div>
-      <div class="row">+ $150</div>
-      <div class="row">+ $100</div>
+    <div class="mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title mdl-card--expand">
+
+        <!-- title -->
+        <h2 class="mdl-card__title-text">Mes 1</h2>
+
+      </div>
+      <div class="mdl-card__supporting-text">
+
+        <!-- body -->
+        <div class="row">+ $150</div>
+        <div class="row">+ $100</div>
+
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+
+        <!-- button -->
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
+          Agrega dinero
+        </a>
+
+      </div>
     </div>
 
-    <div class="row">
-      <div class="row">Febrero 2015</div>
-      <div class="row">+ $50</div>
-      <div class="row">+ $100</div>
-      <div class="row">+ $100</div>
+    <div class="mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title mdl-card--expand">
+
+        <!-- title -->
+        <h2 class="mdl-card__title-text">Mes 2</h2>
+
+      </div>
+      <div class="mdl-card__supporting-text">
+
+        <!-- body -->
+        <div class="row">+ $250</div>
+        <div class="row">+ $50</div>
+        <div class="row">+ $10</div>
+
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+
+        <!-- button -->
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
+          Agrega dinero
+        </a>
+
+      </div>
     </div>
+
 
   </div>
 </div>
