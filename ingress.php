@@ -76,27 +76,28 @@
           <div class="mdl-card__supporting-text monthly_ingress">
 
             <!-- body -->
-            <table>
-              <thead>
-                <th>Cantidad</th>
-                <th>Descripcion</th>
-                <th>Acción</th>
-              </thead>
-              <tbody id="tbodyIngresos">
-                
-              <?php
-                for($i = 0; $i < count($retM); $i++){
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <th>Cantidad</th>
+                  <th>Descripcion</th>
+                  <th>Acción</th>
+                </thead>
+                <tbody id="tbodyIngresos">
+                  
+                <?php
+                  for($i = 0; $i < count($retM); $i++){
 
-                  echo "<tr>";
-                  echo "<td style='background-color: #DFF0D8;' >+ " . money_format('%(#5n',$retM[$i][0]) . "</td>";
-                  echo "<td>" . "Descripcion" . "</td>";
-                  echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
-                  echo "</tr>";
-                }
-              ?>
-              </tbody>
-            </table>  
-
+                    echo "<tr>";
+                    echo "<td style='background-color: #DFF0D8;' >+ " . money_format('%(#5n',$retM[$i][0]) . "</td>";
+                    echo "<td>" . "Descripcion" . "</td>";
+                    echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
+                    echo "</tr>";
+                  }
+                ?>
+                </tbody>
+              </table>  
+            </div>
           </div>
           <div class="mdl-card__actions mdl-card--border">
 
