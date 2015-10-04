@@ -178,4 +178,3 @@ $('.completed').on('click', function (e) {
 	});
 });
 </script>
-<?php  include("foot.php") ?>
