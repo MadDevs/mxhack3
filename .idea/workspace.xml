@@ -27,20 +27,20 @@
       <file leaf-file-name="ingress.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ingress.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20044793">
-              <caret line="109" column="102" selection-start-line="109" selection-start-column="102" selection-end-line="109" selection-end-column="102" />
+            <state vertical-scroll-proportion="0.56215006">
+              <caret line="132" column="52" selection-start-line="132" selection-start-column="52" selection-end-line="132" selection-end-column="52" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1443969445570" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
-                <marker date="1443969445570" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
-                <marker date="1443969445570" expanded="true" signature="2557:2583" placeholder="..." />
-                <marker date="1443969445570" expanded="true" signature="2794:2804" placeholder="..." />
-                <marker date="1443969445570" expanded="true" signature="4066:4092" placeholder="..." />
-                <marker date="1443969445570" expanded="true" signature="4304:4314" placeholder="..." />
-                <marker date="1443969445570" expanded="true" signature="4687:4699" placeholder="..." />
-                <marker date="1443969445570" expanded="true" signature="4744:4756" placeholder="..." />
-                <marker date="1443969445570" expanded="true" signature="5706:5732" placeholder="..." />
+                <marker date="1443969694896" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
+                <marker date="1443969694896" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
+                <marker date="1443969694896" expanded="true" signature="2557:2583" placeholder="..." />
+                <marker date="1443969694896" expanded="true" signature="2794:2804" placeholder="..." />
+                <marker date="1443969694896" expanded="true" signature="4066:4092" placeholder="..." />
+                <marker date="1443969694896" expanded="true" signature="4308:4318" placeholder="..." />
+                <marker date="1443969694896" expanded="true" signature="4691:4703" placeholder="..." />
+                <marker date="1443969694896" expanded="true" signature="4748:4760" placeholder="..." />
+                <marker date="1443969694896" expanded="true" signature="5710:5736" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -52,8 +52,8 @@
             <state vertical-scroll-proportion="-7.8461537">
               <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding>
-                <marker date="1443969417791" expanded="true" signature="241:345" placeholder="INSERT INTO ..." />
-                <marker date="1443969417791" expanded="true" signature="710:773" placeholder="SELECT id_tr..Transaction..." />
+                <marker date="1443969488154" expanded="true" signature="241:345" placeholder="INSERT INTO ..." />
+                <marker date="1443969488154" expanded="true" signature="710:773" placeholder="SELECT id_tr..Transaction..." />
               </folding>
             </state>
           </provider>
@@ -689,28 +689,28 @@
         <state vertical-scroll-proportion="-7.8461537">
           <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
-            <marker date="1443969417791" expanded="true" signature="241:345" placeholder="INSERT INTO ..." />
-            <marker date="1443969417791" expanded="true" signature="710:773" placeholder="SELECT id_tr..Transaction..." />
+            <marker date="1443969488154" expanded="true" signature="241:345" placeholder="INSERT INTO ..." />
+            <marker date="1443969488154" expanded="true" signature="710:773" placeholder="SELECT id_tr..Transaction..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ingress.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20044793">
-          <caret line="109" column="102" selection-start-line="109" selection-start-column="102" selection-end-line="109" selection-end-column="102" />
+        <state vertical-scroll-proportion="0.56215006">
+          <caret line="132" column="52" selection-start-line="132" selection-start-column="52" selection-end-line="132" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1443969445570" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
-            <marker date="1443969445570" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
-            <marker date="1443969445570" expanded="true" signature="2557:2583" placeholder="..." />
-            <marker date="1443969445570" expanded="true" signature="2794:2804" placeholder="..." />
-            <marker date="1443969445570" expanded="true" signature="4066:4092" placeholder="..." />
-            <marker date="1443969445570" expanded="true" signature="4304:4314" placeholder="..." />
-            <marker date="1443969445570" expanded="true" signature="4687:4699" placeholder="..." />
-            <marker date="1443969445570" expanded="true" signature="4744:4756" placeholder="..." />
-            <marker date="1443969445570" expanded="true" signature="5706:5732" placeholder="..." />
+            <marker date="1443969694896" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
+            <marker date="1443969694896" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
+            <marker date="1443969694896" expanded="true" signature="2557:2583" placeholder="..." />
+            <marker date="1443969694896" expanded="true" signature="2794:2804" placeholder="..." />
+            <marker date="1443969694896" expanded="true" signature="4066:4092" placeholder="..." />
+            <marker date="1443969694896" expanded="true" signature="4308:4318" placeholder="..." />
+            <marker date="1443969694896" expanded="true" signature="4691:4703" placeholder="..." />
+            <marker date="1443969694896" expanded="true" signature="4748:4760" placeholder="..." />
+            <marker date="1443969694896" expanded="true" signature="5710:5736" placeholder="..." />
           </folding>
         </state>
       </provider>
