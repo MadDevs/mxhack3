@@ -169,7 +169,7 @@ $('.completed').on('click', function (e) {
 		data: {funcion: "completed", idprod: id},
 		success: function(dtx){
 			console.log(dtx);
-			//window.location.assign("productoView.php");
+			window.location.assign("productoView.php");
 		},
 		error: function (json) {
 			console.log(json);
