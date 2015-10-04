@@ -1,4 +1,34 @@
-<?php ?>
+<?php
+
+    include ("includes/conn.php");
+    $saldos = [];
+    $saldo = 0;
+    $fechaTanda = "";
+    $producto = "";
+    $deudas = 0;
+
+    /* REGRESA INGRESO TOTAL Y EGRESO TOTAL*/
+    $smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a
+	LEFT JOIN mxhacks.Transaction b
+	ON a.id_trans = b.id_trans
+	AND b.type = 1
+	LEFT JOIN mxhacks.Transaction c
+	on a.id_trans = c.id_trans
+	AND c.type = 2");
+    $smtp->execute();
+    $smtp->store_result();
+
+    $smtp->bind_result($ingresos, $egresos);
+
+    while($smtp->fetch()){
+        $saldos[0][0] =  $ingresos;
+        $saldos[0][1] =  $egresos;
+    }
+
+    $smtp->free_result();
+    $smtp->close();
+
+?>
 
 
 <!DOCTYPE html>
@@ -88,7 +118,7 @@
                         <div class="mdl-card__title mdl-card--expand">
                             <h4>Ingresos<br>
                                 Tienes <br>
-                                $ 2,000
+                                $ <?php echo $saldos[0][0]?>
                             </h4>
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
@@ -103,7 +133,7 @@
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>Egresos<br>
                             Debes<br>
-                            $ 500
+                            $ <?php echo $saldos[0][1]?>
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
