@@ -92,7 +92,7 @@ function drawBasic() {
 	];
 
 	var dataArray = new Array();
-	var weeks = (weekDiff(new Date(2014, 0), new Date()));
+	var weeks = 20 //(weekDiff(new Date(2014, 0), new Date()));
 	var costoSemanal = productoCosto / dataDate.length;
 	var ahorroSemanal = dineroAhorrado / weeks;
 
