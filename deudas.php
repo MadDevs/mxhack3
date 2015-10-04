@@ -50,6 +50,15 @@ $smtp->close();
     <p>&nbsp;</p>
 
 
+    <h1>Nueva Deuda</h1>
+
+    <form action="nuevaDeuda.php">
+
+        <button name="tipo" value="nueva" type="submit" class="btn btn-primary btn-lg btn-block">Bueva Deuda</button>
+
+    </form>
+
+
     <h1>Deudas</h1>
 
     <table class="table table-striped">

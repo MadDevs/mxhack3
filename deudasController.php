@@ -46,5 +46,7 @@ else{
 
 }
 
+header('Location: deudas.php');
+
 
 ?>
