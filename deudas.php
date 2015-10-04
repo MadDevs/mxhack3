@@ -98,6 +98,7 @@ $smtp->close();
          foreach($ret as $personas){
              if($personas[6] == "0") {
 
+                 echo '<tr>'; /////creo!!!
                  echo '<td>' . $personas[2] . '</td>';
                  echo '<td>' . $personas[3] . '</td>';
                  echo '<td>' . $personas[4] . '</td>';
