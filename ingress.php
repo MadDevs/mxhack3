@@ -130,6 +130,7 @@
 
   <?php
     for($i = 0; $i < 13; $i++){
+      echo "<div class='mdl-card mdl-shadow--2dp'></div>"
       if(count($retI[$i]) > 0){
         echo
         "<div class='mdl-card mdl-shadow--2dp'>".
