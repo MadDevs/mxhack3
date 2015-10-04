@@ -13,14 +13,16 @@
     $smtp->bind_param("i", $id);
     $smtp->execute();
     $smtp->store_result();
-    $smtp->bind_result($amount, $monthly, $month, $date);
+    $smtp->bind_result($amount, $monthly, $month, $date, $idt);
 
     while ($smtp->fetch()) {
       if($monthly == 1){
-         $retM[$countM][0] =  $amount;
+         $retM[$countM][0] = $amount;
+         $retM[$countM][1] = $idt;
          $countM++;
       } elseif($monthly == 0){
-         $retI[$month][] =  $amount;
+         #$retI[$month][] =  $amount;
+         $retI[$month][] =  array($amount, $idt);
       }
     }
     $smtp->free_result();
@@ -104,7 +106,9 @@
         <!-- body -->
   <?php
     for($i = 0; $i < count($retM); $i++){
-        echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0])."</div>";
+      echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0]).
+        "<button class='remove' data-id='1' value='Quitar ganancia'>".
+        "</div>";
     }
   ?>
 
@@ -137,7 +141,7 @@
           "<div class='mdl-card__supporting-text'>";
             #body
             for($j = 0; $j < count($retI[$i]); $j++){
-              echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j])."</div>";
+              echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0])."</div>";
             }
         echo
           "</div>".
@@ -157,4 +161,22 @@
 </div>
 
 </body>
+    <script>
+    $('.remove').on('click', function (e) {
+
+      console.log(this);
+      e.preventDefault();
+
+      /*
+      $.ajax({
+        type: 'post',
+        url: 'removeTransaction.php',
+        data: $('#addTanda').serialize(),
+        success: function (json) {
+            alert(json);
+
+        }
+       */
+    });
+    </script>
 </html>
