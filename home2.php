@@ -33,9 +33,8 @@
 
 <div class="row"></div>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-6 mdl-card mdl-shadow--2dp">
 
-    <div class="mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title mdl-card--expand">
 
         <!-- title -->
@@ -56,7 +55,6 @@
           Agrega dinero
         </a>
 
-      </div>
     </div>
   </div>
 
