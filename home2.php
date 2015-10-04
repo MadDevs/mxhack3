@@ -104,9 +104,6 @@
         "</div>".
         "<div class='mdl-card__supporting-text'>";
           #body
-          for($j = 0; $j < count($retI[$i]); $j++){
-            echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
-          }
       echo
         "</div>".
         #button
