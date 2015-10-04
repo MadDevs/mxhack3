@@ -79,7 +79,7 @@ $smtp->close();
     $ret[$count][5] =  $description;
                  */
                 if($trans[4] == "1") {
-                    echo '<td>';
+                    echo '<tr>';
                     echo '<td>' . $trans[2] . '</td>';
                     echo '<td>' . $trans[3]  . '</td>';
                     echo '<td>' . $trans[5]  . '</td>';
