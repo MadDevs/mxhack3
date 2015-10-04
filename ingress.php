@@ -172,7 +172,7 @@
 
     $.ajax({
       type: 'post',
-      url: 'removeTransaction.php',
+      url: './removeTransaction.php',
       data: {id:id},
       success: function (json) {
           alert(json);
