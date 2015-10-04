@@ -7,6 +7,10 @@
  */
 
 
+$titulo = "Tandas";
+include ("head.php");
+
+
 include('./includes/conn.php');
 $tipo = $_GET['tipo'];
 
@@ -115,10 +119,6 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
 
 ?>
 
-<?php
-$titulo = "Tandas";
-include ("head.php")
-?>
 
 <div class="container">
 
