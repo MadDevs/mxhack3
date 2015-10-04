@@ -57,6 +57,28 @@
                 return "Diciembre";
         }
     }
+  $finance = [];
+
+  $smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a 
+    LEFT JOIN mxhacks.Transaction b 
+    ON a.id_trans = b.id_trans 
+    AND b.type = 1
+    LEFT JOIN mxhacks.Transaction c 
+    on a.id_trans = c.id_trans
+    AND c.type = 2");
+  echo "sql";
+  $smtp->execute();
+  $smtp->store_result();
+  $smtp->bind_result($income, $outcome);
+
+  while($smtp->fetch()){
+    $finance[0] =  $income;
+    $finance[1] =  $outcome;
+  }
+
+  $smtp->free_result();
+
+  $smtp->close();
   ?>
 
 

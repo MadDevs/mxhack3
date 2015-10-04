@@ -12,7 +12,7 @@
     $smtp = $mysqli->prepare("SELECT t.amount, t.monthly,
       EXTRACT(MONTH FROM t.created), t.created, t.id_trans
       FROM Transaction t
-      WHERE t.id_user = ? AND t.is_active = 1");
+      WHERE t.id_user = ? AND t.is_active = 1 AND t.type = 1");
 
     $smtp->bind_param("i", $id);
     $smtp->execute();
