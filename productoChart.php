@@ -26,9 +26,7 @@ $smtp->close();
 var_dump(error_get_last());
 ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<center>
 	<div id="chart_div"></div>
-</center>
 <script type="text/javascript">
 
 google.load('visualization', '1', {packages: ['corechart', 'line']});
@@ -85,7 +83,7 @@ function drawBasic() {
 	data.addRows(dataArray);		
 
 	var options = {
-		title: "<?php echo 'Tu objetivo actual es comprar:' . $favorite[0][0] . ' con precio de $ ' . $favorite[0][2]?>",
+		title: "<?php echo 'Tu objetivo actual es comprar: ' . $favorite[0][0] . ' con precio de $ ' . $favorite[0][2]?>",
 		hAxis: {
 			title: 'Time',
 			ticks: dataDate
