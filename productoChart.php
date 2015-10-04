@@ -98,7 +98,7 @@ function drawBasic() {
 
 	for (var i = 0; i < dataDate.length; i++) {
 		if (i <= weeks){
-			var temp = new Array(dataDate[i], i * costoSemanal, ahorroSemanal * i;
+			var temp = new Array(dataDate[i], i * costoSemanal, ahorroSemanal * i);
 		}
 		else{
 			var temp = new Array(dataDate[i], i * costoSemanal, null);
