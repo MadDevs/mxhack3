@@ -5,7 +5,7 @@
     $saldo = 0;
     $numTandas = [];
     $favorite = [];
-    $deudas = 0;
+    $deudas = [];
 
     $mysqli = con_start();
 
@@ -53,7 +53,17 @@
     while($smtp->fetch()){
         $numTandas[0][0] = $tandas;
     }
+    $smtp->free_result();
 
+    /*IMPRIMIR DEUDAS*/
+    $smtp = $mysqli->prepare("SELECT SUM(amount) FROM mxhacks.Deudores");
+    $smtp->execute();
+    $smtp->store_result();
+    $smtp->bind_result($total);
+
+    while($smtp->fetch()){
+        $deudas[0][0] = $total;
+    }
     $smtp->free_result();
     $smtp->close();
 
@@ -228,7 +238,7 @@
                         <h4>
                             Deudas<br>
                             Dinero que me deben<br>
-                            $ 3,000
+                            $ <?php echo $deudas[0][0]?>
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
