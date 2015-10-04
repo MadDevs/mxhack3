@@ -76,23 +76,25 @@
 
               "<div class='col-md-6'>".
                 "<table class='table'><thead><th style='color:green;'>Ingreso</th></thead>".
-                "<tbody>".
+                "<tbody>";
                   for($j = 0; $j < count($arrI[$i]); $j++){
                     echo
                       "<td style='color:green;'>+ ".
                         $arrI[$i][$j]."</td>";
                   }
+              echo
                 "</tbody>".
               "</div>".
 
               "<div class='col-md-6'>".
                 "<table class='table'><thead><th style='color:red;'>Egreso</th></thead>".
-                "<tbody>".
+                "<tbody>";
                   for($j = 0; $j < count($arrE[$i]); $j++){
                     echo
                       "<td style='color:red;'>+ ".
                         $arrE[$i][$j]."</td>";
                   }
+              echo
                 "</tbody>".
               "</div>".
             "</div>".
