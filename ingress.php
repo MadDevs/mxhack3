@@ -112,9 +112,10 @@
       <div class="mdl-card__actions mdl-card--border">
 
         <!-- button -->
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
-          Agrega dinero mensual
-        </a>
+        <form>
+          <input type="text" name="money">
+          <input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
+        </form>
 
     </div>
   </div>
