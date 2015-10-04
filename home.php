@@ -176,6 +176,7 @@
                     <h3 class="masthead-brand">Inicio - Bienvenido a tu cochinito</h3>
                 </div>
             </div>
+
             <!-- CARDS SPACE -->
             <div class="inner cover">
                 <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#4BAF4F">

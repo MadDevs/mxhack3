@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="caea6bbc-42a6-4236-be56-2471b7636f36" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nuevaDeudaControlador.php" afterPath="$PROJECT_DIR$/nuevaDeudaControlador.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productoChart.php" afterPath="$PROJECT_DIR$/productoChart.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productoView.php" afterPath="$PROJECT_DIR$/productoView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxhack3 (GitHub Desktop).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.5991042">
-              <caret line="173" column="43" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.3617021">
+              <caret line="172" column="37" selection-start-line="172" selection-start-column="37" selection-end-line="172" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -40,10 +37,10 @@
                 <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1443975130054" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
-                <marker date="1443975130054" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
-                <marker date="1443975130054" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
-                <marker date="1443975130054" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
+                <marker date="1443975249134" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
+                <marker date="1443975249134" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
+                <marker date="1443975249134" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
+                <marker date="1443975249134" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
               </folding>
             </state>
           </provider>
@@ -292,10 +289,10 @@
             <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1443975130054" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
-            <marker date="1443975130054" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
-            <marker date="1443975130054" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
-            <marker date="1443975130054" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
+            <marker date="1443975249134" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443975249134" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
+            <marker date="1443975249134" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
+            <marker date="1443975249134" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
           </folding>
         </state>
       </provider>
@@ -311,10 +308,10 @@
             <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1443975130054" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
-            <marker date="1443975130054" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
-            <marker date="1443975130054" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
-            <marker date="1443975130054" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
+            <marker date="1443975249134" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443975249134" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
+            <marker date="1443975249134" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
+            <marker date="1443975249134" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
           </folding>
         </state>
       </provider>
@@ -383,10 +380,10 @@
             <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1443975130054" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
-            <marker date="1443975130054" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
-            <marker date="1443975130054" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
-            <marker date="1443975130054" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
+            <marker date="1443975249134" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443975249134" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
+            <marker date="1443975249134" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
+            <marker date="1443975249134" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
           </folding>
         </state>
       </provider>
@@ -497,10 +494,10 @@
             <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1443975130054" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
-            <marker date="1443975130054" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
-            <marker date="1443975130054" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
-            <marker date="1443975130054" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
+            <marker date="1443975249134" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443975249134" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
+            <marker date="1443975249134" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
+            <marker date="1443975249134" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
           </folding>
         </state>
       </provider>
@@ -723,8 +720,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5991042">
-          <caret line="173" column="43" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.3617021">
+          <caret line="172" column="37" selection-start-line="172" selection-start-column="37" selection-end-line="172" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -732,10 +729,10 @@
             <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1443975130054" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
-            <marker date="1443975130054" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
-            <marker date="1443975130054" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
-            <marker date="1443975130054" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
+            <marker date="1443975249134" expanded="true" signature="240:496" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443975249134" expanded="true" signature="830:948" placeholder="SELECT name,..Product..." />
+            <marker date="1443975249134" expanded="true" signature="1290:1323" placeholder="SELECT count..Tanda..." />
+            <marker date="1443975249134" expanded="true" signature="1561:1601" placeholder="SELECT SUM(a..Deudores..." />
           </folding>
         </state>
       </provider>
