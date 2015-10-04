@@ -9,11 +9,11 @@
     $turno = $_POST['turno'];
 
     foreach( $namePersona as $key => $value ) {
-       var_dump($key);
+       var_dump($value);
     }
 
     foreach ($turno as $key => $value) {
-       var_dump($key);
+       var_dump($value);
     }
 
 
