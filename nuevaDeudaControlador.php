@@ -29,8 +29,8 @@ $smtp->execute();
 $smtp->free_result();
 $smtp->close();
 
-header("Location: deudas.php");
-die();
+//header("Location: deudas.php");
+//die();
 
 
 ?>
