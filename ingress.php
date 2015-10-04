@@ -6,7 +6,7 @@
 
     $id = 1;
     $smtp = $mysqli->prepare("SELECT t.amount, t.monthly,
-      EXTRACT(MONTH FROM t.created), t.created
+      EXTRACT(MONTH FROM t.created), t.created, t.id
       FROM Transaction t
       WHERE t.id_user = ? AND t.is_active = 1");
 
@@ -21,8 +21,8 @@
          $retM[$countM][1] = $idt;
          $countM++;
       } elseif($monthly == 0){
-         $retI[$month][] =  $amount;
-         #$retI[$month][] =  array($amount, $idt);
+         #$retI[$month][] =  $amount;
+         $retI[$month][] =  array($amount, $idt);
       }
     }
     $smtp->free_result();
@@ -127,8 +127,7 @@
   </div>
 
   <div class="col-md-6">
-
-<?php
+  <?php
      for($i = 0; $i < 13; $i++){
        if(count($retI[$i]) > 0){
          echo
@@ -141,7 +140,7 @@
            "<div class='mdl-card__supporting-text'>";
              #body
              for($j = 0; $j < count($retI[$i]); $j++){
-               echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j])."</div>";
+               echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0])."</div>";
              }
          echo
            "</div>".
@@ -155,6 +154,7 @@
        }
      }
    ?>
+
 
   </div>
 </div>
