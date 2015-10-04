@@ -8,17 +8,26 @@ $mysqli = con_start();
 $favorite = [];
 
 $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1 id_trans = 1");
+var_dump(error_get_last());
 $smtp->execute();
+var_dump(error_get_last());
 $smtp->store_result();
+var_dump(error_get_last());
 $smtp->bind_result($name, $info, $cost, $completed);
-
+var_dump(error_get_last());
 while($smtp->fetch()){
+	var_dump(error_get_last());
 	$favorite[0][0] =  $name;
+	var_dump(error_get_last());
 	$favorite[0][1] =  $info;
+	var_dump(error_get_last());
 	$favorite[0][2] =  $cost;
+	var_dump(error_get_last());
 }
+var_dump(error_get_last());
 
 $smtp->free_result();
+var_dump(error_get_last());
 $smtp->close();
 
 var_dump(error_get_last());
