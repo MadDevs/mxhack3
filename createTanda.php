@@ -2,7 +2,7 @@
 
     $namePersona = $_POST['namePersona'];
     $intervalo = $_POST['intervalo'];
-    $nameTanda = $_POST['name'];
+    $nameTanda = $_POST['nameTanda'];
     $numRep = $_POST['numRep'];
     $numPeople = $_POST['numPeople'];
     $cantidad = $_POST['cantidad'];
