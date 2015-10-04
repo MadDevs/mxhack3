@@ -51,6 +51,7 @@ $smtp->close();
         <p>&nbsp;</p>
         <h1>Resumen</h1>
 
+        <h2 style="color: #468847; background-color: #DFF0D8;">Ingresos</h2>
 
 
         <table class="table table-striped">
@@ -78,7 +79,7 @@ $smtp->close();
     $ret[$count][4] =  $is_active;
     $ret[$count][5] =  $description;
                  */
-                if($trans[4] == "1") {
+                if($trans[4] == "1" && $trans[1] == "1") {
                     echo '<tr>';
                     echo '<td>' . $trans[2] . '</td>';
                     echo '<td>' . $trans[3]  . '</td>';
@@ -92,7 +93,50 @@ $smtp->close();
 
             </tbody>
         </table>
-        
+
+
+        <h2 style="color: #C26047; background-color: #913F30;">Egresos</h2>
+
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+                <th>Descripcion</th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <?php
+            //amount , type, created, is_active, description
+            foreach($ret as $trans){
+
+
+                /*
+                 *
+                 *  $ret[$count][0] =  $id_user;
+    $ret[$count][1] =  $type;
+    $ret[$count][2] =  $amount;
+    $ret[$count][3] =  $created;
+    $ret[$count][4] =  $is_active;
+    $ret[$count][5] =  $description;
+                 */
+                if($trans[4] == "1" && $trans[1] == "2") {
+                    echo '<tr>';
+                    echo '<td>' . $trans[2] . '</td>';
+                    echo '<td>' . $trans[3]  . '</td>';
+                    echo '<td>' . $trans[5]  . '</td>';
+                    echo '</tr>';
+                }
+            }
+
+            ?>
+
+
+            </tbody>
+        </table>
 
 
 
