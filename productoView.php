@@ -40,17 +40,22 @@
 ?>
 
 <div class="container">
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-
-    <?php
-    foreach($ret as $ok){
-        echo $ok[0];
-    }
-
-
-    ?>
+    <table>
+        <tr>
+            <th>Producto</th>
+            <th>Descripci&oacute;n</th>
+            <th>Costo</th>
+        </tr>
+        <?php
+        foreach($ret as $ok){
+            echo "<tr>";
+            echo "<td>".$ok[0]."<td>";
+            echo "<td>".$ok[1]."<td>";
+            echo "<td>".$ok[2]."<td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
 </div>
 
 <?php  include("foot.php") ?>
