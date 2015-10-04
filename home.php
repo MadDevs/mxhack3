@@ -163,16 +163,12 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <div class="site-wrapper">
     <div class="site-wrapper-inner">
         <div class="cover-container">
             <div class="masthead clearfix">
                 <div class="inner">
+                    <br><br>
                     <h3 class="masthead-brand">Inicio - Bienvenido a tu cochinito</h3>
                 </div>
             </div>
