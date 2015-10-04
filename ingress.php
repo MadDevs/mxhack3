@@ -174,7 +174,7 @@
               
               var newRow = "<tr>";
                   newRow += "<td style='background-color: #DFF0D8;'>+ " + amount + ".00</td>";
-                  newRow += "<td>".<?php echo desc?>."</td>";
+                  newRow += "<td>"+desc+"</td>";
                   newRow += "<td><button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button>";
                   newRow += "</tr>";
               $(row).append(newRow);
