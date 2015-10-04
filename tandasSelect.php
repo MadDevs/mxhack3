@@ -87,8 +87,8 @@ $your_date = strtotime($ret[0][7]);
 $datediff = $now - $your_date;
 
 
-//$difDias = floor($datediff/(60*60*24));
-$difDias = 90;
+$difDias = floor($datediff/(60*60*24));
+//$difDias = 90;
 $continua = false;
 //                               numperso    intervalo dias
 
