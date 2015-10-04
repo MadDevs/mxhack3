@@ -112,7 +112,7 @@
 
         <!-- button -->
         <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
-          Agrega dinero
+          Agrega dinero mensual
         </a>
 
     </div>
@@ -140,7 +140,7 @@
           #button
           "<div class='mdl-card__actions mdl-card--border'>".
             "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
-              "Agrega dinero a".getMonth($i).
+              "Agrega dinero a ".getMonth($i).
             "</a>".
           "</div>".
         "</div>";
