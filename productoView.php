@@ -88,8 +88,8 @@ $smtp->close();
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
             echo "<td>".$ok[2]."</td>";
-            echo "<td><button type='button' class='btn btn-default btn-lg center-block' onclick='addFav(".$ok[0].")'><span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>";
-            echo "<td><button type='button' class='btn btn-default btn-lg center-block' onclick='delete(".$ok[0].")'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
+            echo "<td><button type='button' class='btn btn-default btn-lg center-block' onclick='addFav('".$ok[0]."'')'><span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>";
+            echo "<td><button type='button' class='btn btn-default btn-lg center-block' onclick='delete('".$ok[0]."'')'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
             echo "</tr>";
         }
         ?>
@@ -110,7 +110,7 @@ $smtp->close();
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
             echo "<td>".$ok[2]."</td>";
-            echo "<td><button type='button' class='btn btn-default btn-lg center-block' onclick='delete(".$ok[0].")'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
+            echo "<td><button type='button' class='btn btn-default btn-lg center-block' onclick='delete('".$ok[0]."'')'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
             echo "</tr>";
         }
         ?>
