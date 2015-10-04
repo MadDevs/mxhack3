@@ -30,6 +30,7 @@ echo $row['prediccion'];
 // /*
 
 include('./includes/conn.php');
+
 $mysqli = con_start();
 $ret = [];
 $count = 0;
@@ -57,8 +58,14 @@ while ($smtp->fetch()) {
 //echo "test 3";
 
 
+
+
 $smtp->free_result();
 $smtp->close();
+
+
+
+
 
 var_dump($ret);
 // */
@@ -126,12 +133,16 @@ var_dump($ret);
     <p>&nbsp;</p>
     <p>&nbsp;</p>
 
-    <?php
-    //echo '<button type="button" class="btn btn-primary btn-lg btn-block">$ret[0]</button>';
-    foreach($ret as $ok){
-        echo '<button type="button" class="btn btn-primary btn-lg btn-block"> ' +$ok[0] +'</button>';
-    }
+    <h1>Selecciona el numero de tabla</h1>
 
+    <?php
+
+
+    foreach($ret as $tandas){
+        echo '<form action="tandasSelect.php">';
+        echo '<button name="tipo" value="'.$tandas[0].'" type="submit" class="btn btn-primary btn-lg btn-block">'.$tandas[1].'</button>';
+        echo '</form>';
+    }
 
     ?>
 
