@@ -119,7 +119,7 @@ $smtp->close();
     function addFav (id) {
         $.ajax({
           type: 'GET',
-          url: 'productoFunciones.php',
+          url: './productoFunciones.php',
           data: {funcion: "addFav", idprod: id},
           success: function(dtx){
            console.log(dtx);
@@ -130,7 +130,7 @@ $smtp->close();
     function deleteProd (id) {
         $.ajax({
           type: 'GET',
-          url: 'productoFunciones.php',
+          url: './productoFunciones.php',
           data: {funcion: "deleteProd", idprod: id},
           success: function(dtx){
            console.log(dtx);
