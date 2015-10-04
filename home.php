@@ -151,14 +151,13 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="home.php">Inicio</a></li>
-                <li><a href="ingress.php">Ingresos</a></li>
-                <li><a href="egress.php">Egresos</a></li>
-                <li><a href="#">Resumen</a></li>
-                <li><a href="tandasView.php">Tanda</a></li>
-                <li><a href="productoView.php">Productos deseados</a></li>
-                <li><a href="deudas.php">Deudas</a></li>
-                <li><a href="#">Ayuda</a></li>
+                <li id="home" ><a href="home.php">Inicio</a></li>
+                <li id="ingress"><a href="ingress.php">Ingresos</a></li>
+                <li id="egress"><a href="egress.php">Egresos</a></li>
+                <li id="resumen"><a href="resumen2.php">Resumen</a></li>
+                <li id="tandasView"><a href="tandasView.php">Tanda</a></li>
+                <li id="productoView"><a href="productoView.php">Productos deseados</a></li>
+                <li id="deudas"><a href="deudas.php">Deudas</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -276,6 +275,10 @@
     </div>
 </div>
 </div>
-
+<script type="text/javascript">
+     $(document).ready(function() {
+        $('#home').addClass("active");
+      });
+</script>
 </body>
 </html>
