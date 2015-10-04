@@ -5,13 +5,11 @@
     $count = 0;
 
     $id = 1;
-    $smtp = $mysqli->prepare("SELECT u.id_user, u.first_name FROM User u WHERE u.user_id = " . $id);
+    $smtp = $mysqli->prepare("SELECT u.id_user, u.first_name FROM User u WHERE u.id_user = ?");
     
-
+    $smtp->bind_param("i", $id);
     $smtp->execute();
     $smtp->store_result();   
-     
-    echo "test 2";
     $smtp->bind_result($id, $first_name);
     while ($smtp->fetch()) {
          $ret[$count][0] =  $id;
