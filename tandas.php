@@ -40,102 +40,98 @@
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+
+
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
-
-
-
-
-<div class="container">
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h1>Tandas</h1>
-    <h2>Agregar una nueva tanda</h2>
-
-    <form class="form-horizontal">
-        <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Nombre de la tanda</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="name" placeholder="Nombre de la tanda">
-            </div>
-        </div>
-
-        <!--seleccionar tipos de tandas -->
-        <div class="form-group">
-            <label for="Intervalo" class="col-sm-2 control-label">Intervalo</label>
-            <div class="col-md-6 col-md-offset-1">
-
-
-                <select class="form-control">
-                    <option id="Intervalo">1 semana</option>
-                    <option id="Intervalo">2 semanas</option>
-                    <option id="Intervalo">1 mes</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="numPeople" class="col-sm-2 control-label">Numero de personas</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" id="numPeople" placeholder="Numero de personas">
-            </div>
-        </div>
-
-
-
-
         <p>&nbsp;</p>
         <p>&nbsp;</p>
-        <p>&nbsp;</p>
+        <h1>Tandas</h1>
+        <h2>Agregar una nueva tanda</h2>
 
-        <div class="form-group">
-            <div>
-                <button type="submit" class="btn btn-default">Sign in</button>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Nombre de la tanda</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="Nombre de la tanda">
+                </div>
             </div>
-        </div>
-    </form>
 
-    <script>
-    $(document).ready(function() {
-    var max_fields      = 10; //maximum input boxes allowed
-    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
-    var add_button      = $(".add_field_button"); //Add button ID
-
-    var x = 1; //initlal text box count
-    $(add_button).click(function(e){ //on add input button click
-    e.preventDefault();
-    if(x < max_fields){ //max input box allowed
-    x++; //text box increment
-    $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-    }
-    });
-
-    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-    e.preventDefault(); $(this).parent('div').remove(); x--;
-    })
-    });
-    </script>
+            <!--seleccionar tipos de tandas -->
+            <div class="form-group">
+                <label for="Intervalo" class="col-sm-2 control-label">Intervalo</label>
+                <div class="col-md-6 col-md-offset-1">
 
 
-</div><!-- /.container -->
+                    <select class="form-control" id="intervalo">
+                        <option value="1" id="intervalo1">1 semana</option>
+                        <option value="2" id="intervalo2">2 semanas</option>
+                        <option value="3" id="intervalo3">1 mes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="numPeople" class="col-sm-2 control-label">Numero de personas</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="numPeople" placeholder="Numero de personas">
+                </div>
+            </div>
+
+            <div class="form-group" id="personas">
+
+            </div>
+
+
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+            <div class="form-group">
+                <div>
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+            </div>
+        </form>
+
+        <script>
+        $("#numPeople").change(function() {
+            var number =  $("#numPeople").val();
+            $("#personas").empty();
+            var strDiv = "";
+            for (var i = 0; i < number; i++) {
+                strDiv += "<label for=\"namePersona " + (i + 1) + " \" class=\"col-sm-2 control-label\">Nombre " + (i + 1) + " </label>";
+                strDiv += "<div class=\"col-sm-10\">";
+                strDiv += "<input type=\"text\" class=\"form-control\" id=\"name Persona " + i + "\" placeholder=\"Nombre de la Persona " + (i + 1) + "\">";
+                strDiv += "</div><br><br>";
+            };
+            $("#personas").append(strDiv);
+        });
+        </script>
+
+
+    </div><!-- /.container -->
 
 </body>
 </html>
