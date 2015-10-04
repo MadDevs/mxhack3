@@ -19,7 +19,7 @@
         $return = 0;
       }
     $smtp->close();
-    $$id_tands = 0;
+    $id_trans = 0;
     if ($return == 1 ) {
 
 
@@ -30,7 +30,7 @@
 	    $smtp->store_result();   
 	    $smtp->bind_result($id_tand);
 	    while ($smtp->fetch()) {
-	        $id_tands = $id_tand;
+	        $id_trans = $id_tand;
 	    }
 	    $smtp->free_result();
 	    $smtp->close();
