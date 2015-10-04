@@ -45,9 +45,9 @@
 
     foreach( $namePersona as $key => $value ) {
       $mysqli = con_start();
-      var_dump("ID TANDA", $id_tanda);
+
       
-      $smtp = $mysqli->prepare("INSERT INTO UsuariosTanda(id_tanda, nombre, turn) VALUES (?,?,?) ");
+      $smtp = $mysqli->prepare("INSERT INTO UsuariosTanda(id_tanda, nombre, turno) VALUES (?,?,?) ");
 
       $turnoPersona = $turno[$key];
       $smtp->bind_param("isi", $id_tanda,$value, $turnoPersona);
