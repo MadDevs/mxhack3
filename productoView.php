@@ -49,12 +49,14 @@ $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Produ
     AND id_trans = 1 AND hidden = 0");
 $smtp->execute();
 $smtp->store_result();
+$count = 0;
 $smtp->bind_result($name, $info, $cost, $completed);
 
 while($smtp->fetch()){
     $favorite[0][0] =  $name;
     $favorite[0][1] =  $info;
     $favorite[0][2] =  $cost;
+    $count++;
 }
 
 $smtp->free_result();
@@ -67,12 +69,12 @@ $smtp->close();
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <?php //if ($favorite[0][0] == null) {?>
-    <!-- <h2 id="heading" class="text-center">Favor de establecer producto objetivo</h2> -->
-    <?php//}else{?>
+    <?php if ($count == 0) {?>
+        <h2 id="heading" class="text-center">Favor de establecer producto objetivo</h2> 
+    <?php }else{ ?>
     <h2 id="heading" class="text-center">Tu objetivo actual es comprar: <?php echo $favorite[0][0]?> con precio de $<?php echo $favorite[0][2]?></h2>
     <p><a class="btn btn-lg btn-success center-block" href="productoChart.php" role="button">&iquest;Cuanto me falta?</a></p>
-    <?php//} ?>
+    <?php } ?>
     <br>
 
     <h2>Estos son los productos que estan marcados como objetivos pr&oacute;ximos</h2>
@@ -118,7 +120,7 @@ $smtp->close();
         ?>
     </table>
     <script type="text/javascript">
-    
+
       $(document).ready(function() {
         $('#productoView').addClass("active");
       });
