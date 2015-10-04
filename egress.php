@@ -93,7 +93,7 @@
                   for($i = 0; $i < count($retM); $i++){
 
                     echo "<tr>";
-                    echo "<td style='background-color: #DFF0D8;' >+ " . money_format('%(#5n',$retM[$i][0]) . "</td>";
+                    echo "<td style='background-color: #DFF0D8;' >- " . money_format('%(#5n',$retM[$i][0]) . "</td>";
                     echo "<td>" . "Descripcion" . "</td>";
                     echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:green;'>Quitar perdida</button></td>";
                     echo "</tr>";
@@ -128,7 +128,7 @@
                 #body
                 for($j = 0; $j < count($retI[$i]); $j++){
             $row .=    "<tr>";
-            $row .=      "<td style='background-color: #DFF0D8;'>+ ". money_format('%(#5n',$retI[$i][$j][0]). "</td>";
+            $row .=      "<td style='background-color: #DFF0D8;'>- ". money_format('%(#5n',$retI[$i][$j][0]). "</td>";
             $row .=      "<td> Descripcion</td>";
             $row .=      "<td><button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:green;'>Quitar adeudo</button></td>";
             $row .=    "</tr>";
