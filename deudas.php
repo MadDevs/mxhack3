@@ -70,7 +70,7 @@ $smtp->close();
                  echo '<td>' . $personas[2] . '</td>';
                  echo '<td>' . $personas[3] . '</td>';
                  echo '<td>' . $personas[4] . '</td>';
-                 echo '<td><form action="deudasController.php?id_deudor=' . $id_deudor . '&id_usuario=' . $id_user . '&cantidad=' . $amount . '&nombre=' . $nombre . '&descripcion=' . $description . '><button name="tipo" value="pagado" type="submit" class="btn btn-primary">Pagado</button><button name="tipo" value="hide" type="submit" class="btn btn-primary">Eliminar X</button></form></td>';
+                 echo '<td><form action="deudasController.php?id_deudor=' . $id_deudor . '&id_usuario=' . $id_user . '&cantidad=' . $amount . '&nombre=' . $nombre . '&descripcion=' . $description . '"> <button name="tipo" value="pagado" type="submit" class="btn btn-primary">Pagado</button>   <button name="tipo" value="hide" type="submit" class="btn btn-primary">Eliminar X</button></form></td>';
              }
          }
 
