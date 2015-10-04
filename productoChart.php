@@ -7,19 +7,19 @@ include ("head.php");
 $mysqli = con_start();
 $favorite = [];
 
-$smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1 id_trans = 1");
-$smtp->execute();
-$smtp->store_result();
-$smtp->bind_result($name, $info, $cost, $completed);
+// $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1 id_trans = 1");
+// $smtp->execute();
+// $smtp->store_result();
+// $smtp->bind_result($name, $info, $cost, $completed);
 
-while($smtp->fetch()){
-	$favorite[0][0] =  $name;
-	$favorite[0][1] =  $info;
-	$favorite[0][2] =  $cost;
-}
+// while($smtp->fetch()){
+// 	$favorite[0][0] =  $name;
+// 	$favorite[0][1] =  $info;
+// 	$favorite[0][2] =  $cost;
+// }
 
-$smtp->free_result();
-$smtp->close();
+// $smtp->free_result();
+// $smtp->close();
 
 var_dump(error_get_last());
 ?>
