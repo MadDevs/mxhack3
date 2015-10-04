@@ -31,10 +31,10 @@
     $mysqli = con_start();
     $smtp = $mysqli->prepare("SELECT id_tanda FROM Tanda ORDER BY id_tanda DESC LIMIT 1");
     $smtp->execute();
-    var_dump(error_get_last());
+
     $smtp->store_result();   
     $smtp->bind_result($id_tand);
-    var_dump(error_get_last());
+
     while ($smtp->fetch()) {
         $id_tanda = $id_tand;
     }
@@ -45,10 +45,11 @@
     var_dump(error_get_last());
     foreach( $namePersona as $key => $value ) {
       $mysqli = con_start();
-      var_dump($key);
-      var_dump(error_get_last());
+      var_dump($key, $value, $turno[$key]);
+      
       $smtp = $mysqli->prepare("INSERT INTO UsuariosTanda(id_tanda, nombre, turn) VALUES (?,?,?) ");
-      var_dump(error_get_last());
+
+
       $smtp->bind_param("isi", $id_tanda,$value, $turno[$key]);
       $smtp->execute();
       if (!$smtp->error) {
