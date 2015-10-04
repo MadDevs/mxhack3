@@ -113,7 +113,7 @@
 
         <!-- button -->
         <form>
-          <input type="text" name="money" value="100" style="color:black;">
+          <input type="text" name="money" placeholder="100" style="color:black;">
           <input type="submit" value="Agrega dinero mensual"
             class="mdl-button mdl-js-button mdl-js-ripple-effect"
             style="color:green;">
