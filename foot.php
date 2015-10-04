@@ -8,7 +8,7 @@
 ?>
 
 <hr>
-<div class="center">
+<div class="text-center">
 	© 2015 <a href="https://github.com/MadDevs/">MadDevs</a> . Todos los derechos reservados
 </div>
 </body>
