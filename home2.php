@@ -1,3 +1,34 @@
+  <?php include('./includes/conn.php');
+    $mysqli = con_start();
+    $ret = [];
+    $countM = 0;
+    $countI = 0;
+
+    $id = 1;
+    $smtp = $mysqli->prepare("SELECT t.amount, t.monthly, t.created
+      FROM Transaction t
+      WHERE t.id_user = ? AND t.is_active = 1");
+
+    $smtp->bind_param("i", $id);
+    $smtp->execute();
+    $smtp->store_result();
+    $smtp->bind_result($amount, $monthly, $created);
+
+    while ($smtp->fetch()) {
+      if($monthly == 1){
+         $retM[$countM][0] =  $amount;
+         $retM[$countM][1] =  $created;
+         $countM++;
+      } elseif($monthly == 0){
+         $retI[$countI][0] =  $amount;
+         $retI[$countI][1] =  $created;
+         $countI++;
+      }
+    }
+    $smtp->free_result();
+    $smtp->close();
+  ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -44,8 +75,11 @@
       <div class="mdl-card__supporting-text">
 
         <!-- body -->
-        <div class="row">+ $4,000</div>
-        <div class="row">+ $3,500</div>
+  <?php
+    for($i = 0; $i <= count($retM); $i++){
+        echo "<div class='row'>+ ".$retM[$i][0]."</div>";
+    }
+  ?>
 
       </div>
       <div class="mdl-card__actions mdl-card--border">
@@ -60,54 +94,27 @@
 
   <div class="col-md-6">
 
-    <div class="mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title mdl-card--expand">
-
-        <!-- title -->
-        <h2 class="mdl-card__title-text">Mes 1</h2>
-
-      </div>
-      <div class="mdl-card__supporting-text">
-
-        <!-- body -->
-        <div class="row">+ $150</div>
-        <div class="row">+ $100</div>
-
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-
-        <!-- button -->
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
-          Agrega dinero
-        </a>
-
-      </div>
-    </div>
-
-    <div class="mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title mdl-card--expand">
-
-        <!-- title -->
-        <h2 class="mdl-card__title-text">Mes 2</h2>
-
-      </div>
-      <div class="mdl-card__supporting-text">
-
-        <!-- body -->
-        <div class="row">+ $250</div>
-        <div class="row">+ $50</div>
-        <div class="row">+ $10</div>
-
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-
-        <!-- button -->
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
-          Agrega dinero
-        </a>
-
-      </div>
-    </div>
+  <?php
+    for($i = 0; $i <= count($retI); $i++){
+      echo
+      "<div class='mdl-card mdl-shadow--2dp'>".
+        "<div class='mdl-card__title mdl-card--expand'>".
+          #title
+          "<h2 class='mdl-card__title-text'>Mes ".$i."</h2>".
+        "</div>".
+        "<div class='mdl-card__supporting-text'>".
+          #body
+          "<div class='row'>+ ".$retI[$i][0]."</div>".
+        "</div>".
+        #button
+        "<div class='mdl-card__actions mdl-card--border'>".
+          "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
+            "Agrega dinero".
+          "</a>".
+        "</div>".
+      "</div>";
+    }
+  ?>
 
 
   </div>

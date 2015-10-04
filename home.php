@@ -24,6 +24,40 @@
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
 
+    <!-- Material design content -->
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.light_blue-light_green.min.css" />
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        .demo-card-event.mdl-card {
+            width: 200px;
+            height: 200px;
+            margin-left: 20px;
+            margin-top: 20px;
+            background: #03A9F4;
+            float: left;
+        }
+        .demo-card-event > .mdl-card__actions {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .demo-card-event > .mdl-card__title {
+            align-items: flex-start;
+        }
+        .demo-card-event > .mdl-card__title > h4 {
+            margin-top: 0;
+        }
+        .demo-card-event > .mdl-card__actions {
+            display: flex;
+            box-sizing:border-box;
+            align-items: center;
+        }
+        .demo-card-event > .mdl-card__title,
+        .demo-card-event > .mdl-card__actions,
+        .demo-card-event > .mdl-card__actions > .mdl-button {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,30 +67,122 @@
         <div class="cover-container">
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h3 class="masthead-brand">Cover</h3>
+                    <h3 class="masthead-brand">Inicio</h3>
                     <nav>
                         <ul class="nav masthead-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Ayuda</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
+            <!-- CARDS SPACE -->
             <div class="inner cover">
-                <h1 class="cover-heading">Cover your page.</h1>
-                <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-                <p class="lead">
-                    <a href="#" class="btn btn-lg btn-default">Learn more</a>
-                </p>
-            </div>
-            <div class="mastfoot">
-                <div class="inner">
-                    <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h4>Ingresos<br>
+                                Tienes <br>
+                                $ 2,000
+                            </h4>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                Ir a ingresos
+                            </a>
+                            <div class="mdl-layout-spacer"></div>
+                            <i class="material-icons">event</i>
+                        </div>
                 </div>
-            </div>
+
+                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h4>Egresos<br>
+                            Debes<br>
+                            $ 500
+                        </h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            Ir a egresos
+                        </a>
+                        <div class="mdl-layout-spacer"></div>
+                        <i class="material-icons">event</i>
+                    </div>
+                </div>
+
+                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h4>
+                            Resumen<br>
+                            Tu saldo real<br>
+                            $ 1,500
+                        </h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            Ir a resumen
+                        </a>
+                        <div class="mdl-layout-spacer"></div>
+                        <i class="material-icons">event</i>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h4>
+                            Tanda<br>
+                            Te toca el<br>
+                            4 de octubre
+                        </h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                           Ir a tanda
+                        </a>
+                        <div class="mdl-layout-spacer"></div>
+                        <i class="material-icons">event</i>
+                    </div>
+                </div>
+
+                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h4>
+                            Productos<br>
+                            Actualmente quieres<br>
+                            Bicicleta mono
+                        </h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            Ir a productos
+                        </a>
+                        <div class="mdl-layout-spacer"></div>
+                        <i class="material-icons">event</i>
+                    </div>
+                </div>
+
+                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h4>
+                            ???<br>
+                            May 24, 2016<br>
+                            7-11pm
+                        </h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            ???
+                        </a>
+                        <div class="mdl-layout-spacer"></div>
+                        <i class="material-icons">event</i>
+                    </div>
+                </div>
+
+            <!-- CARDS SPACE -->
         </div>
     </div>
+</div>
 </div>
 
 </body>
