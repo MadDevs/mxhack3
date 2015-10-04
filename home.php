@@ -168,8 +168,8 @@
     <div class="site-wrapper-inner">
         <div class="cover-container">
             <div class="masthead clearfix">
-                <div class="inner">
-                    <h3 class="masthead-brand">Inicio - Bienvenido a tu cochinito</h3>
+                <div class="inner" style="padding: 50px 0 0;">
+                    <h3 class="masthead-brand">Bienvenido a tu cochinito</h3>
                     <nav>
                         <ul class="nav masthead-nav">
                             <li><a href="#">Ayuda</a></li>
