@@ -3,14 +3,15 @@
     $idu = $_POST['idu'];
     $amount = $_POST['amount'];
     $time = date("Y-m-d");
+    $desc = $_POST['desc'];
 
     $return = 0;
     $two = 2;
     $one = 1;
     $mysqli = con_start();
-    $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created)
+    $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description)
       VALUES(?,?,?,?,?)");
-    $smtp->bind_param("iiiis",$idu,$two, $amount,$one, $time);
+    $smtp->bind_param("iiiiss",$idu,$two, $amount,$one, $time, $desc);
     $smtp->execute();
 
     if (!$smtp->error) {
