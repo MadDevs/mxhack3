@@ -1,14 +1,14 @@
   <?php include('./includes/conn.php'); 
     echo "test";
     $mysqli = con_start();
-    var_dump(error_get_last());
-       $ret = [];
-       var_dump(error_get_last());
+    $ret = [];
     $count = 0;
-    var_dump(error_get_last());
+
     $id = 1;
     $smtp = $mysqli->prepare("SELECT u.id_user, u.first_name FROM User u WHERE u.user_id = ?");
+    var_dump(error_get_last());
     $smtp->bind_param("i", $id);
+    
     var_dump(error_get_last());
     $smtp->execute();
     $smtp->store_result();    
