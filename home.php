@@ -8,6 +8,7 @@
     $deudas = 0;
 
     echo "Empieza";
+    $mysqli = con_start();
     /* REGRESA INGRESO TOTAL Y EGRESO TOTAL*/
     $smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a
 	LEFT JOIN mxhacks.Transaction b
