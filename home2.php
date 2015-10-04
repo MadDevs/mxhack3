@@ -20,7 +20,7 @@
          $retM[$countM][0] =  $amount;
          $countM++;
       } elseif($monthly == 0){
-         $retI[$month][0] =  $amount;
+         $retI[$month][] =  $amount;
       }
     }
     $smtp->free_result();
@@ -98,7 +98,7 @@
       "<div class='mdl-card mdl-shadow--2dp'>".
         "<div class='mdl-card__title mdl-card--expand'>".
           #title
-          "<h2 class='mdl-card__title-text'>Mes ".$i+1."</h2>".
+          "<h2 class='mdl-card__title-text'>Mes ".($i+1)."</h2>".
         "</div>".
         "<div class='mdl-card__supporting-text'>";
           #body
