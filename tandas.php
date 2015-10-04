@@ -81,7 +81,7 @@
             <!--seleccionar tipos de tandas -->
             <div class="form-group">
                 <label for="Intervalo" class="col-sm-2 control-label">Intervalo</label>
-                <div class="col-md-6 col-md-offset-1">
+                <div class="col-sm-10">
 
 
                     <select class="form-control" id="intervalo">
@@ -89,6 +89,20 @@
                         <option value="2" id="intervalo2">2 semanas</option>
                         <option value="3" id="intervalo3">1 mes</option>
                     </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="numRep" class="col-sm-2 control-label">Numero de repeticiones</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="numRep" placeholder="Numero de repeticiones">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="numRep" class="col-sm-2 control-label">Cantidad $</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="numRep" placeholder="Cantidad $">
                 </div>
             </div>
 
@@ -102,6 +116,8 @@
             <div class="form-group" id="personas">
 
             </div>
+
+
 
 
             <p>&nbsp;</p>
@@ -121,9 +137,9 @@
             $("#personas").empty();
             var strDiv = "";
             for (var i = 0; i < number; i++) {
-                strDiv += "<label for=\"namePersona " + (i + 1) + " \" class=\"col-sm-2 control-label\">Nombre " + (i + 1) + " </label>";
+                strDiv += "<label for=\"namePersona[]\" class=\"col-sm-2 control-label\">Nombre " + (i + 1) + " </label>";
                 strDiv += "<div class=\"col-sm-10\">";
-                strDiv += "<input type=\"text\" class=\"form-control\" id=\"name Persona " + i + "\" placeholder=\"Nombre de la Persona " + (i + 1) + "\">";
+                strDiv += "<input type=\"text\" class=\"form-control\" id=\"namePersona[]\" placeholder=\"Nombre de la Persona " + (i + 1) + "\">";
                 strDiv += "</div><br><br>";
             };
             $("#personas").append(strDiv);
