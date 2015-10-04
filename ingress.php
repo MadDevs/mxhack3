@@ -140,7 +140,9 @@
           "<div class='mdl-card__supporting-text'>";
             #body
             for($j = 0; $j < count($retI[$i]); $j++){
-              echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j])."</div>";
+              echo
+                "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0])."</div>".
+                "<button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:red;'>Quitar ganancia</button>";
             }
         echo
           "</div>".
