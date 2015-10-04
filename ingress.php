@@ -1,4 +1,5 @@
   <?php include('./includes/conn.php');
+    setlocale(LC_MONETARY, 'en_US');
     $mysqli = con_start();
     $countM = 0;
     $countI = 0;
@@ -103,7 +104,7 @@
         <!-- body -->
   <?php
     for($i = 0; $i < count($retM); $i++){
-        echo "<div class='row'>+ ".$retM[$i][0]."</div>";
+        echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0])."</div>";
     }
   ?>
 
@@ -111,9 +112,12 @@
       <div class="mdl-card__actions mdl-card--border">
 
         <!-- button -->
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
-          Agrega dinero
-        </a>
+        <form>
+          <input type="text" name="money" placeholder="100" style="color:black;">
+          <input type="submit" value="Agrega dinero mensual"
+            class="mdl-button mdl-js-button mdl-js-ripple-effect"
+            style="color:green;">
+        </form>
 
     </div>
   </div>
@@ -133,14 +137,14 @@
           "<div class='mdl-card__supporting-text'>";
             #body
             for($j = 0; $j < count($retI[$i]); $j++){
-              echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
+              echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j])."</div>";
             }
         echo
           "</div>".
           #button
           "<div class='mdl-card__actions mdl-card--border'>".
             "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
-              "Agrega dinero a".getMonth($i).
+              "Agrega dinero a ".getMonth($i).
             "</a>".
           "</div>".
         "</div>";

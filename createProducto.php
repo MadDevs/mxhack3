@@ -1,24 +1,24 @@
 <?php include('./includes/conn.php');
 
+    $nameProducto = "";
+    $info = "";
+    $cost = "";
 
-    $nameProducto = $_POST['name'];
+    $nameProducto = $_POST['nameProducto'];
     $info = $_POST['description'];
     $cost = $_POST['amount'];
+
 
 
     $mysqli = con_start();
     $id_user = 1;
 
-    echo "</br> " . $nameProducto . "</br>";
-    echo "</br> " . $info . "</br>";
-    echo "</br> " . $cost . "</br>";
-    echo "</br> " . $id_user . "</br>";
+
 
     $smtp = $mysqli->prepare("INSERT INTO Product(id_user, name, description, amount, completed, id_trans) VALUES (?,?,?,?,?,?)");
-    echo "INSERT INTO Product(id_user, name, description, amount, completed, id_trans) VALUES ($id_user, $nameProducto, $info, $cost, 1, 1)";
-    var_dump(error_get_last());
-    $smtp->bind_param("issiii", $id_user, $nameProducto, $info, $cost, 1, 1);
-    var_dump(error_get_last());
+
+    $smtp->bind_param("issiii", $id_user, $nameProducto, $info, $cost, $id_user, $id_user);
+
     $smtp->execute();
 
 
@@ -26,7 +26,7 @@
         echo "correct"  ;
     }
     else {
-        echo "error" . $smtp->error;
+        echo "error" . $smtp->error; 
     }
     $smtp->close();
 

@@ -10,12 +10,13 @@
     <h1>Nueva objetivo de compra</h1>
     <h2>&iexcl;Quieres una nuevo art&iacute;culo, es momento de ahorrar!</h2>
     <br>
-
-    <form name="newProduct" class="form-horizontal" action="createProducto.php" method="POST">
+    <p class="bg-success" style="display: none; border-radius: 5px; text-align: center;" id="success">Producto agregado correctamente</p>
+    <p class="bg-error" style="display: none;   border-radius: 5px; text-align: center;" id="error">Error al agregar producto</p>
+    <form id="addProducto" name="newProduct" class="form-horizontal" action="createProducto.php" method="POST">
         <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Nombre del art&iacute;culo</label>
+            <label for="nameProducto" class="col-sm-2 control-label">Nombre del art&iacute;culo</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="name" id="name" placeholder="Ejemplo: Lavadora, motocicleta, television..">
+                <input type="text" class="form-control" name="nameProducto" id="nameProducto" placeholder="Ejemplo: Lavadora, motocicleta, television..">
             </div>
         </div>
 
@@ -39,10 +40,42 @@
         <p>&nbsp;</p>
 
         <button type="submit" class="btn btn-default">Guardar</button>
+        
     </form>
 </div><!-- /.container -->
-<?php  include("foot.php") ?>
+ <script>
 
+
+    $('#addProducto').on('submit', function (e) {
+
+      e.preventDefault();
+
+          $.ajax({
+            type: 'post',
+            url: 'createProducto.php',
+            data: $('#addProducto').serialize(),
+            success: function (json) {
+ 
+                    if ($.trim(json)=="correct") {
+
+                        setTimeout(function() {$("#success").show();}, 1000);
+                        setTimeout(function() {$("#success").hide();}, 5000);
+                        $('#description').val("");
+                        $('#nameProducto').val("");
+                        $('#amount').val("");
+
+                    }
+                    else {
+                        setTimeout(function() {$("#error").show();}, 1000);
+                        setTimeout(function() {$("#error").hide();}, 5000);   
+                    }
+
+                }
+            });
+
+    });
+   </script>
+<?php  include("foot.php") ?>
 
 
 
