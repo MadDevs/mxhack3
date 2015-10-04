@@ -168,7 +168,7 @@
     });
 
       $('.remove').on('click', function (e) {
-
+        console.log("clicked", this);
         e.preventDefault();
         var id = $(this).attr('data-id');
         var button = $(this);
@@ -179,7 +179,7 @@
           data: {id:id},
           success: function (json) {
               $(button).parent().hide();
-              console.log(button);
+              
 
           },
           error: function (json) {
