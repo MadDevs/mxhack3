@@ -6,11 +6,13 @@
  * Time: 4:59 AM
  */
 
-
 $titulo = "Deudas";
 include ("head.php");
 
 include('./includes/conn.php');
+
+
+$mysqli = con_start();
 
 var_dump(error_get_last());
 
