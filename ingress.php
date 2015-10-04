@@ -177,6 +177,10 @@
       success: function (json) {
           alert(json);
 
+      },
+      error: function (json) {
+        console.log(json);
+
       }
   });
 
