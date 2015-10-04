@@ -196,7 +196,7 @@
                         <h4>
                             Tanda<br>
                             Actualmente estas en<br>
-                            <?php $numTandas[0][0] ?> tandas
+                            <?php echo $numTandas[0][0] ?> tandas
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
