@@ -63,11 +63,7 @@
 <div class="container">
 
     <?php
-    for(int $i = 1; $i < 13; $i++){
-      if(true){
-        echo "dd";
-      }
-    }
+    echo "dd";
     ?>
 
 </div>
