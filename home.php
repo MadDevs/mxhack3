@@ -3,7 +3,7 @@
     include ("includes/conn.php");
     $saldos = [];
     $saldo = 0;
-    $numTandas = "";
+    $numTandas = [];
     $favorite = [];
     $deudas = 0;
 
@@ -51,7 +51,7 @@
     $smtp->bind_result($tandas);
 
     while($smtp->fetch()){
-        $numTandas = $tandas;
+        $numTandas[0][0] = $tandas;
     }
 
     $smtp->free_result();
@@ -196,7 +196,7 @@
                         <h4>
                             Tanda<br>
                             Actualmente estas en<br>
-                            <?php $numTandas ?> tandas
+                            <?php $numTandas[0][0] ?> tandas
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
