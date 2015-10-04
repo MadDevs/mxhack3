@@ -82,7 +82,7 @@
                 <th>Descripcion</th>
                 <th>Acción</th>
               </thead>
-              <tbody>
+              <tbody id="tbodyIngresos">
                 
               <?php
                 for($i = 0; $i < count($retM); $i++){
@@ -157,7 +157,7 @@
 
         e.preventDefault();
         var idu = $(this).attr('data-idu');
-        var row = $('.monthly_ingress');
+        var row = $('.tbodyIngresos');
         var amount = $('#ingresoFijo').val();
         var button = $(this);
         $.ajax({
