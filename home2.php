@@ -101,8 +101,7 @@
           #title
           "<h2 class='mdl-card__title-text'>Mes ".$i+1."</h2>".
         "</div>".
-        "<div class='mdl-card__supporting-text'>";
-      echo
+        "<div class='mdl-card__supporting-text'>".
         "</div>".
         #button
         "<div class='mdl-card__actions mdl-card--border'>".
