@@ -92,13 +92,15 @@ $smtp->close();
         </tr>
         <?php
         foreach($notYet as $ok){
-            echo "<tr>";
-            echo "<td>".$ok[0]."</td>";
-            echo "<td>".$ok[1]."</td>";
-            echo "<td id='".str_replace(" ", "", $ok[0])."'>$".$ok[2]."</td>";
-            echo "<td><button id='".$ok[0]."' type='button' class='btn btn-default btn-lg center-block addFav'><span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>";
-            echo "<td><button id='".$ok[0]."' type='button' class='btn btn-default btn-lg center-block deleteProd'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
-            echo "</tr>";
+            if($ok[0] != null){
+                echo "<tr>";
+                echo "<td>".$ok[0]."</td>";
+                echo "<td>".$ok[1]."</td>";
+                echo "<td id='".str_replace(" ", "", $ok[0])."'>$".$ok[2]."</td>";
+                echo "<td><button id='".$ok[0]."' type='button' class='btn btn-default btn-lg center-block addFav'><span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>";
+                echo "<td><button id='".$ok[0]."' type='button' class='btn btn-default btn-lg center-block deleteProd'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
+                echo "</tr>";
+            }
         }
         ?>
     </table>
@@ -136,16 +138,16 @@ $smtp->close();
           url: './productoFunciones.php',
           data: {funcion: "addFav", idprod: id},
           success: function(dtx){
-           console.log(dtx);
-           var price = $("td#" + dtx.replace(" ", "")).html();
-           $("#heading").text("Tu objetivo actual es comprar: " + dtx + " con precio de " + price);
-           $("#chart").show();
-       },
-       error: function (json) {
-        console.log(json);
+             console.log(dtx);
+             var price = $("td#" + dtx.replace(" ", "")).html();
+             $("#heading").text("Tu objetivo actual es comprar: " + dtx + " con precio de " + price);
+             $("#chart").show();
+         },
+         error: function (json) {
+            console.log(json);
 
-    }
-});
+        }
+    });
     });
 
     $('.deleteProd').on('click', function (e) {
@@ -157,14 +159,14 @@ $smtp->close();
           data: {funcion: "deleteProd", idprod: id},
           success: function(dtx){
 
-           $(row).parent().parent().hide();
-           console.log(dtx);
-       },
-       error: function (json) {
-        console.log(json);
+             $(row).parent().parent().hide();
+             console.log(dtx);
+         },
+         error: function (json) {
+            console.log(json);
 
-    }
-});
+        }
+    });
     });
     </script>
 </div><!-- /.container -->
