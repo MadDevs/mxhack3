@@ -70,7 +70,7 @@
         <h1>Tandas</h1>
         <h2>Agregar una nueva tanda</h2>
 
-        <form class="form-horizontal" action="createTanda.php" method="POST">
+        <form id="addTanda" class="form-horizontal" action="createTanda.php" method="POST">
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">Nombre de la tanda</label>
                 <div class="col-sm-10">
@@ -144,6 +144,25 @@
             };
             $("#personas").append(strDiv);
         });
+
+
+        $('#addTanda').on('submit', function (e) {
+
+          e.preventDefault();
+
+          $.ajax({
+            type: 'post',
+            url: 'createTanda.php',
+            data: $('#addTanda').serialize(),
+            success: function (json) {
+                alert(json);
+              
+            }
+          });
+
+        });
+
+
         </script>
 
 
