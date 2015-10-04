@@ -55,22 +55,10 @@ while ($smtp->fetch()) {
 
     $count++;
 }
-//echo "test 3";
-
-
-
+//echo "test 3"
 
 $smtp->free_result();
 $smtp->close();
-
-
-
-
-
-var_dump($ret);
-// */
-
-// */
 
 
 ?>
