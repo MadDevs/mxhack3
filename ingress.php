@@ -100,7 +100,7 @@
         <h2 class="mdl-card__title-text">Ganancia de cada mes</h2>
 
       </div>
-      <div class="mdl-card__supporting-text">
+      <div class="mdl-card__supporting-text monthly_ingress">
 
         <!-- body -->
   <?php
@@ -115,12 +115,10 @@
       <div class="mdl-card__actions mdl-card--border">
 
         <!-- button -->
-        <form>
-          <input type="text" name="money" placeholder="100" style="color:black;">
-          <input type="submit" value="Agrega dinero mensual"
-            class="mdl-button mdl-js-button mdl-js-ripple-effect"
-            style="color:green;">
-        </form>
+        <input class="monthlyInput" type="text" name="money" placeholder="100" style="color:black;">
+        <button value="Agrega dinero mensual" style="color:green;"
+          class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
+          data-idu='1'>
 
     </div>
   </div>
@@ -165,6 +163,31 @@
 </body>
 
 <script>
+  $('.insertMonthly').on('click', function (e) {
+
+    e.preventDefault();
+    var idu = $(this).attr('data-idu');
+    var row = $('.monthly_ingress');
+    var amount = $
+
+    $.ajax({
+      type: 'post',
+      url: './createMonthlyTransaction.php',
+      data: {idu:idu},
+      success: function (json) {
+          $(row).innerHTML += "<div class='row'>+ "+
+          $(button).parent().hide();
+          console.log(button);
+
+      },
+      error: function (json) {
+        console.log(json);
+
+      }
+  });
+
+});
+
   $('.remove').on('click', function (e) {
 
     e.preventDefault();
