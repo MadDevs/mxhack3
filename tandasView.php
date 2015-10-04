@@ -37,7 +37,7 @@ $count = 0;
 var_dump(error_get_last());
 
 //$id = 1;
-$smtp = $mysqli->prepare("SELECT id_tanda, name, FROM Tanda WHERE id_user = 1");
+$smtp = $mysqli->prepare("SELECT id_tanda, name FROM Tanda WHERE id_user = 1");
 
 var_dump(error_get_last());
 
