@@ -101,11 +101,12 @@
           #title
           "<h2 class='mdl-card__title-text'>Mes ".$i+1."</h2>".
         "</div>".
-        "<div class='mdl-card__supporting-text'>".
+        "<div class='mdl-card__supporting-text'>";
           #body
           for($j = 0; $j < count($retI[$i]); $j++){
-            "<div class='row'>+ ".$retI[$i][$j]."</div>".
+            echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
           }
+      echo
         "</div>".
         #button
         "<div class='mdl-card__actions mdl-card--border'>".
