@@ -169,6 +169,7 @@
 
     alert(this);
     e.preventDefault();
+    /*
     var id = $(this).attr('data-id');
 
     $.ajax({
@@ -179,6 +180,7 @@
           alert(json);
 
       }
+     */
   });
 </script>
 </html>
