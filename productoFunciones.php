@@ -17,13 +17,13 @@ if($funcion == "addFav"){
     $smtp->execute();
 
     $smtp->close();
-	echo "addFav" . $id;
+	echo $id;
 }elseif ($funcion == "deleteProd") {
 	$smtp = $mysqli->prepare("UPDATE Product SET hidden = 1 WHERE name like ?");
     $smtp->bind_param("s",$id);
     $smtp->execute();
     $smtp->close();
-	echo "deleteProd" . $id;
+	echo $id;
 }
 
 ?>

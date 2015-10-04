@@ -68,8 +68,7 @@ $smtp->close();
     <p>&nbsp;</p>
     <p>&nbsp;</p>
 
-    <h2 class="text-center">Tu objetivo actual es comprar: <?php echo $favorite[0][0]?> con precio de $ <?php
-    echo $favorite[0][2]?></h2>
+    <h2 id="heading" class="text-center">Tu objetivo actual es comprar: <?php echo $favorite[0][0]?> con precio de $ <?php echo $favorite[0][2]?></h2>
     <p><a class="btn btn-lg btn-success center-block" href="productoChart.php" role="button">&iquest;Cuanto me falta?</a></p>
     <br>
 
@@ -124,6 +123,7 @@ $smtp->close();
           data: {funcion: "addFav", idprod: id},
           success: function(dtx){
            console.log(dtx);
+           $("#heading").text("Tu objetivo actual es comprar: " + dtx);
        },
        error: function (json) {
         console.log(json);
