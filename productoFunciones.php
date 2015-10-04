@@ -9,11 +9,11 @@ $funcion = $_POST['funcion'];
 $idprod = $_POST['idprod'];
 
 
-funcion addFav($id){
+function addFav($id){
 	echo "addFav" . $id;
 }
 
-funcion deleteProd($id){
+function deleteProd($id){
 	echo "deleteProd" . $id;
 }
 
