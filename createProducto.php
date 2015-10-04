@@ -1,5 +1,8 @@
 <?php include('./includes/conn.php');
 
+    $nameProducto = "";
+    $info = "";
+    $cost = "";
 
     $nameProducto = $_POST['name'];
     $info = $_POST['description'];
@@ -22,7 +25,7 @@
         echo "correct"  ;
     }
     else {
-        echo "error" . $smtp->error;
+        echo "error" . $smtp->error . $name; 
     }
     $smtp->close();
 
