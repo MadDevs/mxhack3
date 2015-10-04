@@ -147,15 +147,15 @@
         var idu = $(this).attr('data-idu');
         var row = $('.monthly_ingress');
         var amount = $('#ingresoFijo').val();
-
+        var button = $(this);
         $.ajax({
           type: 'post',
           url: './createMonthlyTransaction.php',
           data: {idu:idu, amount: amount},
           success: function (json) {
-            if ($.trim(json)=="correct") {
+            if ($.trim(json)!=0) {
 
-              $(row).innerHTML += "<div class='row'>+ "+
+              $(row).innerHTML += "<div class='row'>+ "+ amount+".00 <button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button></div>";
               $(button).parent().hide();
              
             }
