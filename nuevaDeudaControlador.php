@@ -7,12 +7,13 @@
  */
 
 
+include('./includes/conn.php');
 $name = $_GET['name'];
 $description = $_GET['description'];
 $quantity = $_GET['quantity'];
 $id_usuario = 1;
 
-$time = date("Y-m-d");
+
 
 $mysqli = con_start();
 
@@ -24,7 +25,8 @@ $smtp->execute();
 $smtp->free_result();
 $smtp->close();
 
-header('Location: deudas.php');
+header("Location: deudas.php");
+die();
 
 
 ?>

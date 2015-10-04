@@ -6,6 +6,7 @@
  * Time: 5:42 AM
  */
 
+include('./includes/conn.php');
 
 $tipo = $_GET['tipo'];
 $id_deudor = $_GET['id_deudor'];
@@ -46,7 +47,8 @@ else{
 
 }
 
-header('Location: deudas.php');
+header("Location: deudas.php");
+die();
 
 
 ?>
