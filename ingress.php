@@ -105,7 +105,7 @@
   <?php
     for($i = 0; $i < count($retM); $i++){
       echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0]).
-        "<button class='remove' data-id='1' value='Quitar ganancia'>".
+        "<button class='remove' data-id='1' value='remove' style='color:red;'>Quitar ganancia</button>".
         "</div>";
     }
   ?>
