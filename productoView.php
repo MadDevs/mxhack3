@@ -117,27 +117,35 @@ $smtp->close();
     </table>
     <script type="text/javascript">
     $('.addFav').on('click', function (e) {
-        console.log(this.id);
         var id = this.id;
         $.ajax({
           type: 'POST',
           url: './productoFunciones.php',
           data: {funcion: "addFav", idprod: id},
           success: function(dtx){
-             console.log(dtx);
-         }
-     });
+           console.log(dtx);
+       },
+       error: function (json) {
+        console.log(json);
+
+    }
+});
     });
 
     $('.deleteProd').on('click', function (e) {
+        var id = this.id;
         $.ajax({
           type: 'POST',
           url: './productoFunciones.php',
           data: {funcion: "deleteProd", idprod: id},
           success: function(dtx){
-             console.log(dtx);
-         }
-     });
+           console.log(dtx);
+       },
+       error: function (json) {
+        console.log(json);
+
+    }
+});
     });
     </script>
 </div><!-- /.container -->
