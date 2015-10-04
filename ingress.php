@@ -63,7 +63,6 @@
 
 
 <div class="container">
-  <div class="jumbotron">
     <div class="row">
       <div class="col-lg-12" style="padding-bottom: 50px;">
          <div class="mdl-card__title mdl-card--expand">
@@ -120,7 +119,7 @@
         for($i = 0; $i < 13; $i++){
           if(count($retI[$i]) > 0){
             $row = "<div class='table-responsive'>";
-            $row .=  "<table class='table'";
+            $row .=  "<table class='table'>";
             $row .=    "<thead>";
             $row .=      "<th colspan='3'>" . getMonth($i). "</th>";
             $row .=    "</thead>";
@@ -153,7 +152,7 @@
 
       </div>
     </div>
-  </div>
+  
 </div>
 
     <script>
