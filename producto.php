@@ -105,7 +105,7 @@
           $.ajax({
             type: 'post',
             url: 'createProducto.php',
-            data: $('#addTanda').serialize(),
+            data: $('#addProducto').serialize(),
             success: function (json) {
                     alert(json);
                     if ($.trim(json)=="correct") {
