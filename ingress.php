@@ -9,20 +9,21 @@
     $countI = 0;
 
     $id = 1;
-    $smtp = $mysqli->prepare("SELECT t.amount, t.monthly,
+    $smtp = $mysqli->prepare("SELECT t.amount, t.monthly, t.description,
       EXTRACT(MONTH FROM t.created), t.created, t.id_trans
       FROM Transaction t
-      WHERE t.id_user = ? AND t.is_active = 1 AND t.type = 1");
+      WHERE t.id_user = 1 AND t.is_active = 1 AND t.type = 1");
 
     $smtp->bind_param("i", $id);
     $smtp->execute();
     $smtp->store_result();
-    $smtp->bind_result($amount, $monthly, $month, $date, $idt);
+    $smtp->bind_result($amount, $monthly, $description , $month, $date, $idt);
 
     while ($smtp->fetch()) {
       if($monthly == 1){
          $retM[$countM][0] =  $amount;
          $retM[$countM][1] =  $idt;
+         $retM[$countM][2] =  $description;
          $countM++;
       } elseif($monthly == 0){
          $retI[$month][] =  array($amount, $idt);
@@ -93,7 +94,7 @@
 
                     echo "<tr>";
                     echo "<td style='background-color: #DFF0D8;' >+ " . money_format('%(#5n',$retM[$i][0]) . "</td>";
-                    echo "<td>" . "Descripcion" . "</td>";
+                    echo "<td>".$retM[$i][2]."</td>";
                     echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
                     echo "</tr>";
                   }
@@ -145,6 +146,7 @@
         }
       ?>
 
+          <h2>Tu total de ingresos es: $ 440000 pesos</h2>
 
 
       </div>
