@@ -179,7 +179,7 @@
 
       },
       error: function (json) {
-          alert("error");
+          alert(json);
 
       }
   });
