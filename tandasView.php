@@ -74,6 +74,17 @@ include ("head.php")
     <p>&nbsp;</p>
     <p>&nbsp;</p>
 
+    <h1>Crear una tanda</h1>
+
+    <form action="tandas.php">;
+
+        <button name="tipo" value="nueva" type="submit" class="btn btn-primary btn-lg btn-block"> Crear una nueva tanda</button>;
+
+    </form>;
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
     <h1>Selecciona el numero de tabla</h1>
 
     <?php
@@ -81,7 +92,7 @@ include ("head.php")
 
     foreach($ret as $tandas){
         echo '<form action="tandasSelect.php">';
-        echo '<button name="tipo" value="'.$tandas[0].'" type="submit" class="btn btn-primary btn-lg btn-block">'.$tandas[1].'</button>';
+        echo '<button name="tipo" value="'.$tandas[0].'" type="submit" class="btn btn-secondary btn-lg btn-block">'.$tandas[1].'</button>';
         echo '</form>';
     }
 
