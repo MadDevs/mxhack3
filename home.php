@@ -4,10 +4,11 @@
     $saldos = [];
     $saldo = 0;
     $fechaTanda = "";
-    $producto = "";
+    $favorite = [];
     $deudas = 0;
 
     $mysqli = con_start();
+
     /* REGRESA INGRESO TOTAL Y EGRESO TOTAL*/
     $smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a
 	LEFT JOIN mxhacks.Transaction b
@@ -25,10 +26,24 @@
         $saldos[0][0] =  $ingresos;
         $saldos[0][1] =  $egresos;
     }
-
     $saldo = $saldos[0][0] - $saldos[0][1];
-
     $smtp->free_result();
+
+    /*Consegir el favorito*/
+    $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1
+            AND id_trans = 1 AND hidden = 0");
+    $smtp->execute();
+    $smtp->store_result();
+    $smtp->bind_result($name, $info, $cost, $completed);
+
+    while($smtp->fetch()){
+        $favorite[0][0] =  $name;
+        $favorite[0][1] =  $info;
+        $favorite[0][2] =  $cost;
+    }
+
+$smtp->free_result();
+
     $smtp->close();
 
 ?>
@@ -186,7 +201,7 @@
                         <h4>
                             Productos<br>
                             Actualmente quieres<br>
-                            Bicicleta mono
+                            <?php echo $favorite[0][0]?>
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
