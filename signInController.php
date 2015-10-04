@@ -1,5 +1,6 @@
 <?php
 
-	echo $_POST["email"];
+header("Location: home.php");
+die();
 
 ?>
