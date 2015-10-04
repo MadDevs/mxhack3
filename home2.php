@@ -1,6 +1,5 @@
   <?php include('./includes/conn.php');
     $mysqli = con_start();
-    $ret = [];
     $countM = 0;
     $countI = 0;
 
@@ -20,7 +19,7 @@
          $retM[$countM][0] =  $amount;
          $countM++;
       } elseif($monthly == 0){
-         $retI[$month][0] =  $amount;
+         $retI[$month][] =  $amount;
       }
     }
     $smtp->free_result();
@@ -93,27 +92,69 @@
   <div class="col-md-6">
 
   <?php
-    for($i = 0; $i < count($retI); $i++){
-      echo
-      "<div class='mdl-card mdl-shadow--2dp'>".
-        "<div class='mdl-card__title mdl-card--expand'>".
-          #title
-          "<h2 class='mdl-card__title-text'>Mes ".$i+1."</h2>".
-        "</div>".
-        "<div class='mdl-card__supporting-text'>";
-          #body
-          for($j = 0; $j < count($retI[$i]); $j++){
-            echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
-          }
-      echo
-        "</div>".
-        #button
-        "<div class='mdl-card__actions mdl-card--border'>".
-          "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
-            "Agrega dinero".
-          "</a>".
-        "</div>".
-      "</div>";
+    for($i = 0; $i < 13; $i++){
+      if(count($retI[$i]) > 0){
+        echo
+        "<div class='mdl-card mdl-shadow--2dp'>".
+          "<div class='mdl-card__title mdl-card--expand'>".
+            #title
+          "<h2 class='mdl-card__title-text'>";
+        switch ($i) {
+            case 1:
+                echo "Enero";
+                break;
+            case 2:
+                echo "Febrero";
+                break;
+            case 3:
+                echo "Marzo";
+                break;
+            case 4:
+                echo "Abril";
+                break;
+            case 5:
+                echo "Mayo";
+                break;
+            case 6:
+                echo "Junio";
+                break;
+            case 7:
+                echo "Julio";
+                break;
+            case 8:
+                echo "Agosto";
+                break;
+            case 9:
+                echo "Septiembre";
+                break;
+            case 10:
+                echo "Octubre";
+                break;
+            case 11:
+                echo "Noviembre";
+                break;
+            case 12:
+                echo "Diciembre";
+                break;
+        }
+        echo
+          "</h2>".
+          "</div>".
+          "<div class='mdl-card__supporting-text'>";
+            #body
+            for($j = 0; $j < count($retI[$i]); $j++){
+              echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
+            }
+        echo
+          "</div>".
+          #button
+          "<div class='mdl-card__actions mdl-card--border'>".
+            "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
+              "Agrega dinero".
+            "</a>".
+          "</div>".
+        "</div>";
+      }
     }
   ?>
 

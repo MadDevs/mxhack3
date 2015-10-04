@@ -27,17 +27,22 @@ echo $row['prediccion'];
 
 // /*
 
+// /*
+
 include('./includes/conn.php');
 $mysqli = con_start();
 $ret = [];
 $count = 0;
 
+
 //$id = 1;
-$smtp = $mysqli->prepare("SELECT id_tanda, name, FROM Tanda WHERE id_user = 1");
+$smtp = $mysqli->prepare("SELECT id_tanda, name FROM Tanda WHERE id_user = 1");
 
 
 //$smtp->bind_param("i", $id);
 $smtp->execute();
+
+
 $smtp->store_result();
 $smtp->bind_result($id_tanda, $name);
 
@@ -46,12 +51,17 @@ while ($smtp->fetch()) {
     $ret[$count][0] =  $id_tanda;
     $ret[$count][1] =  $name;
 
+
     $count++;
 }
 //echo "test 3";
 
+
 $smtp->free_result();
 $smtp->close();
+
+var_dump($ret);
+// */
 
 // */
 
@@ -111,7 +121,20 @@ $smtp->close();
 </nav>
 
 <div class="container">
-    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <?php
+    //echo '<button type="button" class="btn btn-primary btn-lg btn-block">$ret[0]</button>';
+    foreach($ret as $ok){
+        echo '<button type="button" class="btn btn-primary btn-lg btn-block"> ' +$ok[0] +'</button>';
+    }
+
+
+    ?>
+
 
 
 </div>

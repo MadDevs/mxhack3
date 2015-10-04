@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caea6bbc-42a6-4236-be56-2471b7636f36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/producto.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/createProducto.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/listProductos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/producto.php" afterPath="$PROJECT_DIR$/producto.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxhack3 (GitHub Desktop).iws" />
@@ -25,21 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tandas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tandas.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="database.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.433735">
-              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+            <state vertical-scroll-proportion="-8.566265">
+              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -48,11 +40,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="producto.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createProducto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/createProducto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.0">
+              <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+              <folding>
+                <marker date="1443935068944" expanded="true" signature="376:487" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createTanda.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/createTanda.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.3076923">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="30" selection-end-column="19" />
+              <folding>
+                <marker date="1443933683962" expanded="true" signature="473:601" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="producto.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/producto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6441441">
-              <caret line="77" column="77" selection-start-line="77" selection-start-column="77" selection-end-line="77" selection-end-column="77" />
+            <state vertical-scroll-proportion="-24.0">
+              <caret line="84" column="80" selection-start-line="84" selection-start-column="80" selection-end-line="84" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conn.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/conn.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27211645">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/head.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5263157">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -78,7 +114,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/cover.css" />
         <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/listProductos.php" />
         <option value="$PROJECT_DIR$/producto.php" />
+        <option value="$PROJECT_DIR$/createProducto.php" />
       </list>
     </option>
   </component>
@@ -95,6 +133,22 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Blade files</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -149,6 +203,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mxhack3 (GitHub Desktop)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mxhack3 (GitHub Desktop)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -161,8 +229,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="SearchEverywhereHistoryKey" value="comm&#9;ACTION&#9;CommentByBlockComment&#10;replace&#9;ACTION&#9;Replace&#10;show line&#9;null&#9;null" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="SearchEverywhereHistoryKey" value="templ&#9;ACTION&#9;NewFromTemplate&#10;comm&#9;ACTION&#9;CommentByBlockComment&#10;replace&#9;ACTION&#9;Replace&#10;show line&#9;null&#9;null" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager">
@@ -293,26 +361,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/head.php">
+    <entry file="file://$PROJECT_DIR$/listProductos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2094065">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.02247191">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tandasView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1443934232882" expanded="true" signature="-1:-1" placeholder="SELECT id_ta..Tanda..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tandasSelect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tandas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding />
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="76" column="75" selection-start-line="76" selection-start-column="75" selection-end-line="76" selection-end-column="75" />
+          <folding>
+            <element signature="e#7#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tandasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1443933683983" expanded="true" signature="-1:-1" placeholder="SELECT id_ta..Tanda..." />
+            <marker date="1443933683983" expanded="true" signature="-1:-1" placeholder="SELECT nombr..UsuariosTanda..." />
+            <marker date="1443933683983" expanded="true" signature="-1:-1" placeholder="SELECT predi..predicciones..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.433735">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        <state vertical-scroll-proportion="-8.566265">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -320,10 +420,46 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/createTanda.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <marker date="1443933683962" expanded="true" signature="473:601" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/producto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6441441">
-          <caret line="77" column="77" selection-start-line="77" selection-start-column="77" selection-end-line="77" selection-end-column="77" />
+        <state vertical-scroll-proportion="-24.0">
+          <caret line="84" column="80" selection-start-line="84" selection-start-column="80" selection-end-line="84" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5263157">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0">
+          <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+          <folding>
+            <marker date="1443935068944" expanded="true" signature="376:487" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/conn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27211645">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="44" />
           <folding />
         </state>
       </provider>

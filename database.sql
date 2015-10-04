@@ -61,7 +61,7 @@ intervalo_dias int NOT NULL,
 num_personas int NOT NULL, 
 num_repeticiones int NOT NULL,
 cantidad int NOT NULL,
-id_active int NOT NULL,
+is_active int NOT NULL,
 fecha_inicial DATE NOT NULL,
 PRIMARY KEY (id_tanda)
 );
