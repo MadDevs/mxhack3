@@ -1,15 +1,16 @@
 <?php include('./includes/conn.php');
 
     $idu = $_POST['idu'];
+    $desc = $_POST['desc'];
     $amount = $_POST['amount'];
     $time = date("Y-m-d");
 
     $return = 0;
     $one = 1;
     $mysqli = con_start();
-    $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created)
-      VALUES(?,?,?,?,?)");
-    $smtp->bind_param("iiiis",$idu,$one, $amount,$one, $time);
+    $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description)
+      VALUES(?,?,?,?,?,?)");
+    $smtp->bind_param("iiiiss",$idu,$one, $amount,$one, $time, $desc);
     $smtp->execute();
 
     if (!$smtp->error) {
