@@ -17,7 +17,7 @@
     $count2 = 0;
     //$id = 1;
     $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1
-        AND id_trans = 0");
+        AND id_trans = 0 AND hidden = 0");
 
     $smtp->execute();
 
@@ -43,7 +43,7 @@
 
 
     $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1
-        AND id_trans = 1");
+        AND id_trans = 1 AND hidden = 0");
     $smtp->execute();
     $smtp->store_result();
     $smtp->bind_result($name, $info, $cost, $completed);
@@ -76,6 +76,8 @@
             <th>Producto</th>
             <th>Descripci&oacute;n</th>
             <th>Costo</th>
+            <th>Marcar como favorito</th>
+            <th>Eliminae</th>
         </tr>
         <?php
         foreach($notYet as $ok){
@@ -83,6 +85,8 @@
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
             echo "<td>".$ok[2]."</td>";
+            echo "<td><span class='glyphicon glyphicon-star' aria-hidden='true'></span></td>";
+            echo "<td><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></td>";
             echo "</tr>";
         }
         ?>
@@ -95,6 +99,7 @@
             <th>Producto</th>
             <th>Descripci&oacute;n</th>
             <th>Costo</th>
+            <th>Eliminar</th>
         </tr>
         <?php
         foreach($done as $ok){
@@ -102,7 +107,7 @@
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
             echo "<td>".$ok[2]."</td>";
-            echo "<td><span class='glyphicon glyphicon-search' aria-hidden='true'></span></td>";
+            echo "<td><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></td>";
             echo "</tr>";
         }
         ?>
