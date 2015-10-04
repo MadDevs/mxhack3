@@ -93,9 +93,18 @@ $smtp->close();
                     </div>
                 </div>
             </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <h2>"Detallado"</h2>
+        <h2>Detallado</h2>
 
 
         <h2 style="color: #468847;">Ingresos</h2>
