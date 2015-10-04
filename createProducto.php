@@ -16,8 +16,10 @@
     $id_user = 1;
 
     $smtp = $mysqli->prepare("INSERT INTO Product(id_user, name,
-              description, amount, completed, id_trans) VALUES (?,?,?,?,?,?) ");
-    var_dump(error_get_last());
+              description, amount, completed, id_trans) VALUES (?,?,?,?,?,?)");
+    echo "INSERT INTO Product(id_user, name,
+              description, amount, completed, id_trans) VALUES ($id_user, $nameProducto, $info, $cost, 1, 1)";
+
     $smtp->bind_param("issiii", $id_user, $nameProducto, $info, $cost, 1, 1);
     var_dump(error_get_last());
     $smtp->execute();
