@@ -175,8 +175,8 @@
       url: './removeTransaction.php',
       data: {id:id},
       success: function (json) {
-          alert(json);
           $(this).parent().hide();
+          console.log(this);
 
       },
       error: function (json) {
