@@ -167,9 +167,13 @@
           success: function (json) {
             
             if ($.trim(json)!=0) {
-              var addition = "<div class='row'>+ "+ amount+".00 <button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button></div>";
               
-              $(row).append(addition);
+              var newRow = "<tr>";
+                  newRow += "<td>+ " + amount ".00</td>";
+                  newRow += "<td>Descripcion</td>";
+                  newRow += "<td><button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button>":
+                  newRow += "</tr>";
+              $(row).append(newRow);
               
              
             }
@@ -190,7 +194,7 @@
           url: './removeTransaction.php',
           data: {id:id},
           success: function (json) {
-              $(button).parent().hide();
+              $(button).parent().parent().hide();
               
 
           },
