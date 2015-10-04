@@ -25,23 +25,7 @@
     <link href="css/signin.css" rel="stylesheet">
 
   </head>
-  <?php include('./includes/conn.php'); 
-    $mysqli = con_start();
 
-    $smtp = $mysqli->prepare("SELECT count(*) FROM User");
-    
-    $smtp->execute();
-    $smtp->store_result();    
-    $smtp->bind_result($count);
-    while ($smtp->fetch()) {
-         echo $count . " tessttttt ";
-    }
-    $smtp->free_result();
-    $smtp->close();
-
-
-
-  ?>  
   <body>
 
     <div class="container">
