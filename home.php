@@ -7,6 +7,7 @@
     $producto = "";
     $deudas = 0;
 
+    echo "Empieza";
     /* REGRESA INGRESO TOTAL Y EGRESO TOTAL*/
     $smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a
 	LEFT JOIN mxhacks.Transaction b
@@ -16,10 +17,12 @@
 	on a.id_trans = c.id_trans
 	AND c.type = 2");
     $smtp->execute();
+    echo "done";
     $smtp->store_result();
 
     $smtp->bind_result($ingresos, $egresos);
 
+    echo "Antes while";
     while($smtp->fetch()){
         $saldos[0][0] =  $ingresos;
         $saldos[0][1] =  $egresos;
