@@ -39,11 +39,12 @@ if($tipo == "pagado"){
 
     $mysqli = con_start();
 
-    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = '.$id_deudor.'");
+    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = ?");
+    $smtp->bind_param("i",$id_deudor);
     $smtp->execute();
 
     $smtp->free_result();
-    $smtp->commit();
+   // $smtp->commit();
     $smtp->close();
 
 
@@ -56,14 +57,15 @@ else{
 
     $mysqli = con_start();
 
-    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = '.$id_deudor.'");
+    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = ?");
+    $smtp->bind_param("i",$id_deudor);
 
     $smtp->execute();
 
     //
 
     $smtp->free_result();
-    $smtp->commit();
+    //$smtp->commit();
 
     $smtp->close();
 
@@ -71,8 +73,8 @@ else{
 
 }
 
-//header("Location: deudas.php");
-//die();
+header("Location: deudas.php");
+die();
 
 
 ?>
