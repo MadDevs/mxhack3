@@ -7,21 +7,24 @@
     $id = 1;
     $smtp = $mysqli->prepare("SELECT t.amount, t.monthly,
       EXTRACT(MONTH FROM t.created), t.created, t.id_trans
+      t.is_active
       FROM Transaction t
       WHERE t.id_user = ? AND t.is_active = 1");
 
     $smtp->bind_param("i", $id);
     $smtp->execute();
     $smtp->store_result();
-    $smtp->bind_result($amount, $monthly, $month, $date, $idt);
+    $smtp->bind_result($amount, $monthly, $month, $date, $idt, $active);
 
     while ($smtp->fetch()) {
-      if($monthly == 1){
-         $retM[$countM][0] =  $amount;
-         $retM[$countM][1] =  $idt;
-         $countM++;
-      } elseif($monthly == 0){
-         $retI[$month][] =  array($amount, $idt);
+      if($active == 1){
+        if($monthly == 1){
+           $retM[$countM][0] =  $amount;
+           $retM[$countM][1] =  $idt;
+           $countM++;
+        } elseif($monthly == 0){
+           $retI[$month][] =  array($amount, $idt);
+        }
       }
     }
     $smtp->free_result();
@@ -176,7 +179,7 @@
       data: {id:id},
       success: function (json) {
           alert(json);
-          $(this).parent.hide;
+          $(this).parent().hide();
 
       },
       error: function (json) {
