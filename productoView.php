@@ -65,8 +65,8 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
 
-    <h2>Tu objetivo actual es comprar: <?php echo ".$favorite[0]."?> con precio de $ <?php
-        echo $favorite[2]?></h2><br>
+    <h2>Tu objetivo actual es comprar: <?php echo $favorite[0][0]?> con precio de $ <?php
+        echo $favorite[0][2]?></h2><br>
 
     <h2>Estos son los productos que estan marcados como objetivos pr&oacute;ximos</h2>
     <table class="table">
