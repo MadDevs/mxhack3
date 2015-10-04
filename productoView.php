@@ -10,23 +10,32 @@
     include ("head.php");
 
     $mysqli = con_start();
-    $ret = [];
-    $count = 0;
+    $notYet = [];
+    $done = [];
+    $count1 = 0;
+    $count2 = 0;
     //$id = 1;
-    $smtp = $mysqli->prepare("SELECT name, description, amount FROM Product WHERE id_user = 1");
+    $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1");
 
     //$smtp->bind_param("i", $id);
     $smtp->execute();
 
     $smtp->store_result();
-    $smtp->bind_result($name, $info, $cost);
+    $smtp->bind_result($name, $info, $cost, $completed);
 
 
     while ($smtp->fetch()) {
-        $ret[$count][0] =  $name;
-        $ret[$count][1] =  $info;
-        $ret[$count][2] =  $cost;
-        $count++;
+        if($completed == 1){
+            $done[$count2][0] =  $name;
+            $done[$count2][1] =  $info;
+            $done[$count2][2] =  $cost;
+            $count2++;
+        } else {
+            $notYet[$count1][0] =  $name;
+            $notYet[$count1][1] =  $info;
+            $notYet[$count1][2] =  $cost;
+            $count1++;
+        }
     }
 
     $smtp->free_result();
@@ -38,6 +47,8 @@
 <div class="container">
     <p>&nbsp;</p>
     <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h2>Estos son los productos que estan marcados como objetivos</h2>
     <table class="table">
         <tr>
             <th>Producto</th>
@@ -45,7 +56,7 @@
             <th>Costo</th>
         </tr>
         <?php
-        foreach($ret as $ok){
+        foreach($notYet as $ok){
             echo "<tr>";
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
