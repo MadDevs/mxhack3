@@ -4,10 +4,11 @@
     $info = "";
     $cost = "";
 
-    $nameProducto = $_POST['name'];
+    $nameProducto = $_POST['nameProducto'];
     $info = $_POST['description'];
     $cost = $_POST['amount'];
 
+    var_dump($nameProducto, $info, $cost);
 
     $mysqli = con_start();
     $id_user = 1;

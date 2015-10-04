@@ -65,9 +65,9 @@
 
     <form id="addProducto" name="newProduct" class="form-horizontal" action="createProducto.php" method="POST">
         <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Nombre del art&iacute;culo</label>
+            <label for="nameProducto" class="col-sm-2 control-label">Nombre del art&iacute;culo</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="name" id="name" placeholder="Ejemplo: Lavadora, motocicleta, television..">
+                <input type="text" class="form-control" name="nameProducto" id="nameProducto" placeholder="Ejemplo: Lavadora, motocicleta, television..">
             </div>
         </div>
 
