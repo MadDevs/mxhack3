@@ -115,7 +115,7 @@
       <div class="mdl-card__actions mdl-card--border">
 
         <!-- button -->
-        <input class="monthlyInput" type="text" name="money" placeholder="100" style="color:black;">
+        <input class="monthly_input" type="text" name="money" placeholder="100" style="color:black;">
         <button value="Agrega dinero mensual" style="color:green;"
           class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
           data-idu='1'>
@@ -168,14 +168,15 @@
     e.preventDefault();
     var idu = $(this).attr('data-idu');
     var row = $('.monthly_ingress');
-    var amount = $
+    var amount = $('.monthly_input');
 
     $.ajax({
       type: 'post',
       url: './createMonthlyTransaction.php',
       data: {idu:idu},
       success: function (json) {
-          $(row).innerHTML += "<div class='row'>+ "+
+        $(row).innerHTML += "<div class='row'>+ "+$(amount)+
+
           $(button).parent().hide();
           console.log(button);
 
