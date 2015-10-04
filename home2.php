@@ -26,7 +26,7 @@
     }
     $smtp->free_result();
     $smtp->close();
-    var_dump(retI);
+    print_r(retI);
   ?>
 
 <!DOCTYPE HTML>
