@@ -28,13 +28,13 @@ include('./includes/conn.php');
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">Nombre</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="name" placeholder="nombre">
+                    <input type="text" class="form-control" name="name" placeholder="Nombre">
                 </div>
             </div>
             <div class="form-group">
                 <label for="description" class="col-sm-2 control-label">Descripcion</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="description" placeholder="descripcion">
+                    <input type="text" class="form-control" name="description" placeholder="Descripcion">
                 </div>
             </div>
             <div class="form-group">

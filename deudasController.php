@@ -18,6 +18,8 @@ $time = date("Y-m-d");
 $type = 1;
 $created = 0;
 
+echo $tipo.$id_usuario.$id_deudor.$cantidad.$nombre.$descripcion.$time.$type.$time.$created;
+
 
 if($tipo == "pagado"){
 
@@ -47,8 +49,8 @@ else{
 
 }
 
-header("Location: deudas.php");
-die();
+//header("Location: deudas.php");
+//die();
 
 
 ?>
