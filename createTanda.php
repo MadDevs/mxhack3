@@ -22,10 +22,10 @@
     $smtp->execute();
  
     if (!$smtp->error) {
-      echo "correct";
+      echo "correct"  ;
     }
     else {
-      echo "error";
+      echo "error" + $smtp->error;
     }
     $smtp->close();
     
