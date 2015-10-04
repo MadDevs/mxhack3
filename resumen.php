@@ -64,32 +64,7 @@
     for(int $i = 1; $i < 13; $i++){
       if(count($arrI[$i]) > 0 && count($arrE[$i])){
         echo
-        "<div class='row'>".
-          "<div class='row'>".$i."</div>".
-          "<div class='row'>".
-            "<div class='col-md-6' style='color:green;'>Ingreso</div>".
-            "<div class='col-md-6' style='color:red;'>Egreso:</div>".
-          "</div>".
-          "<div class='row'>".
-            "<div class='col-md-6' style='color:green;'>";
-            for(int $j = 0; $j < count($arrI[$i]); $j++){
-              echo
-                "<div class='row' style='color:green;'>+ ".
-                  $arrI[$i][$j]."</div>"
-            }
-
-          echo
-            "</div>".
-            "<div class='col-md-6' style='color:red;'>";
-            for(int $j = 0; $j < count($arrE[$i]); $j++){
-              echo
-                "<div class='row' style='color:red;'>- ".
-                  $arrE[$i][$j]."</div>"
-            }
-          echo
-            "</div>".
-          "</div>".
-        "</div>";
+        "<div class='row'>"
       }
     }
     ?>
