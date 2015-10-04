@@ -26,13 +26,7 @@
             <div class="form-group">
                 <label for="Intervalo" class="col-sm-2 control-label">Intervalo</label>
                 <div class="col-sm-10">
-
-
-                    <select class="form-control" id="intervalo" name="intervalo">
-                        <option value="1" id="intervalo1">1 semana</option>
-                        <option value="2" id="intervalo2">2 semanas</option>
-                        <option value="3" id="intervalo3">1 mes</option>
-                    </select>
+                    <input type="number" name="intervalo" class="form-control" id="intervalo" placeholder="Cada cuando se colecta dinero">
                 </div>
             </div>
 
@@ -118,7 +112,7 @@
 
 
 
-$('addTanda').on('submit', function (e) {
+$('#addTanda').on('submit', function (e) {
 
   e.preventDefault();
 

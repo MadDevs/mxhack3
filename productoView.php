@@ -48,7 +48,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <h2>Estos son los productos que estan marcados como objetivos</h2>
+    <h2>Estos son los productos que estan marcados como objetivos pr&oacute;ximos</h2>
     <table class="table">
         <tr>
             <th>Producto</th>
@@ -57,6 +57,24 @@
         </tr>
         <?php
         foreach($notYet as $ok){
+            echo "<tr>";
+            echo "<td>".$ok[0]."</td>";
+            echo "<td>".$ok[1]."</td>";
+            echo "<td>".$ok[2]."</td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
+
+    <h2>Estos son los productos que has comprado, &iexcl;Felicidades!</h2>
+    <table class="table">
+        <tr>
+            <th>Producto</th>
+            <th>Descripci&oacute;n</th>
+            <th>Costo</th>
+        </tr>
+        <?php
+        foreach($done as $ok){
             echo "<tr>";
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
