@@ -24,6 +24,35 @@
     }
     $smtp->free_result();
     $smtp->close();
+
+    function getMonth ($i){
+        switch ($i) {
+            case 1:
+                return "Enero";
+            case 2:
+                return "Febrero";
+            case 3:
+                return "Marzo";
+            case 4:
+                return "Abril";
+            case 5:
+                return "Mayo";
+            case 6:
+                return "Junio";
+            case 7:
+                return "Julio";
+            case 8:
+                return "Agosto";
+            case 9:
+                return "Septiembre";
+            case 10:
+                return "Octubre";
+            case 11:
+                return "Noviembre";
+            case 12:
+                return "Diciembre";
+        }
+    }
   ?>
 
 <!DOCTYPE HTML>
@@ -98,46 +127,7 @@
         "<div class='mdl-card mdl-shadow--2dp'>".
           "<div class='mdl-card__title mdl-card--expand'>".
             #title
-          "<h2 class='mdl-card__title-text'>";
-        switch ($i) {
-            case 1:
-                echo "Enero";
-                break;
-            case 2:
-                echo "Febrero";
-                break;
-            case 3:
-                echo "Marzo";
-                break;
-            case 4:
-                echo "Abril";
-                break;
-            case 5:
-                echo "Mayo";
-                break;
-            case 6:
-                echo "Junio";
-                break;
-            case 7:
-                echo "Julio";
-                break;
-            case 8:
-                echo "Agosto";
-                break;
-            case 9:
-                echo "Septiembre";
-                break;
-            case 10:
-                echo "Octubre";
-                break;
-            case 11:
-                echo "Noviembre";
-                break;
-            case 12:
-                echo "Diciembre";
-                break;
-        }
-        echo
+          "<h2 class='mdl-card__title-text'>".getMonth($i).
           "</h2>".
           "</div>".
           "<div class='mdl-card__supporting-text'>";
@@ -150,7 +140,7 @@
           #button
           "<div class='mdl-card__actions mdl-card--border'>".
             "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
-              "Agrega dinero".
+              "Agrega dinero a".getMonth($i).
             "</a>".
           "</div>".
         "</div>";
