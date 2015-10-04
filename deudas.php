@@ -72,7 +72,7 @@ $smtp->close();
              echo '<td>'.$personas[2].'</td>';
              echo '<td>'.$personas[3].'</td>';
              echo '<td>'.$personas[4].'</td>';
-             echo '<td> <form> <label class="checkbox-inline"><input type="checkbox" id="inlineCheckbox1" value="option1"> Pagado </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" value="option2"> X </label><button type="submit" class="btn btn-default">Submit</button> </form> </td>';
+             echo '<td><form action="deudasController.php"><button name="tipo" value="pagado" type="submit" >Pagado</button><button name="tipo" value="hide" type="submit" >Eliminar X</button></form></td>';
          }
 
          ?>
@@ -83,14 +83,6 @@ $smtp->close();
 
 
 </div>
-
-
-
-
-
-
-
-
 
 
 <?php

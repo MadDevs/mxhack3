@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caea6bbc-42a6-4236-be56-2471b7636f36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productoView.php" afterPath="$PROJECT_DIR$/productoView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createProducto.php" afterPath="$PROJECT_DIR$/createProducto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/producto.php" afterPath="$PROJECT_DIR$/producto.php" />
     </list>
     <ignored path="mxhack3 (GitHub Desktop).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,9 +28,46 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="64.42308">
+            <state vertical-scroll-proportion="50.757576">
               <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="producto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/producto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-30.73077">
+              <caret line="47" column="98" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createProducto.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/createProducto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.52407616">
+              <caret line="35" column="110" selection-start-line="35" selection-start-column="110" selection-end-line="35" selection-end-column="110" />
+              <folding>
+                <marker date="1443959436479" expanded="true" signature="567:617" placeholder="UPDATE Produ..." />
+                <marker date="1443959436479" expanded="true" signature="738:871" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createTanda.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/createTanda.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="51" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="51" />
+              <folding>
+                <marker date="1443953964320" expanded="true" signature="492:629" placeholder="INSERT INTO ..." />
+                <marker date="1443953964320" expanded="true" signature="1019:1076" placeholder="SELECT id_ta..Tanda..." />
+                <marker date="1443953964320" expanded="true" signature="1397:1462" placeholder="INSERT INTO ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,18 +95,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productoView.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="productoView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/productoView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6692913">
-              <caret line="109" column="168" selection-start-line="109" selection-start-column="168" selection-end-line="109" selection-end-column="168" />
+            <state vertical-scroll-proportion="-10.733334">
+              <caret line="93" column="49" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="49" />
               <folding>
-                <marker date="1443958005633" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
-                <marker date="1443958005633" expanded="true" signature="357:471" placeholder="SELECT name,..Product..." />
-                <marker date="1443958005633" expanded="true" signature="1027:1126" placeholder="SELECT name,..Product..." />
-                <marker date="1443958005633" expanded="true" signature="1027:1141" placeholder="SELECT name,..Product..." />
-                <marker date="1443958005633" expanded="true" signature="2925:3294" placeholder="..." />
-                <marker date="1443958005633" expanded="true" signature="2938:3079" placeholder="..." />
+                <marker date="1443958049135" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
+                <marker date="1443958049135" expanded="true" signature="357:471" placeholder="SELECT name,..Product..." />
+                <marker date="1443958049135" expanded="true" signature="1027:1126" placeholder="SELECT name,..Product..." />
+                <marker date="1443958049135" expanded="true" signature="1027:1141" placeholder="SELECT name,..Product..." />
+                <marker date="1443958049135" expanded="true" signature="2925:3294" placeholder="..." />
+                <marker date="1443958049135" expanded="true" signature="2938:3079" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -97,11 +134,11 @@
         <option value="$PROJECT_DIR$/foot.php" />
         <option value="$PROJECT_DIR$/tandasView.php" />
         <option value="$PROJECT_DIR$/css/cover.css" />
-        <option value="$PROJECT_DIR$/createProducto.php" />
-        <option value="$PROJECT_DIR$/producto.php" />
         <option value="$PROJECT_DIR$/head.php" />
         <option value="$PROJECT_DIR$/productoReview.php" />
         <option value="$PROJECT_DIR$/productoView.php" />
+        <option value="$PROJECT_DIR$/producto.php" />
+        <option value="$PROJECT_DIR$/createProducto.php" />
       </list>
     </option>
   </component>
@@ -299,12 +336,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1443958005633" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
-            <marker date="1443958005633" expanded="true" signature="357:471" placeholder="SELECT name,..Product..." />
-            <marker date="1443958005633" expanded="true" signature="1027:1126" placeholder="SELECT name,..Product..." />
-            <marker date="1443958005633" expanded="true" signature="1027:1141" placeholder="SELECT name,..Product..." />
-            <marker date="1443958005633" expanded="true" signature="2925:3294" placeholder="..." />
-            <marker date="1443958005633" expanded="true" signature="2938:3079" placeholder="..." />
+            <marker date="1443958049135" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
+            <marker date="1443958049135" expanded="true" signature="357:471" placeholder="SELECT name,..Product..." />
+            <marker date="1443958049135" expanded="true" signature="1027:1126" placeholder="SELECT name,..Product..." />
+            <marker date="1443958049135" expanded="true" signature="1027:1141" placeholder="SELECT name,..Product..." />
+            <marker date="1443958049135" expanded="true" signature="2925:3294" placeholder="..." />
+            <marker date="1443958049135" expanded="true" signature="2938:3079" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -340,6 +377,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -354,6 +392,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -422,22 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createTanda.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/createProducto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4568869">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="27" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -459,9 +482,9 @@
         <state vertical-scroll-proportion="-1.3135499">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1443953964374" expanded="true" signature="-1:-1" placeholder="SELECT id_ta..Tanda..." />
-            <marker date="1443953964374" expanded="true" signature="-1:-1" placeholder="SELECT nombr..UsuariosTanda..." />
-            <marker date="1443953964374" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1443958037470" expanded="true" signature="-1:-1" placeholder="SELECT id_ta..Tanda..." />
+            <marker date="1443958037470" expanded="true" signature="-1:-1" placeholder="SELECT nombr..UsuariosTanda..." />
+            <marker date="1443958037470" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -487,14 +510,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/producto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77715564">
-          <caret line="49" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/cover.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -503,25 +518,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/productoView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.733334">
+          <caret line="93" column="49" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="49" />
+          <folding>
+            <marker date="1443958049135" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
+            <marker date="1443958049135" expanded="true" signature="357:471" placeholder="SELECT name,..Product..." />
+            <marker date="1443958049135" expanded="true" signature="1027:1126" placeholder="SELECT name,..Product..." />
+            <marker date="1443958049135" expanded="true" signature="1027:1141" placeholder="SELECT name,..Product..." />
+            <marker date="1443958049135" expanded="true" signature="2925:3294" placeholder="..." />
+            <marker date="1443958049135" expanded="true" signature="2938:3079" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="64.42308">
+        <state vertical-scroll-proportion="50.757576">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productoView.php">
+    <entry file="file://$PROJECT_DIR$/producto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6692913">
-          <caret line="109" column="168" selection-start-line="109" selection-start-column="168" selection-end-line="109" selection-end-column="168" />
+        <state vertical-scroll-proportion="-30.73077">
+          <caret line="47" column="98" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createTanda.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="51" />
           <folding>
-            <marker date="1443958005633" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
-            <marker date="1443958005633" expanded="true" signature="357:471" placeholder="SELECT name,..Product..." />
-            <marker date="1443958005633" expanded="true" signature="1027:1126" placeholder="SELECT name,..Product..." />
-            <marker date="1443958005633" expanded="true" signature="1027:1141" placeholder="SELECT name,..Product..." />
-            <marker date="1443958005633" expanded="true" signature="2925:3294" placeholder="..." />
-            <marker date="1443958005633" expanded="true" signature="2938:3079" placeholder="..." />
+            <marker date="1443953964320" expanded="true" signature="492:629" placeholder="INSERT INTO ..." />
+            <marker date="1443953964320" expanded="true" signature="1019:1076" placeholder="SELECT id_ta..Tanda..." />
+            <marker date="1443953964320" expanded="true" signature="1397:1462" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52407616">
+          <caret line="35" column="110" selection-start-line="35" selection-start-column="110" selection-end-line="35" selection-end-column="110" />
+          <folding>
+            <marker date="1443959436479" expanded="true" signature="567:617" placeholder="UPDATE Produ..." />
+            <marker date="1443959436479" expanded="true" signature="738:871" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
