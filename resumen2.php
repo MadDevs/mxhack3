@@ -83,13 +83,14 @@ $smtp->close();
 
 
 
-        <div class="row">
+        <div class="row text-center">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
 
                     <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>...</p>
+                        <h3>Ingresos</h3>
+                        <h3><?php echo $saldos[0][0]; ?></h3>
+
                     </div>
                 </div>
             </div>
@@ -97,8 +98,21 @@ $smtp->close();
                 <div class="thumbnail">
 
                     <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>...</p>
+
+                        <h3>Egresos</h3>
+                        <h3><?php echo $saldos[0][1]; ?></h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+
+                    <div class="caption">
+
+                        <h3>Total</h3>
+                        <h3><?php echo ($saldos[0][0] - $saldos[0][1]) ; ?></h3>
+
                     </div>
                 </div>
             </div>
