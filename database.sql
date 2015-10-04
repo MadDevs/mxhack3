@@ -10,6 +10,7 @@ last_name varchar(255) NOT NULL ,
 address varchar(255),
 credit_candidate int NOT NULL DEFAULT 0 ,
 monthly_earnings int NOT NULL DEFAULT 0 ,
+current_savings int NOT NULL DEFAULT 0,
 has_partner int NOT NULL DEFAULT 0 ,
 PRIMARY KEY (id_user)
 );
