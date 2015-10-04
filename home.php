@@ -25,14 +25,14 @@
     <link href="css/cover.css" rel="stylesheet">
 
     <!-- Material design content -->
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.light_blue-light_green.min.css" />
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.green-light_green.min.css" />
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <style>
         .demo-card-event.mdl-card {
-            width: 200px;
-            height: 200px;
+            width: 240px;
+            height: 240px;
             margin-left: 20px;
             margin-top: 20px;
             background: #03A9F4;
@@ -77,7 +77,7 @@
             </div>
             <!-- CARDS SPACE -->
             <div class="inner cover">
-                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#4BAF4F">
                         <div class="mdl-card__title mdl-card--expand">
                             <h4>Ingresos<br>
                                 Tienes <br>
@@ -93,7 +93,7 @@
                         </div>
                 </div>
 
-                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#3F51B5">
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>Egresos<br>
                             Debes<br>
@@ -109,7 +109,7 @@
                     </div>
                 </div>
 
-                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#E91E63">
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>
                             Resumen<br>
@@ -128,7 +128,7 @@
 
                 <br>
 
-                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#FF5722">
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>
                             Tanda<br>
@@ -145,7 +145,7 @@
                     </div>
                 </div>
 
-                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#FFC107">
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>
                             Productos<br>
@@ -162,7 +162,7 @@
                     </div>
                 </div>
 
-                <div class="demo-card-event mdl-card mdl-shadow--2dp">
+                <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#CDDC39">
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>
                             ???<br>
