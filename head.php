@@ -40,11 +40,10 @@
                 <li class="active"><a href="home.php">Inicio</a></li>
                 <li><a href="ingress.php">Ingresos</a></li>
                 <li><a href="egress.php">Egresos</a></li>
-                <li><a href="#">Resumen</a></li>
+                <li><a href="resumen2.php">Resumen</a></li>
                 <li><a href="tandasView.php">Tanda</a></li>
                 <li><a href="productoView.php">Productos deseados</a></li>
                 <li><a href="deudas.php">Deudas</a></li>
-                <li><a href="#">Ayuda</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
