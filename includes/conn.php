@@ -16,5 +16,5 @@ function con_start() {
     /* change character set to utf8 */
     $mysqli->set_charset("utf8_spanish_ci");
     return $mysqli;
-}
+} 
 ?>
