@@ -55,8 +55,8 @@ var_dump(error_get_last());
 	</div>
 </div>
 <div class="col-sm-2"></div>
-<div class="text-center">
-	<button id="completed" class="">Producto adquirido</button>
+<div class="text-center col-sm-12">
+	<button id="<?php $favorite[0][0]?>" class="completed">Producto adquirido</button>
 </div>
 
 <script type="text/javascript">
