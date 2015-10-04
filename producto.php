@@ -91,9 +91,9 @@
         <p>&nbsp;</p>
 
         <button type="submit" class="btn btn-default">Guardar</button>
+        <p class="bg-success" style="display: none; " id="success">Producto agregado correctamente</p>
+        <p class="bg-success" style="display: none; " id="error">Error al agregar producto</p>
     </form>
-    <p class="bg-success" style="display: none; " id="success">Producto agregado correctamente</p>
-    <p class="bg-success" style="display: none; " id="error">Error al agregar producto</p>
 </div><!-- /.container -->
  <script>
 
@@ -107,7 +107,7 @@
             url: 'createTanda.php',
             data: $('#addTanda').serialize(),
             success: function (json) {
-                    
+                    alert(json);
                     if ($.trim(json)=="correct") {
 
                         setTimeout(function() {$("#success").show();}, 1000);
