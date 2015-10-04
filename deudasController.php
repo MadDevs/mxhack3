@@ -19,7 +19,7 @@ $type = 1;
 $created = 0;
 $hidden = 1;
 $nombremejor =  $nombre." pago su deuda";
-echo $tipo.$id_usuario.$id_deudor.$cantidad.$nombre.$descripcion.$time.$type.$time.$created;
+//echo $tipo.$id_usuario.$id_deudor.$cantidad.$nombre.$descripcion.$time.$type.$time.$created;
 
 
 if($tipo == "pagado"){
@@ -38,7 +38,7 @@ if($tipo == "pagado"){
     $smtp->close();
 
     $mysqli = con_start();
-    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = '.$hidden.' WHERE id_deudor = '.$id_deudor.'");
+    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = '.$id_deudor.'");
     $smtp->execute();
     $smtp->free_result();
     $smtp->close();
@@ -48,11 +48,12 @@ if($tipo == "pagado"){
 else{
 
 
+    echo $id_deudor;
     echo "borrar";
 
     $mysqli = con_start();
     echo "borrar";
-    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = '.$hidden.' WHERE id_deudor = '.$id_deudor.'");
+    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = '.$id_deudor.'");
     echo "borrar";
     $smtp->execute();
     echo "borrar";
