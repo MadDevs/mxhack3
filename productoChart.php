@@ -85,8 +85,7 @@ function drawBasic() {
 	data.addRows(dataArray);		
 
 	var options = {
-		title: 'Tu objetivo actual es comprar:' + <?php echo $favorite[0][0]?> + ' con precio de $ ' +
-		<?php echo $favorite[0][2]?>,
+		title: <?php 'Tu objetivo actual es comprar:' . $favorite[0][0] . ' con precio de $ ' . $favorite[0][2]?>,
 		hAxis: {
 			title: 'Time',
 			ticks: dataDate
