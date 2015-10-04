@@ -5,6 +5,7 @@
 </head>
 <body>
 
+<div class="row">
   <div class="col-md-6">
     <div class="row">Cada mes</div>
 
@@ -29,6 +30,7 @@
     </div>
 
   </div>
+</div>
 
 </body>
 </html>
