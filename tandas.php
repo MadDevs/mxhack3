@@ -132,7 +132,7 @@
         </form>
 
         <script>
-        $("#numPeople").keyDown(function() {
+        $("#numPeople").keydown(function() {
             var number =  $("#numPeople").val();
             $("#personas").empty();
             var strDiv = "";
