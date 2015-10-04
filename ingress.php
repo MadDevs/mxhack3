@@ -113,8 +113,10 @@
 
         <!-- button -->
         <form>
-          <input type="text" name="money">
-          <input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:green;">
+          <input type="text" name="money" style="color:black;">
+          <input type="submit" value="Agrega dinero mensual"
+            class="mdl-button mdl-js-button mdl-js-ripple-effect"
+            style="color:green;">
         </form>
 
     </div>
