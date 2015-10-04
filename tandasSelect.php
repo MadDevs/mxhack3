@@ -174,6 +174,7 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
         </table>
 
      */
+    $cuentaDias = 1;
 
     echo '<table class="table table-bordered">';
     echo    '<thead>';
@@ -192,12 +193,12 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
     for($i = 0; $i< $ret[0][3]; $i++){
 
         echo        '<tr>';
-        echo       '<td>periodo'.($i + 1).'</td>';
+        echo       '<td>Dia '.$cuentaDias.' - '.($ret[0][2] * ($cicloActual +1)).'</td>';
         for($j = 0; $j< $ret[0][3]; $j++){
             if($turno1[$i]==($j + 1 ))
                 echo    '<td style="color: #468847; background-color: #DFF0D8;">'.($ret[0][5] * $ret[0][3] ).'</td>';
             else
-                echo '<td>'.$ret[0][5].'</td>';
+                echo '<td>-'.$ret[0][5].'</td>';
 
         }
         echo        '</tr>';
