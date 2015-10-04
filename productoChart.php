@@ -92,9 +92,12 @@ function drawBasic() {
 	];
 
 	var dataArray = new Array();
-	var costoSemanal = dineroAhorrado / dataDate.length;
+	var weeks = (weekDiff(new Date(2014, 0), new Date()));
+	var costoSemanal = productoCosto / dataDate.length;
+	var ahorroSemanal = dineroAhorrado / weeks;
+
 	for (var i = 0; i < dataDate.length; i++) {
-		if (i <= dataDate.length / 4){
+		if (i <= weeks){
 			var temp = new Array(dataDate[i], i * costoSemanal, i * costoSemanal + costoSemanal / 2 * Math.pow(-1, i));
 		}
 		else{
@@ -131,5 +134,21 @@ function drawBasic() {
 	chart.draw(data, options);
 }
 
+function weekDiff(d1, d2) {
+	var weeks;
+	weeks = (d2.getFullYear() - d1.getFullYear()) * 56;
+	weeks -= getWeekNumber(d1);
+	weeks += getWeekNumber(d2);
+	return weeks <= 0 ? 0 : weeks;
+}
+
+function getWeekNumber(d) {
+	d = new Date(+d);
+	d.setHours(0,0,0);
+	d.setDate(d.getDate() + 4 - (d.getDay()||7));
+	var yearStart = new Date(d.getFullYear(),0,1);
+	var weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
+	return weekNo;
+}
 </script>
 <?php  include("foot.php") ?>
