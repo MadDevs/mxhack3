@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Tu cochinito</a>
+            <a class="navbar-brand" href="home.php">Tu cochinito</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -43,7 +43,7 @@
                 <li><a href="#">Resumen</a></li>
                 <li><a href="tandasView.php">Tanda</a></li>
                 <li><a href="productoView.php">Productos deseados</a></li>
-                <li><a href="#">??</a></li>
+                <li><a href="#">Deudas</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
         </div><!--/.nav-collapse -->

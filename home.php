@@ -1,3 +1,5 @@
+<?php ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +96,6 @@
                                 Ir a ingresos
                             </a>
                             <div class="mdl-layout-spacer"></div>
-                            <i class="material-icons">event</i>
                         </div>
                 </div>
 
@@ -110,7 +111,6 @@
                             Ir a egresos
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 
@@ -127,7 +127,6 @@
                             Ir a resumen
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 
@@ -146,7 +145,6 @@
                            Ir a tanda
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 
@@ -163,7 +161,6 @@
                             Ir a productos
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 
@@ -180,7 +177,6 @@
                             Ir a deudas
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 
