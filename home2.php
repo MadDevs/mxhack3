@@ -77,7 +77,7 @@
         <!-- body -->
   <?php
     for($i = 0; $i <= count($retM); $i++){
-        echo "<div class='row'>+ ".$ret[$i][0]."</div>";
+        echo "<div class='row'>+ ".$retM[$i][0]."</div>";
     }
   ?>
 
