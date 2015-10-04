@@ -1,4 +1,8 @@
-  <?php include('./includes/conn.php');
+    <?php include('./includes/conn.php');
+
+    $titulo = "Ingresos";
+    include ("head.php")
+
     setlocale(LC_MONETARY, 'en_US');
     $mysqli = con_start();
     $countM = 0;
@@ -57,158 +61,129 @@
     }
   ?>
 
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
-    <title>Ingresos</title>
+<div class="container">
 
-    <!-- Google material css -->
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.light_green-amber.min.css" />
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <div class="row">
+      <div class="col-md-6 mdl-card mdl-shadow--2dp">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+          <div class="mdl-card__title mdl-card--expand">
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            <!-- title -->
+            <h2 class="mdl-card__title-text">Ganancia de cada mes</h2>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+          </div>
+          <div class="mdl-card__supporting-text monthly_ingress">
 
-    <!-- Custom styles for this template -->
-    <link href="css/cover.css" rel="stylesheet">
+            <!-- body -->
+      <?php
+        for($i = 0; $i < count($retM); $i++){
+          echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0]).
+            "<button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button>".
+            "</div>";
+        }
+      ?>
 
-</head>
-<body>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
 
-<div class="row"></div>
-<div class="row">
-  <div class="col-md-6 mdl-card mdl-shadow--2dp">
+            <!-- button -->
+            <input class="monthlyInput" type="text" name="money" placeholder="100" style="color:black;">
+            <button value="Agrega dinero mensual" style="color:green;"
+              class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
+              data-idu='1'>
 
-      <div class="mdl-card__title mdl-card--expand">
+        </div>
+      </div>
 
-        <!-- title -->
-        <h2 class="mdl-card__title-text">Ganancia de cada mes</h2>
+      <div class="col-md-6">
+
+      <?php
+        for($i = 0; $i < 13; $i++){
+          if(count($retI[$i]) > 0){
+            echo
+            "<div class='mdl-card mdl-shadow--2dp'>".
+              "<div class='mdl-card__title mdl-card--expand'>".
+                #title
+              "<h2 class='mdl-card__title-text'>".getMonth($i).
+              "</h2>".
+              "</div>".
+              "<div class='mdl-card__supporting-text'>";
+                #body
+                for($j = 0; $j < count($retI[$i]); $j++){
+                  echo
+                    "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0]).
+                      "<button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:red;'>Quitar ganancia</button>".
+                      "</div>";
+                }
+            echo
+              "</div>".
+              #button
+              "<div class='mdl-card__actions mdl-card--border'>".
+                "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
+                  "Agrega dinero a ".getMonth($i).
+                "</a>".
+              "</div>".
+            "</div>";
+          }
+        }
+      ?>
+
 
       </div>
-      <div class="mdl-card__supporting-text monthly_ingress">
-
-        <!-- body -->
-  <?php
-    for($i = 0; $i < count($retM); $i++){
-      echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0]).
-        "<button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button>".
-        "</div>";
-    }
-  ?>
-
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-
-        <!-- button -->
-        <input class="monthlyInput" type="text" name="money" placeholder="100" style="color:black;">
-        <button value="Agrega dinero mensual" style="color:green;"
-          class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
-          data-idu='1'>
-
     </div>
-  </div>
 
-  <div class="col-md-6">
-
-  <?php
-    for($i = 0; $i < 13; $i++){
-      if(count($retI[$i]) > 0){
-        echo
-        "<div class='mdl-card mdl-shadow--2dp'>".
-          "<div class='mdl-card__title mdl-card--expand'>".
-            #title
-          "<h2 class='mdl-card__title-text'>".getMonth($i).
-          "</h2>".
-          "</div>".
-          "<div class='mdl-card__supporting-text'>";
-            #body
-            for($j = 0; $j < count($retI[$i]); $j++){
-              echo
-                "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0]).
-                  "<button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:red;'>Quitar ganancia</button>".
-                  "</div>";
-            }
-        echo
-          "</div>".
-          #button
-          "<div class='mdl-card__actions mdl-card--border'>".
-            "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
-              "Agrega dinero a ".getMonth($i).
-            "</a>".
-          "</div>".
-        "</div>";
-      }
-    }
-  ?>
-
-
-  </div>
 </div>
 
-</body>
+    <script>
+      $('.insertMonthly').on('click', function (e) {
 
-<script>
-  $('.insertMonthly').on('click', function (e) {
+        e.preventDefault();
+        var idu = $(this).attr('data-idu');
+        var row = $('.monthly_ingress');
+        var amount = $
 
-    e.preventDefault();
-    var idu = $(this).attr('data-idu');
-    var row = $('.monthly_ingress');
-    var amount = $
+        $.ajax({
+          type: 'post',
+          url: './createMonthlyTransaction.php',
+          data: {idu:idu},
+          success: function (json) {
+              $(row).innerHTML += "<div class='row'>+ "+
+              $(button).parent().hide();
+              console.log(button);
 
-    $.ajax({
-      type: 'post',
-      url: './createMonthlyTransaction.php',
-      data: {idu:idu},
-      success: function (json) {
-          $(row).innerHTML += "<div class='row'>+ "+
-          $(button).parent().hide();
-          console.log(button);
+          },
+          error: function (json) {
+            console.log(json);
 
-      },
-      error: function (json) {
-        console.log(json);
+          }
+      });
 
-      }
-  });
+    });
 
-});
+      $('.remove').on('click', function (e) {
 
-  $('.remove').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).attr('data-id');
+        var button = $(this);
 
-    e.preventDefault();
-    var id = $(this).attr('data-id');
-    var button = $(this);
+        $.ajax({
+          type: 'post',
+          url: './removeTransaction.php',
+          data: {id:id},
+          success: function (json) {
+              $(button).parent().hide();
+              console.log(button);
 
-    $.ajax({
-      type: 'post',
-      url: './removeTransaction.php',
-      data: {id:id},
-      success: function (json) {
-          $(button).parent().hide();
-          console.log(button);
+          },
+          error: function (json) {
+            console.log(json);
 
-      },
-      error: function (json) {
-        console.log(json);
+          }
+      });
 
-      }
-  });
-
-});
+    });
 </script>
-</html>
+
+<?php  include("foot.php") ?>
+
