@@ -127,11 +127,11 @@ $smtp->close();
    });
     }
 
-    function delete (id) {
+    function deleteProd (id) {
         $.ajax({
           type: 'post',
           url: 'productoFunciones.php',
-          data: {funcion: "delete", idprod: id},
+          data: {funcion: "deleteProd", idprod: id},
           success: function(dtx){
            console.log(dtx);
        }

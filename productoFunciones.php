@@ -13,15 +13,15 @@ funcion addFav($id){
 	return "addFav" . $id;
 }
 
-funcion addFav($id){
-	return "delete" . $id;
+funcion deleteProd($id){
+	return "deleteProd" . $id;
 }
 
 
 if($funcion == "addFav"){
 	addFav($idprod);
-}elseif ($funcion == "delete") {
-	delete($idprod);
+}elseif ($funcion == "deleteProd") {
+	deleteProd($idprod);
 }
 
 ?>
