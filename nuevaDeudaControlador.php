@@ -40,6 +40,7 @@ $smtp->close();
 //$time = date("Y-m-d");
 $type = 2;
 $created = date("Y-m-d");
+
 $nombremejor =  $nombre." pidio prestado";
 $monthly = 1;
 
@@ -48,7 +49,7 @@ $mysqli = con_start();
 //echo "entro a pagar";
 $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description) VALUES(?,?,?,?,?,?)");
 //echo "entro a pagar";
-$smtp->bind_param("iiiiis",$id_usuario, $type, $quantity, $monthly,  $created, $nombremejor);
+$smtp->bind_param("iiiiss",$id_usuario, $type, $quantity, $monthly,  $created, $nombremejor);
 //echo "entro a pagar";
 $smtp->execute();
 //echo "entro a pagar";

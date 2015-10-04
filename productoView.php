@@ -134,13 +134,15 @@ $smtp->close();
     });
 
     $('.deleteProd').on('click', function (e) {
+        var row = $(this);
         var id = this.id;
         $.ajax({
           type: 'POST',
           url: './productoFunciones.php',
           data: {funcion: "deleteProd", idprod: id},
           success: function(dtx){
-            $('tr#'+dtx).remove();
+           
+           $(row).parent().parent().hide();
            console.log(dtx);
        },
        error: function (json) {
