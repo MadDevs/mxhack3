@@ -125,7 +125,7 @@ $smtp->close();
              console.log(dtx);
          }
      });
-    )};
+    });
 
     $('.deleteProd').on('click', function (e) {
         $.ajax({
@@ -136,7 +136,7 @@ $smtp->close();
              console.log(dtx);
          }
      });
-    )};
+    });
     </script>
 </div><!-- /.container -->
 
