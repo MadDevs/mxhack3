@@ -22,11 +22,12 @@ id_trans int NOT NULL AUTO_INCREMENT ,
 id_user int NOT NULL ,
 type int NOT NULL ,
 amount float NOT NULL ,
+monthly int NOT NULL ,
 created date NOT NULL ,
 PRIMARY KEY (id_trans)
 );
-INSERT INTO Transaction(id_user, type, amount, created) VALUES (1, 1, 666, '2015/10/06');
-INSERT INTO Transaction(id_user, type, amount, created) VALUES (2, 1, 420, '2015-10-03');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 1, 666, 200, '2015/10/06');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (2, 1, 420, 200, '2015-10-03');
 DROP TABLE  Product;
 CREATE TABLE Product
 (
