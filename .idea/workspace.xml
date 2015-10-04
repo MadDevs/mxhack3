@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caea6bbc-42a6-4236-be56-2471b7636f36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createMonthlyDebt.php" afterPath="$PROJECT_DIR$/createMonthlyDebt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signInController.php" afterPath="$PROJECT_DIR$/signInController.php" />
     </list>
     <ignored path="mxhack3 (GitHub Desktop).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,38 +43,52 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="signInController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/signInController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.03807391">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deudasController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deudasController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-27.153847">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="76" selection-end-column="6" />
+              <folding>
+                <marker date="1443970916364" expanded="true" signature="656:754" placeholder="INSERT INTO ..." />
+                <marker date="1443970916364" expanded="true" signature="1091:1141" placeholder="UPDATE Deudo..." />
+                <marker date="1443970916364" expanded="true" signature="1371:1421" placeholder="UPDATE Deudo..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="egress.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/egress.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-16.148148">
               <caret line="153" column="10" selection-start-line="153" selection-start-column="10" selection-end-line="153" selection-end-column="10" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1443977066771" expanded="true" signature="236:423" placeholder="SELECT t.amo..Transaction..." />
-                <marker date="1443977066771" expanded="true" signature="2539:2558" placeholder="..." />
-                <marker date="1443977066771" expanded="true" signature="2539:2565" placeholder="..." />
-                <marker date="1443977066771" expanded="true" signature="2776:2788" placeholder="..." />
-                <marker date="1443977066771" expanded="true" signature="4056:4082" placeholder="..." />
-                <marker date="1443977066771" expanded="true" signature="4294:4306" placeholder="..." />
-                <marker date="1443977066771" expanded="true" signature="4677:4689" placeholder="..." />
-                <marker date="1443977066771" expanded="true" signature="4734:4744" placeholder="..." />
-                <marker date="1443977066771" expanded="true" signature="5632:5658" placeholder="..." />
-                <marker date="1443977066771" expanded="true" signature="5657:5658" placeholder="..." />
+                <marker date="1443977309416" expanded="true" signature="236:423" placeholder="SELECT t.amo..Transaction..." />
+                <marker date="1443977309416" expanded="true" signature="2539:2558" placeholder="..." />
+                <marker date="1443977309416" expanded="true" signature="5657:5658" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createMonthlyDebt.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createMonthlyDebt.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/createMonthlyDebt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21783295">
+            <state vertical-scroll-proportion="-5.848485">
               <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
               <folding>
-                <marker date="1443977275322" expanded="true" signature="255:359" placeholder="INSERT INTO ..." />
-                <marker date="1443977275322" expanded="true" signature="723:786" placeholder="SELECT id_tr..Transaction..." />
+                <marker date="1443977384583" expanded="true" signature="255:359" placeholder="INSERT INTO ..." />
+                <marker date="1443977384583" expanded="true" signature="723:786" placeholder="SELECT id_tr..Transaction..." />
               </folding>
             </state>
           </provider>
@@ -111,6 +125,7 @@
         <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/egress.php" />
         <option value="$PROJECT_DIR$/createMonthlyDebt.php" />
+        <option value="$PROJECT_DIR$/signInController.php" />
       </list>
     </option>
   </component>
@@ -499,13 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signInController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/listProductos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02247191">
@@ -570,14 +578,6 @@
     <entry file="file://$PROJECT_DIR$/tandasSelect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3135499">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deudasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -672,6 +672,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/egress.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.148148">
+          <caret line="153" column="10" selection-start-line="153" selection-start-column="10" selection-end-line="153" selection-end-column="10" />
+          <folding>
+            <marker date="1443977309416" expanded="true" signature="236:423" placeholder="SELECT t.amo..Transaction..." />
+            <marker date="1443977309416" expanded="true" signature="2539:2558" placeholder="..." />
+            <marker date="1443977309416" expanded="true" signature="5657:5658" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createMonthlyDebt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.848485">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <marker date="1443977384583" expanded="true" signature="255:359" placeholder="INSERT INTO ..." />
+            <marker date="1443977384583" expanded="true" signature="723:786" placeholder="SELECT id_tr..Transaction..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ingress.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-30.73077">
@@ -689,36 +712,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/egress.php">
+    <entry file="file://$PROJECT_DIR$/deudasController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.148148">
-          <caret line="153" column="10" selection-start-line="153" selection-start-column="10" selection-end-line="153" selection-end-column="10" />
+        <state vertical-scroll-proportion="-27.153847">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="76" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1443977066771" expanded="true" signature="236:423" placeholder="SELECT t.amo..Transaction..." />
-            <marker date="1443977066771" expanded="true" signature="2539:2558" placeholder="..." />
-            <marker date="1443977066771" expanded="true" signature="2539:2565" placeholder="..." />
-            <marker date="1443977066771" expanded="true" signature="2776:2788" placeholder="..." />
-            <marker date="1443977066771" expanded="true" signature="4056:4082" placeholder="..." />
-            <marker date="1443977066771" expanded="true" signature="4294:4306" placeholder="..." />
-            <marker date="1443977066771" expanded="true" signature="4677:4689" placeholder="..." />
-            <marker date="1443977066771" expanded="true" signature="4734:4744" placeholder="..." />
-            <marker date="1443977066771" expanded="true" signature="5632:5658" placeholder="..." />
-            <marker date="1443977066771" expanded="true" signature="5657:5658" placeholder="..." />
+            <marker date="1443970916364" expanded="true" signature="656:754" placeholder="INSERT INTO ..." />
+            <marker date="1443970916364" expanded="true" signature="1091:1141" placeholder="UPDATE Deudo..." />
+            <marker date="1443970916364" expanded="true" signature="1371:1421" placeholder="UPDATE Deudo..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createMonthlyDebt.php">
+    <entry file="file://$PROJECT_DIR$/signInController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21783295">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <marker date="1443977275322" expanded="true" signature="255:359" placeholder="INSERT INTO ..." />
-            <marker date="1443977275322" expanded="true" signature="723:786" placeholder="SELECT id_tr..Transaction..." />
-          </folding>
+        <state vertical-scroll-proportion="0.03807391">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
