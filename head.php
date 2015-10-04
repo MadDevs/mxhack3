@@ -37,12 +37,12 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Inicio</a></li>
-                <li><a href="#">Ingresos</a></li>
-                <li><a href="#">Egresos</a></li>
+                <li class="active"><a href="home.php">Inicio</a></li>
+                <li><a href="ingress.php">Ingresos</a></li>
+                <li><a href="">Egresos</a></li>
                 <li><a href="#">Resumen</a></li>
-                <li><a href="#">Tanda</a></li>
-                <li><a href="#">Productos deseados</a></li>
+                <li><a href="tandasView.php">Tanda</a></li>
+                <li><a href="productoView.php">Productos deseados</a></li>
                 <li><a href="#">??</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>

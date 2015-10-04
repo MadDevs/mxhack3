@@ -10,8 +10,9 @@
 $titulo = "Tandas";
 include ("head.php");
 
-
 include('./includes/conn.php');
+
+
 $tipo = $_GET['tipo'];
 
 var_dump(error_get_last());
@@ -25,7 +26,7 @@ $count = 0;
 //$id = 1;
 
 var_dump(error_get_last());
-$smtp = $mysqli->prepare("SELECT id_tanda, name, intervalo_dias, num_personas, num_repeticiones, cantidad, id_active, fecha_inicial, turno FROM Tanda WHERE id_user = 1 and id_tanda ='$tipo'");
+$smtp = $mysqli->prepare("SELECT id_tanda, name, intervalo_dias, num_personas, num_repeticiones, cantidad, is_active, fecha_inicial, turno FROM Tanda WHERE id_user = 1 and id_tanda ='$tipo'");
 
 
 var_dump(error_get_last());
@@ -86,8 +87,8 @@ $your_date = strtotime($ret[0][7]);
 $datediff = $now - $your_date;
 
 
-//$difDias = floor($datediff/(60*60*24));
-$difDias = 90;
+$difDias = floor($datediff/(60*60*24));
+//$difDias = 90;
 $continua = false;
 //                               numperso    intervalo dias
 
@@ -114,7 +115,7 @@ $data[] = array('volume' => 98, 'edition' => 2);
 $data[] = array('volume' => 86, 'edition' => 6);
 $data[] = array('volume' => 67, 'edition' => 7);
 */
-$data[] = array('nombre' => $ret[0][1], 'turno' => $ret[0][8]);
+$data[] = array('nombre' => "Juan", 'turno' => $ret[0][8]);
 foreach($ret2 as $adusr) {
     $data[] = array('nombre' => $adusr[0], 'turno' => $adusr[1]);
 }
@@ -165,7 +166,51 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
             echo '<h2>Ciclo # ' . $ret[0][4]. ' de  # ' . $ret[0][4] . '</h2>';
         }
 
+
+    /*
+     *
+     *  <table class="table table-bordered">
+        ...
+        </table>
+
+     */
+
+    echo '<table class="table table-bordered">';
+    echo    '<thead>';
+    echo        '<tr>';
+    echo        '<th>Periodos</th>';
+
+    for($i = 0; $i< $ret[0][3]; $i++){
+
+        echo        '<th>'.$nombre1[$i].'</th>';
+    }
+    echo        '</tr>';
+    echo    '</thead>';
+    echo    '<tbody>';
+
+
+    for($i = 0; $i< $ret[0][3]; $i++){
+
+        echo        '<tr>';
+        echo       '<td>periodo'.($i + 1).'</td>';
+        for($j = 0; $j< $ret[0][3]; $j++){
+            if($turno1[$i]==($j + 1 ))
+                echo    '<td style="color: #468847; background-color: #DFF0D8;">'.($ret[0][5] * $ret[0][3] ).'</td>';
+            else
+                echo '<td>'.$ret[0][5].'</td>';
+
+        }
+        echo        '</tr>';
+
+    }
+
+    echo    '</tbody>';
+
+    echo    '</table>';
+
     ?>
+
+
 
 
 </div>

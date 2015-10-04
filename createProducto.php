@@ -21,6 +21,13 @@
 
     $mysqli = con_start();
 
+    if($fav == 1){
+        $smtp = $mysqli->prepare("UPDATE Product SET id_trans = 0 WHERE id_trans = 1");
+        $smtp->execute();
+        $smtp->free_result();
+        $smtp->close();
+    }
+
     $smtp = $mysqli->prepare("INSERT INTO Product(id_user, name, description, amount, completed, id_trans) VALUES (?,?,?,?,?,?)");
     $smtp->bind_param("issiii", $id_user, $nameProducto, $info, $cost, $notCompleted, $fav);
     $smtp->execute();
