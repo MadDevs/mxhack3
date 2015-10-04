@@ -42,15 +42,15 @@
     $smtp->close();
 
 
-    var_dump(error_get_last());
+
     foreach( $namePersona as $key => $value ) {
       $mysqli = con_start();
       var_dump($key, $value, $turno[$key]);
       
       $smtp = $mysqli->prepare("INSERT INTO UsuariosTanda(id_tanda, nombre, turn) VALUES (?,?,?) ");
 
-
-      $smtp->bind_param("isi", $id_tanda,$value, $turno[$key]);
+      $turnoPersona = $turno[$key];
+      $smtp->bind_param("isi", $id_tanda,$value, $turnoPersona);
       $smtp->execute();
       if (!$smtp->error) {
         echo "correct"  ;
