@@ -13,12 +13,30 @@
     $smtp->execute();
 
     if (!$smtp->error) {
-        echo "correct";
+        $return = 1;
       }
       else {
-        echo "error";
+        $return = 0;
       }
     $smtp->close();
+    $$id_tands = 0;
+    if ($return == 1 ) {
+
+
+	    // Id de tanda que se acaba de insertar
+	    $mysqli = con_start();
+	    $smtp = $mysqli->prepare("SELECT id_trans FROM Transaction ORDER BY id_trans DESC LIMIT 1");
+	    $smtp->execute();
+	    $smtp->store_result();   
+	    $smtp->bind_result($id_tand);
+	    while ($smtp->fetch()) {
+	        $id_tands = $id_tand;
+	    }
+	    $smtp->free_result();
+	    $smtp->close();
+
+    }
+    echo $id_trans;
 
 
 ?>
