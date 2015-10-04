@@ -25,7 +25,11 @@ $smtp = $mysqli->prepare("INSERT INTO Deudores (id_user, name, description, amou
 echo"ejecute";
 
 $smtp->bind_param("issi", $id_usuario, $name, $description, $quantity);
+
+echo"ejecute1";
 $smtp->execute();
+
+echo"ejecute2";
 $smtp->free_result();
 $smtp->close();
 
