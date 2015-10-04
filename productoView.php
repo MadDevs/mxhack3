@@ -32,15 +32,12 @@
     $smtp->free_result();
     $smtp->close();
 
-    var_dump($ret);
-    // */
-
-    // */
+    //var_dump($ret);
 
 ?>
 
 <div class="container">
-    <table>
+    <table class="table">
         <tr>
             <th>Producto</th>
             <th>Descripci&oacute;n</th>
