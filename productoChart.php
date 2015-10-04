@@ -48,12 +48,12 @@ $smtp->close();
 var_dump(error_get_last());
 ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<div class="col-sm-4"></div>
-<div class="col-sm-4">
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
 	<div id="chart_div">
 	</div>
 </div>
-<div class="col-sm-4"></div>
+<div class="col-sm-2"></div>
 
 <script type="text/javascript">
 
