@@ -179,7 +179,7 @@
 
       },
       error: function (json) {
-          alert(json);
+        console.log(json);
 
       }
   });
