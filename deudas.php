@@ -6,17 +6,24 @@
  * Time: 4:59 AM
  */
 
-
 $titulo = "Deudas";
 include ("head.php");
 
 include('./includes/conn.php');
 
+
+$mysqli = con_start();
+
+var_dump(error_get_last());
+
 $smtp = $mysqli->prepare("SELECT id_deudor, id_user, name, description, amount, completed, hidden FROM Deudores WHERE id_user = 1");
 
+var_dump(error_get_last());
 $smtp->execute();
+var_dump(error_get_last());
 
 $smtp->store_result();
+var_dump(error_get_last());
 $smtp->bind_result($id_deudor, $id_user, $name, $description, $amount, $completed, $hidden);
 
 while ($smtp->fetch()) {
