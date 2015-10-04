@@ -92,13 +92,13 @@ function drawBasic() {
 	];
 
 	var dataArray = new Array();
-	var costoSemanal = dineroAhorrado / 24;
+	var costoSemanal = dineroAhorrado / dataDate.length;
 	for (var i = 0; i < dataDate.length; i++) {
 		if (i <= dataDate.length / 4){
 			var temp = new Array(dataDate[i], i * costoSemanal, i * costoSemanal + costoSemanal / 2 * Math.pow(-1, i));
 		}
 		else{
-			var temp = new Array(dataDate[i], i * 10, null);
+			var temp = new Array(dataDate[i], i * costoSemanal, null);
 		}
 		dataArray.push(temp);
 	}
