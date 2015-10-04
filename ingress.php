@@ -167,6 +167,7 @@
 <script>
   $('.remove').on('click', function (e) {
 
+    alert("works");
     console.log(this);
     e.preventDefault();
 
