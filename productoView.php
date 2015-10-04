@@ -117,6 +117,8 @@ $smtp->close();
     </table>
     <script type="text/javascript">
     $('.addFav').on('click', function (e) {
+        console.log(this.id);
+        var id = this.id;
         $.ajax({
           type: 'POST',
           url: './productoFunciones.php',
