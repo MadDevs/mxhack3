@@ -25,7 +25,7 @@
       echo "correct"  ;
     }
     else {
-      echo "error" + $smtp->error;
+      echo "error" . $smtp->error;
     }
     $smtp->close();
     
