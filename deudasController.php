@@ -16,7 +16,7 @@ $nombre = $_GET['nombre'];
 $descripcion = $_GET['descripcion'];
 $time = date("Y-m-d");
 $type = 1;
-$created = 0;
+$created = 1;
 $hidden = 1;
 $nombremejor =  $nombre." pago su deuda";
 //echo $tipo.$id_usuario.$id_deudor.$cantidad.$nombre.$descripcion.$time.$type.$time.$created;
@@ -29,7 +29,7 @@ if($tipo == "pagado"){
     //echo "entro a pagar";
     $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description) VALUES(?,?,?,?,?,?)");
     //echo "entro a pagar";
-    $smtp->bind_param("iiiiss",$id_usuario,$type, $cantidad,$time, $created,$nombremejor);
+    $smtp->bind_param("iiiiss",$id_usuario, $type, $cantidad, $created, $time, $nombremejor);
     //echo "entro a pagar";
     $smtp->execute();
     //echo "entro a pagar";

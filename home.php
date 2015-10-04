@@ -13,10 +13,10 @@
     $smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a
 	LEFT JOIN mxhacks.Transaction b
 	ON a.id_trans = b.id_trans
-	AND b.type = 1
+	AND b.type = 1 AND b.is_active = 1
 	LEFT JOIN mxhacks.Transaction c
 	on a.id_trans = c.id_trans
-	AND c.type = 2");
+	AND c.type = 2 AND c.is_active = 1");
     $smtp->execute();
     $smtp->store_result();
 
