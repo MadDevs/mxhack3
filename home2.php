@@ -93,7 +93,7 @@
   <div class="col-md-6">
 
   <?php
-    for($i = 0; $i < count($retI); $i++){
+    for($i = 0; $i < 13; $i++){
       if(count($retI[$i]) > 0){
         echo
         "<div class='mdl-card mdl-shadow--2dp'>".
