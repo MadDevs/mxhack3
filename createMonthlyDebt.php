@@ -10,7 +10,7 @@
     $one = 1;
     $mysqli = con_start();
     $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description)
-      VALUES(?,?,?,?,?)");
+      VALUES(?,?,?,?,?,?)");
     $smtp->bind_param("iiiiss",$idu,$two, $amount,$one, $time, $desc);
     $smtp->execute();
 
