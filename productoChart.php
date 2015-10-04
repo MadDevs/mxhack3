@@ -21,7 +21,7 @@ while($smtp->fetch()){
 $smtp->free_result();
 $smtp->close();
 
-// var_dump($favorite);
+var_dump(error_get_last());
 ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <center>
