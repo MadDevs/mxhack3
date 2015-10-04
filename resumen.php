@@ -64,7 +64,7 @@
 
     <?php
     for(int $i = 1; $i < 13; $i++){
-      if((3) > 0) || (5) > 0)){
+      if(true){
         echo "dd";
       }
     }
