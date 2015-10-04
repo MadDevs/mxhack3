@@ -3,7 +3,7 @@
     include ("includes/conn.php");
     $saldos = [];
     $saldo = 0;
-    $fechaTanda = "";
+    $numTandas = "";
     $favorite = [];
     $deudas = 0;
 
@@ -42,8 +42,19 @@
         $favorite[0][2] =  $cost;
     }
 
-$smtp->free_result();
+    $smtp->free_result();
 
+    /*Conseguir el numero de tandas*/
+    $smtp = $mysqli->prepare("SELECT count(id_tanda) FROM Tanda;");
+    $smtp->execute();
+    $smtp->store_result();
+    $smtp->bind_result($tandas);
+
+    while($smtp->fetch()){
+        $numTandas = $tandas;
+    }
+
+    $smtp->free_result();
     $smtp->close();
 
 ?>
@@ -184,8 +195,8 @@ $smtp->free_result();
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>
                             Tanda<br>
-                            Te toca el<br>
-                            4 de octubre
+                            Actualmente estas en<br>
+                            <?php $numTandas ?> tandas
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
