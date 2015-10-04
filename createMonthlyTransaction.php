@@ -13,4 +13,6 @@
     $smtp->execute();
 
     $smtp->close();
+
+    var_dump(error_get_last())
 ?>
