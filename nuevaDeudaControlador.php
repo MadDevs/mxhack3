@@ -19,6 +19,8 @@ $mysqli = con_start();
 
 echo "entre";
 
+echo $name.$description.$quantity;
+
 $smtp = $mysqli->prepare("INSERT INTO Deudores (id_user, name, description, amount)
       VALUES(?,?,?,?)");
 
