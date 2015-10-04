@@ -66,18 +66,18 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-lg-12" style="padding-bottom: 50px;">
-        
+         <div class="mdl-card__title mdl-card--expand">
+
+          <!-- title -->
+          <h2 class="mdl-card__title-text">Ganancia de cada mes</h2>
+
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 mdl-card mdl-shadow--2dp">
 
-          <div class="mdl-card__title mdl-card--expand">
-
-            <!-- title -->
-            <h2 class="mdl-card__title-text">Ganancia de cada mes</h2>
-
-          </div>
+       
           <div class="mdl-card__supporting-text monthly_ingress">
 
             <!-- body -->
