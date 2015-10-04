@@ -45,7 +45,7 @@
 
     foreach( $namePersona as $key => $value ) {
       $mysqli = con_start();
-      var_dump($key, $value, $turno[$key]);
+      var_dump("ID TANDA", $id_tanda);
       
       $smtp = $mysqli->prepare("INSERT INTO UsuariosTanda(id_tanda, nombre, turn) VALUES (?,?,?) ");
 
