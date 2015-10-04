@@ -49,12 +49,12 @@ var_dump(error_get_last());
 ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <br><br><br>
-<div class="col-sm-3"></div>
-<div class="col-sm-6 text-center">
+<div class="col-sm-2"></div>
+<div class="col-sm-8 text-center">
 	<div id="chart_div">
 	</div>
 </div>
-<div class="col-sm-3"></div>
+<div class="col-sm-2"></div>
 
 <script type="text/javascript">
 
