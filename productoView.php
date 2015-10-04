@@ -120,22 +120,22 @@ $smtp->close();
         $.ajax({
           type: 'post',
           url: 'productoFunciones.php',
-          data: {funcion: "addFav", idprod: id}
+          data: {funcion: "addFav", idprod: id},
           success: function(dtx){
            console.log(dtx);
-         }
-    });
+       }
+   });
     }
 
     function delete (id) {
         $.ajax({
           type: 'post',
           url: 'productoFunciones.php',
-          data: {funcion: "delete", idprod: id}
+          data: {funcion: "delete", idprod: id},
           success: function(dtx){
            console.log(dtx);
-         }
-    });
+       }
+   });
     }
     </script>
 </div><!-- /.container -->
