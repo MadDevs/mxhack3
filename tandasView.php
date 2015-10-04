@@ -34,40 +34,33 @@ $mysqli = con_start();
 $ret = [];
 $count = 0;
 
-var_dump(error_get_last());
 
 //$id = 1;
 $smtp = $mysqli->prepare("SELECT id_tanda, name FROM Tanda WHERE id_user = 1");
 
-var_dump(error_get_last());
 
 //$smtp->bind_param("i", $id);
 $smtp->execute();
 
-var_dump(error_get_last());
 
 $smtp->store_result();
 $smtp->bind_result($id_tanda, $name);
-
-var_dump(error_get_last());
 
 
 while ($smtp->fetch()) {
     $ret[$count][0] =  $id_tanda;
     $ret[$count][1] =  $name;
 
-    var_dump(error_get_last());
 
     $count++;
 }
 //echo "test 3";
 
-var_dump(error_get_last());
 
 $smtp->free_result();
 $smtp->close();
 
-var_dump(error_get_last());
+//var_dump($ret);
 // */
 
 // */
@@ -129,7 +122,18 @@ var_dump(error_get_last());
 
 <div class="container">
 
-    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <?php
+    foreach($ret as $ok){
+        echo '<button type="button" class="btn btn-primary btn-lg btn-block">$ok[0]</button>';
+    }
+
+
+    ?>
+
 
 
 </div>
