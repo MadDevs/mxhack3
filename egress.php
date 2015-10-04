@@ -108,6 +108,7 @@
 
             <!-- button -->
             <input id="ingresoFijo" class="monthlyInput"  type="text" name="amount" placeholder="100" style="color:black;">
+              <input id="desc" class="monthlyInput"  type="text" name="desc" placeholder="Compra de materiales" style="color:black;">
             <button style="color:red;" class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
               data-idu='1'>Registra deuda mensual</button>
 
@@ -161,18 +162,19 @@
         var idu = $(this).attr('data-idu');
         var row = $('#tbodyIngresos');
         var amount = $('#ingresoFijo').val();
+          var desc = $('#desc').val();
         var button = $(this);
         $.ajax({
           type: 'post',
           url: './createMonthlyDebt.php',
-          data: {idu:idu, amount: amount},
+          data: {idu:idu, amount: amount, desc: desc},
           success: function (json) {
             
             if ($.trim(json)!=0) {
               
               var newRow = "<tr>";
                   newRow += "<td style='background-color: #DFF0D8;'>- " + amount + ".00</td>";
-                  newRow += "<td>Descripcion</td>";
+                  newRow += "<td>"+desc+"</td>";
                   newRow += "<td><button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button>";
                   newRow += "</tr>";
               $(row).append(newRow);
