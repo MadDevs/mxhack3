@@ -63,7 +63,7 @@
     <h2>&iexcl;Quieres una nuevo art&iacute;culo, es momento de ahorrar!</h2>
     <br>
 
-    <form name="newProduct" class="form-horizontal" action="createProducto.php" method="POST">
+    <form id="addProducto" name="newProduct" class="form-horizontal" action="createProducto.php" method="POST">
         <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Nombre del art&iacute;culo</label>
             <div class="col-sm-10">
@@ -92,8 +92,37 @@
 
         <button type="submit" class="btn btn-default">Guardar</button>
     </form>
+    <p class="bg-success hidden" id="success">Producto agregado correctamente</p>
+    <p class="bg-success hidden" id="error">Error al agregar producto</p>
 </div><!-- /.container -->
+ <script>
 
+
+    $('#addProducto').on('submit', function (e) {
+
+      e.preventDefault();
+
+          $.ajax({
+            type: 'post',
+            url: 'createTanda.php',
+            data: $('#addTanda').serialize(),
+            success: function (json) {
+                    
+                    if (trim(json)=="correct") {
+
+                        setTimeout(function() {$("#success").show();}, 1000);
+                        setTimeout(function() {$("#success").hide();}, 5000);
+                    }
+                    else {
+                        setTimeout(function() {$("#error").show();}, 1000);
+                        setTimeout(function() {$("#error").hide();}, 5000);   
+                    }
+
+                }
+            });
+
+    });
+   </script>
 </body>
 </html>
 
