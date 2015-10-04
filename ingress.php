@@ -139,7 +139,7 @@
             $row .=   "</div>";
             $row .= "</div>";
               #button     
-            
+            echo $row;
           }
         }
       ?>
