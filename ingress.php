@@ -21,8 +21,8 @@
          $retM[$countM][1] = $idt;
          $countM++;
       } elseif($monthly == 0){
-         #$retI[$month][] =  $amount;
-         $retI[$month][] =  array($amount, $idt);
+         $retI[$month][] =  $amount;
+         #$retI[$month][] =  array($amount, $idt);
       }
     }
     $smtp->free_result();
@@ -142,7 +142,7 @@
           "<div class='mdl-card__supporting-text'>";
             #body
             for($j = 0; $j < count($retI[$i]); $j++){
-              echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0])."</div>";
+              echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j])."</div>";
             }
         echo
           "</div>".
