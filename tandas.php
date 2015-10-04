@@ -112,12 +112,7 @@
                     <input type="number" class="form-control" id="numPeople" placeholder="Numero de personas">
                 </div>
             </div>
-             <div class="form-group">
-                <label for="numPeople2" class="col-sm-2 control-label">Numero de personas</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" id="numPeople" placeholder="Numero de personas">
-                </div>
-            </div>   
+
             <div class="form-group" id="personas">
 
             </div>
@@ -137,20 +132,7 @@
         </form>
 
         <script>
-        $("#numPeople").keypress(function() {
-            var number =  $("#numPeople").val();
-            $("#personas").empty();
-            var strDiv = "";
-            for (var i = 0; i < number && i < 100; i++) {
-                strDiv += "<label for=\"namePersona[]\" class=\"col-sm-2 control-label\">Nombre " + (i + 1) + " </label>";
-                strDiv += "<div class=\"col-sm-10\">";
-                strDiv += "<input type=\"text\" class=\"form-control\" id=\"namePersona[]\" placeholder=\"Nombre de la Persona " + (i + 1) + "\">";
-                strDiv += "</div><br><br>";
-            };
-            $("#personas").append(strDiv);
-        });
-
-         $("#numPeople2").keypress(function() {
+        $("#numPeople").keyup(function() {
             var number =  $("#numPeople").val();
             $("#personas").empty();
             var strDiv = "";
