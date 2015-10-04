@@ -56,6 +56,7 @@ CREATE TABLE Tanda
 (
 id_tanda int NOT NULL AUTO_INCREMENT ,
 id_user int NOT NULL ,
+turno int NOT NULL, 
 name varchar(255) NOT NULL,
 intervalo_dias int NOT NULL,
 num_personas int NOT NULL, 
@@ -71,5 +72,6 @@ CREATE TABLE UsuariosTanda
 id_usuarios_tanda int NOT NULL AUTO_INCREMENT,
 id_tanda int NOT NULL,
 nombre varchar(255) NOT NULL,
+turno int NOT NULL,
 PRIMARY KEY (id_usuarios_tanda)
 );
