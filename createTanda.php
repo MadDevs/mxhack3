@@ -16,12 +16,13 @@
     echo "\n " . $cantidad . "\n";
     echo "\n " . $intervalo . "\n";
     echo "\n " . $nameTanda . "\n";
+    var_dump(error_get_last());
     $now = time();
     $d = $now["mday"];
     $m = $now["mon"];
     $y = $now["year"];
     echo "$y-$m-$d"; //getdate converted day
-
+    var_dump(error_get_last());
     $mysqli = con_start();
     $ret = [];
     $count = 0;
