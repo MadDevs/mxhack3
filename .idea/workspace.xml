@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="caea6bbc-42a6-4236-be56-2471b7636f36" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productoView.php" afterPath="$PROJECT_DIR$/productoView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxhack3 (GitHub Desktop).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,15 +61,15 @@
       <file leaf-file-name="productoView.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/productoView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9479049">
-              <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.30577576">
+              <caret line="67" column="60" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
               <folding>
-                <marker date="1443949894054" expanded="true" signature="357:431" placeholder="SELECT , nam..." />
-                <marker date="1443949894054" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
-                <marker date="1443949894054" expanded="true" signature="357:458" placeholder="SELECT name,..Product..." />
-                <marker date="1443949894054" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
-                <marker date="1443949894054" expanded="true" signature="1759:1870" placeholder="..." />
-                <marker date="1443949894054" expanded="true" signature="2241:2352" placeholder="..." />
+                <marker date="1443950088663" expanded="true" signature="357:431" placeholder="SELECT , nam..." />
+                <marker date="1443950088663" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
+                <marker date="1443950088663" expanded="true" signature="357:458" placeholder="SELECT name,..Product..." />
+                <marker date="1443950088663" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
+                <marker date="1443950088663" expanded="true" signature="1758:1869" placeholder="..." />
+                <marker date="1443950088663" expanded="true" signature="2240:2351" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -414,8 +413,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
-            <marker date="1443948969924" expanded="true" signature="-1:-1" placeholder="SELECT t.amo..Transaction..." />
-            <marker date="1443948969924" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1443949988045" expanded="true" signature="-1:-1" placeholder="SELECT t.amo..Transaction..." />
+            <marker date="1443949988045" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -509,15 +508,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/productoView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9479049">
-          <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.30577576">
+          <caret line="67" column="60" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
           <folding>
-            <marker date="1443949894054" expanded="true" signature="357:431" placeholder="SELECT , nam..." />
-            <marker date="1443949894054" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
-            <marker date="1443949894054" expanded="true" signature="357:458" placeholder="SELECT name,..Product..." />
-            <marker date="1443949894054" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
-            <marker date="1443949894054" expanded="true" signature="1759:1870" placeholder="..." />
-            <marker date="1443949894054" expanded="true" signature="2241:2352" placeholder="..." />
+            <marker date="1443950088663" expanded="true" signature="357:431" placeholder="SELECT , nam..." />
+            <marker date="1443950088663" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
+            <marker date="1443950088663" expanded="true" signature="357:458" placeholder="SELECT name,..Product..." />
+            <marker date="1443950088663" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
+            <marker date="1443950088663" expanded="true" signature="1758:1869" placeholder="..." />
+            <marker date="1443950088663" expanded="true" signature="2240:2351" placeholder="..." />
           </folding>
         </state>
       </provider>
