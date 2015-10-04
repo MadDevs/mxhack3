@@ -94,26 +94,28 @@
 
   <?php
     for($i = 0; $i < count($retI); $i++){
-      echo
-      "<div class='mdl-card mdl-shadow--2dp'>".
-        "<div class='mdl-card__title mdl-card--expand'>".
-          #title
-          "<h2 class='mdl-card__title-text'>Mes ".($i+1)."</h2>".
-        "</div>".
-        "<div class='mdl-card__supporting-text'>";
-          #body
-          for($j = 0; $j < (count($retI[$i])+10); $j++){
-            echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
-          }
-      echo
-        "</div>".
-        #button
-        "<div class='mdl-card__actions mdl-card--border'>".
-          "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
-            "Agrega dinero".
-          "</a>".
-        "</div>".
-      "</div>";
+      if(count($retI[$i]) > 0){
+        echo
+        "<div class='mdl-card mdl-shadow--2dp'>".
+          "<div class='mdl-card__title mdl-card--expand'>".
+            #title
+            "<h2 class='mdl-card__title-text'>Mes ".($i+1)."</h2>".
+          "</div>".
+          "<div class='mdl-card__supporting-text'>";
+            #body
+            for($j = 0; $j < count($retI[$i]); $j++){
+              echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
+            }
+        echo
+          "</div>".
+          #button
+          "<div class='mdl-card__actions mdl-card--border'>".
+            "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
+              "Agrega dinero".
+            "</a>".
+          "</div>".
+        "</div>";
+      }
     }
   ?>
 
