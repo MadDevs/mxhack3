@@ -169,7 +169,7 @@
             if ($.trim(json)!=0) {
               
               var newRow = "<tr>";
-                  newRow += "<td>+ " + amount ".00</td>";
+                  newRow += "<td>+ " + amount + ".00</td>";
                   newRow += "<td>Descripcion</td>";
                   newRow += "<td><button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button>":
                   newRow += "</tr>";
