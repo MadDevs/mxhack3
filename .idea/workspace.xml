@@ -4,6 +4,7 @@
     <list default="true" id="caea6bbc-42a6-4236-be56-2471b7636f36" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createMonthlyTransaction.php" afterPath="$PROJECT_DIR$/createMonthlyTransaction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ingress.php" afterPath="$PROJECT_DIR$/ingress.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxhack3 (GitHub Desktop).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,49 +26,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ingress.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ingress.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ingress.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="32.346153">
-              <caret line="109" column="73" selection-start-line="109" selection-start-column="73" selection-end-line="109" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.69540876">
+              <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1443968685046" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
-                <marker date="1443968685046" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
-                <marker date="1443968685046" expanded="true" signature="2557:2583" placeholder="..." />
-                <marker date="1443968685046" expanded="true" signature="2794:2804" placeholder="..." />
-                <marker date="1443968685046" expanded="true" signature="4068:4094" placeholder="..." />
-                <marker date="1443968685046" expanded="true" signature="4306:4316" placeholder="..." />
-                <marker date="1443968685046" expanded="true" signature="4689:4701" placeholder="..." />
-                <marker date="1443968685046" expanded="true" signature="4746:4758" placeholder="..." />
-                <marker date="1443968685046" expanded="true" signature="5659:5685" placeholder="..." />
+                <marker date="1443969364045" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
+                <marker date="1443969364045" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
+                <marker date="1443969364045" expanded="true" signature="2557:2583" placeholder="..." />
+                <marker date="1443969364045" expanded="true" signature="2794:2804" placeholder="..." />
+                <marker date="1443969364045" expanded="true" signature="4068:4094" placeholder="..." />
+                <marker date="1443969364045" expanded="true" signature="4306:4316" placeholder="..." />
+                <marker date="1443969364045" expanded="true" signature="4689:4701" placeholder="..." />
+                <marker date="1443969364045" expanded="true" signature="4746:4758" placeholder="..." />
+                <marker date="1443969364045" expanded="true" signature="5708:5734" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createMonthlyDebt.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/createMonthlyDebt.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1443962756342" expanded="true" signature="227:316" placeholder="INSERT INTO ..." />
-                <marker date="1443962756342" expanded="true" signature="672:735" placeholder="SELECT id_tr..Transaction..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createMonthlyTransaction.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createMonthlyTransaction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/createMonthlyTransaction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22844344">
-              <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding>
-                <marker date="1443968885571" expanded="true" signature="241:345" placeholder="INSERT INTO ..." />
-                <marker date="1443968885571" expanded="true" signature="709:772" placeholder="SELECT id_tr..Transaction..." />
+                <marker date="1443969226000" expanded="true" signature="241:345" placeholder="INSERT INTO ..." />
+                <marker date="1443969226000" expanded="true" signature="710:773" placeholder="SELECT id_tr..Transaction..." />
               </folding>
             </state>
           </provider>
@@ -100,8 +88,8 @@
         <option value="$PROJECT_DIR$/createProducto.php" />
         <option value="$PROJECT_DIR$/head.php" />
         <option value="$PROJECT_DIR$/home.php" />
-        <option value="$PROJECT_DIR$/ingress.php" />
         <option value="$PROJECT_DIR$/createMonthlyTransaction.php" />
+        <option value="$PROJECT_DIR$/ingress.php" />
       </list>
     </option>
   </component>
@@ -692,39 +680,39 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1443962756342" expanded="true" signature="227:316" placeholder="INSERT INTO ..." />
-            <marker date="1443962756342" expanded="true" signature="672:735" placeholder="SELECT id_tr..Transaction..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="32.346153">
-          <caret line="109" column="73" selection-start-line="109" selection-start-column="73" selection-end-line="109" selection-end-column="73" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1443968685046" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
-            <marker date="1443968685046" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
-            <marker date="1443968685046" expanded="true" signature="2557:2583" placeholder="..." />
-            <marker date="1443968685046" expanded="true" signature="2794:2804" placeholder="..." />
-            <marker date="1443968685046" expanded="true" signature="4068:4094" placeholder="..." />
-            <marker date="1443968685046" expanded="true" signature="4306:4316" placeholder="..." />
-            <marker date="1443968685046" expanded="true" signature="4689:4701" placeholder="..." />
-            <marker date="1443968685046" expanded="true" signature="4746:4758" placeholder="..." />
-            <marker date="1443968685046" expanded="true" signature="5659:5685" placeholder="..." />
+            <marker date="1443962756342" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1443962756342" expanded="true" signature="-1:-1" placeholder="SELECT id_tr..Transaction..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/createMonthlyTransaction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22844344">
-          <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
-            <marker date="1443968885571" expanded="true" signature="241:345" placeholder="INSERT INTO ..." />
-            <marker date="1443968885571" expanded="true" signature="709:772" placeholder="SELECT id_tr..Transaction..." />
+            <marker date="1443969226000" expanded="true" signature="241:345" placeholder="INSERT INTO ..." />
+            <marker date="1443969226000" expanded="true" signature="710:773" placeholder="SELECT id_tr..Transaction..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingress.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69540876">
+          <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1443969364045" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
+            <marker date="1443969364045" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
+            <marker date="1443969364045" expanded="true" signature="2557:2583" placeholder="..." />
+            <marker date="1443969364045" expanded="true" signature="2794:2804" placeholder="..." />
+            <marker date="1443969364045" expanded="true" signature="4068:4094" placeholder="..." />
+            <marker date="1443969364045" expanded="true" signature="4306:4316" placeholder="..." />
+            <marker date="1443969364045" expanded="true" signature="4689:4701" placeholder="..." />
+            <marker date="1443969364045" expanded="true" signature="4746:4758" placeholder="..." />
+            <marker date="1443969364045" expanded="true" signature="5708:5734" placeholder="..." />
           </folding>
         </state>
       </provider>

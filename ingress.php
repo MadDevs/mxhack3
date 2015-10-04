@@ -162,11 +162,12 @@
         var idu = $(this).attr('data-idu');
         var row = $('#tbodyIngresos');
         var amount = $('#ingresoFijo').val();
+        var desc = $('#desc').val();
         var button = $(this);
         $.ajax({
           type: 'post',
           url: './createMonthlyTransaction.php',
-          data: {idu:idu, amount: amount},
+          data: {idu:idu, amount: amount, desc: desc},
           success: function (json) {
             
             if ($.trim(json)!=0) {
