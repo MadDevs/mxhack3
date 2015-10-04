@@ -2,10 +2,10 @@
  
 function con_start() {
      
-    $host = "http://104.236.217.175/";
+    $host = "http://104.236.217.175:3306";
     $user = "root";
     $pass = "mxhacks3";
-    $db = "mxhacks3";
+    $db = "mxhacks";
      
     $mysqli = new mysqli($host, $user, $pass, $db);
     /* check connection */
