@@ -17,10 +17,14 @@ $id_usuario = 1;
 
 $mysqli = con_start();
 
+echo "entre";
+
 $smtp = $mysqli->prepare("INSERT INTO Deudores (id_user, name, description, amount)
       VALUES(?,?,?,?)");
 
-$smtp->bind_param("issi",$id_usuario, $name, $description, $quantity);
+echo"ejecute";
+
+$smtp->bind_param("issi", $id_usuario, $name, $description, $quantity);
 $smtp->execute();
 $smtp->free_result();
 $smtp->close();
