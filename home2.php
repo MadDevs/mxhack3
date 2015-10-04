@@ -112,7 +112,7 @@
             "Agrega dinero".
           "</a>".
         "</div>".
-      "</div>"
+      "</div>";
     }
   ?>
 
