@@ -31,7 +31,7 @@
         <div class="form-group">
             <label for="amount" class="col-sm-2 control-label">Costo $</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control" step="50" name="amount" id="amount" placeholder="3,499">
+                <input type="number" class="form-control" min="10" max="10000000" step="50" name="amount" id="amount" placeholder="3,499">
             </div>
         </div>
 
