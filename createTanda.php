@@ -64,6 +64,7 @@
 
     $mysqli = con_start();
 
+    echo $return;
       
 
   ?>  
