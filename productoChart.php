@@ -48,10 +48,13 @@ $smtp->close();
 var_dump(error_get_last());
 ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<div class="center-block">
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
 	<div id="chart_div">
 	</div>
 </div>
+<div class="col-sm-4"></div>
+
 <script type="text/javascript">
 
 google.load('visualization', '1', {packages: ['corechart', 'line']});
