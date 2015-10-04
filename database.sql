@@ -26,7 +26,17 @@ monthly int NOT NULL ,
 created date NOT NULL ,
 PRIMARY KEY (id_trans)
 );
-INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 1, 666, 200, '2015/10/06');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 1, 666, 0, '2015/10/06');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 1, 420, 0, '2015-10-03');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 1, 800, 0, '2015/11/06');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 1, 200, 0, '2015-12-03');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 1, 3000, 1, '2015/10/06');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 1, 4000, 1, '2015/10/06');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 2, 540, 0, '2015/10/06');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 2, 40, 0, '2015-10-03');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 2, 800, 0, '2015/11/06');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 2, 4000, 1, '2015/10/06');
+INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (2, 1, 420, 200, '2015-10-03');
 INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (2, 1, 420, 200, '2015-10-03');
 DROP TABLE  Product;
 CREATE TABLE Product
