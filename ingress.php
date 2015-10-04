@@ -63,7 +63,7 @@
 
 
 <div class="container">
-
+  <div class="jumbotron">
     <div class="row">
       <div class="col-md-6 mdl-card mdl-shadow--2dp">
 
@@ -148,7 +148,7 @@
 
       </div>
     </div>
-
+  </div>
 </div>
 
     <script>

@@ -63,6 +63,11 @@
 <div class="container">
 
     <?php
+    for(int $i = 1; $i < 13; $i++){
+      if((count($arrI[$i]) > 0) || (count($arrE[$i]) > 0)){
+        echo "edho";
+      }
+    }
     ?>
 
 </div>
