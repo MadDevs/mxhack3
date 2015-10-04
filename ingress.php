@@ -107,7 +107,7 @@
 
             <!-- button -->
             <input id="ingresoFijo" class="monthlyInput"  type="text" name="amount" placeholder="100" style="color:black;">
-            <input id="desc" class="monthlyInput"  type="text" name="desc" placeholder="Venta de papitas" style="color:black;">
+            <input id="desc" class="monthlyInput"  type="text" name="desc" placeholder="Venta de papas" style="color:black;">
             <button style="color:green;" class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
               data-idu='1'>Agrega dinero mensual</button>
 
