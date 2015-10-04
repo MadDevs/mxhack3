@@ -24,12 +24,17 @@ echo $tipo.$id_usuario.$id_deudor.$cantidad.$nombre.$descripcion.$time.$type.$ti
 
 if($tipo == "pagado"){
 
+    echo "entro a pagar";
     $mysqli = con_start();
-    $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description)
-      VALUES(?,?,?,?,?,?)");
+    echo "entro a pagar";
+    $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description) VALUES(?,?,?,?,?,?)");
+    echo "entro a pagar";
     $smtp->bind_param("iiiiss",$id_usuario,$type, $cantidad,$created, $created,$nombremejor);
+    echo "entro a pagar";
     $smtp->execute();
+    echo "entro a pagar";
     $smtp->free_result();
+    echo "entro a pagar";
     $smtp->close();
 
     $mysqli = con_start();
@@ -41,6 +46,8 @@ if($tipo == "pagado"){
 
 }
 else{
+
+    echo "borrar";
 
     $mysqli = con_start();
     $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = '.$id_deudor.'");
