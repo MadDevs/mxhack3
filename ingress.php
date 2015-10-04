@@ -64,7 +64,7 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-lg-12" style="padding-bottom: 50px;">
+      <div class="col-lg-12" style="padding: 80px 0 0;">
          <div class="mdl-card__title mdl-card--expand">
 
           <!-- title -->
@@ -128,7 +128,7 @@
                 #body
                 for($j = 0; $j < count($retI[$i]); $j++){
             $row .=    "<tr>";
-            $row .=      "<td>+ ". money_format('%(#5n',$retI[$i][$j][0]). "</td>";
+            $row .=      "<td style='background-color: #DFF0D8;'>+ ". money_format('%(#5n',$retI[$i][$j][0]). "</td>";
             $row .=      "<td> Descripcion</td>";
             $row .=      "<td><button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
             $row .=    "</tr>";
@@ -137,11 +137,9 @@
             $row .=     "</tbody>";
             $row .=   "</table>";
             $row .=   "<div class='mdl-card__actions mdl-card--border'>";
-            $row .=     "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>";
-            $row .=       "Agrega dinero a ".getMonth($i);
-            $row .=     "</a>";
+            $row .=     "<input id='ingresoFijo' class='monthlyInput'  type='text' name='amount' placeholder='100' style='color:black;'>";
+            $row .=     "<button style='color:green;' class='insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect' data-idu='1'>Agrega dinero a ".getMonth($i) . "</button>";
             $row .=   "</div>";
-            $row .= "</div>";
               #button     
             echo $row;
           }
