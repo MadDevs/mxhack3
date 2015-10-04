@@ -1,8 +1,11 @@
   <?php include('./includes/conn.php'); 
     echo "test";
     $mysqli = con_start();
+    var_dump(error_get_last());
        $ret = [];
+       var_dump(error_get_last());
     $count = 0;
+    var_dump(error_get_last());
     $id = 1;
     $smtp = $mysqli->prepare("SELECT u.id_user, u.first_name FROM User u WHERE u.user_id = ?");
     $smtp->bind_param("i", $id);
