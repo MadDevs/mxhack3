@@ -86,7 +86,7 @@ $smtp->close();
             echo "<tr>";
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
-            echo "<td>".$ok[2]."</td>";
+            echo "<td>$".$ok[2]."</td>";
             echo "<td><button id='".$ok[0]."' type='button' class='btn btn-default btn-lg center-block addFav'><span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>";
             echo "<td><button id='".$ok[0]."' type='button' class='btn btn-default btn-lg center-block deleteProd'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
             echo "</tr>";
@@ -105,10 +105,10 @@ $smtp->close();
         </tr>
         <?php
         foreach($done as $ok){
-            echo "<tr>";
+            echo "<tr id='".$ok[0]."'>";
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
-            echo "<td>".$ok[2]."</td>";
+            echo "<td>$".$ok[2]."</td>";
             echo "<td><button id='".$ok[0]."' type='button' class='btn btn-default btn-lg center-block deleteProd'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
             echo "</tr>";
         }
@@ -139,6 +139,7 @@ $smtp->close();
           url: './productoFunciones.php',
           data: {funcion: "deleteProd", idprod: id},
           success: function(dtx){
+            $('#'+dtx).remove();
            console.log(dtx);
        },
        error: function (json) {
