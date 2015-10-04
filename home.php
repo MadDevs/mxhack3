@@ -30,6 +30,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <style>
+        h4{
+            color:#fff;
+        }
+
         .demo-card-event.mdl-card {
             width: 240px;
             height: 240px;
@@ -41,6 +45,7 @@
         .demo-card-event > .mdl-card__actions {
             border-color: rgba(255, 255, 255, 0.2);
         }
+
         .demo-card-event > .mdl-card__title {
             align-items: flex-start;
         }
@@ -67,7 +72,7 @@
         <div class="cover-container">
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h3 class="masthead-brand">Inicio</h3>
+                    <h3 class="masthead-brand">Inicio - Bienvenido a tu cochinito</h3>
                     <nav>
                         <ul class="nav masthead-nav">
                             <li><a href="#">Ayuda</a></li>
@@ -85,7 +90,7 @@
                             </h4>
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
-                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            <a href="ingress.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                                 Ir a ingresos
                             </a>
                             <div class="mdl-layout-spacer"></div>
@@ -137,7 +142,7 @@
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        <a href="tandasView.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                            Ir a tanda
                         </a>
                         <div class="mdl-layout-spacer"></div>
@@ -154,7 +159,7 @@
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        <a href="productoView.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                             Ir a productos
                         </a>
                         <div class="mdl-layout-spacer"></div>
@@ -165,14 +170,14 @@
                 <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#CDDC39">
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>
-                            ???<br>
-                            May 24, 2016<br>
-                            7-11pm
+                            Deudas<br>
+                            Dinero que me deben<br>
+                            $ 3,000
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            ???
+                        <a href="deudas.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            Ir a deudas
                         </a>
                         <div class="mdl-layout-spacer"></div>
                         <i class="material-icons">event</i>
