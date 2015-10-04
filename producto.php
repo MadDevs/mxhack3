@@ -62,8 +62,8 @@
     <h1>Nueva objetivo de compra</h1>
     <h2>&iexcl;Quieres una nuevo art&iacute;culo, es momento de ahorrar!</h2>
     <br>
-    <p class="bg-success" style="display: none; " id="success">Producto agregado correctamente</p>
-    <p class="bg-error" style="display: none; " id="error">Error al agregar producto</p>
+    <p class="bg-success" style="display: none; border-radius: 5px; text-align: center;" id="success">Producto agregado correctamente</p>
+    <p class="bg-error" style="display: none;   border-radius: 5px; text-align: center;" id="error">Error al agregar producto</p>
     <form id="addProducto" name="newProduct" class="form-horizontal" action="createProducto.php" method="POST">
         <div class="form-group">
             <label for="nameProducto" class="col-sm-2 control-label">Nombre del art&iacute;culo</label>
@@ -112,6 +112,10 @@
 
                         setTimeout(function() {$("#success").show();}, 1000);
                         setTimeout(function() {$("#success").hide();}, 5000);
+                        $('#description').val("");
+                        $('#nameProducto').val("");
+                        $('#amount').val("");
+
                     }
                     else {
                         setTimeout(function() {$("#error").show();}, 1000);
