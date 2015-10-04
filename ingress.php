@@ -167,20 +167,19 @@
 <script>
   $('.remove').on('click', function (e) {
 
-    alert($(this).attr('data-id'));
     e.preventDefault();
-    /*
     var id = $(this).attr('data-id');
 
     $.ajax({
       type: 'post',
-      url: 'createTanda.php',
-      data: id:id,
+      url: 'removeTransaction.php',
+      data: {id:id},
       success: function (json) {
           alert(json);
 
       }
-     */
   });
+
+});
 </script>
 </html>
