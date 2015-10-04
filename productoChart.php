@@ -8,7 +8,7 @@ $mysqli = con_start();
 echo "fav";
 $favorite = [];
 
-$smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1 id_trans = 1");
+$smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1 AND id_trans = 1");
 echo "sql";
 $smtp->execute();
 $smtp->store_result();
