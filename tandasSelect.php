@@ -159,11 +159,11 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
         echo '<h2>'.$nombre1[$usrActual].'</h2>';
 
         if($continua) {
-            echo '<h2>Ciclo # ' . ($cicloActual + 1) . ' de  # ' . $ret[0][4] . '</h2>';
+            echo '<h2>Ciclo # ' . ($cicloActual + 1) . ' de  # ' . $ret[0][5] . '</h2>';
         }
         else{
             echo '<h2>FIN DEL CICLO</h2>';
-            echo '<h2>Ciclo # ' . $ret[0][4]. ' de  # ' . $ret[0][4] . '</h2>';
+            echo '<h2>Ciclo # ' . $ret[0][4]. ' de  # ' . $ret[0][5] . '</h2>';
         }
 
 
@@ -194,7 +194,7 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
         echo        '<tr>';
         echo       '<td>periodo'.($i + 1).'</td>';
         for($j = 0; $j< $ret[0][3]; $j++){
-            if($turno1[$i]==($i + 1))
+            if($turno1[$i]==($j))
                 echo    '<td style="color: #468847; background-color: #DFF0D8;">'.$ret[0][3].'</td>';
             else
                 '<td>'.$ret[0][3].'</td>';
