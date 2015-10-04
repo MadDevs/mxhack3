@@ -7,7 +7,7 @@
     $numPeople = $_POST['numPeople'];
     $cantidad = $_POST['cantidad'];
 
-
+    var_dump($namePersona);
     foreach( $namePersona as $key => $value ) {
       echo $value;
     }
