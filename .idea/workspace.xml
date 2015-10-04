@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caea6bbc-42a6-4236-be56-2471b7636f36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/head.php" afterPath="$PROJECT_DIR$/head.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/productoReview.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productoView.php" afterPath="$PROJECT_DIR$/productoView.php" />
     </list>
     <ignored path="mxhack3 (GitHub Desktop).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,21 +38,33 @@
       <file leaf-file-name="producto.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/producto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-32.03846">
               <caret line="49" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productoView.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="productoView.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/productoView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.0">
-              <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.6689189">
+              <caret line="69" column="78" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
               <folding>
-                <marker date="1443951635744" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
-                <marker date="1443951635744" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
+                <marker date="1443952549668" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
+                <marker date="1443952549668" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productoReview.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/productoReview.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.076923">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <folding>
+                <element signature="e#6#99#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,23 +73,13 @@
       <file leaf-file-name="database.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-3.9638555">
               <caret line="50" column="6" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="6" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/head.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7525196">
-              <caret line="44" column="74" selection-start-line="44" selection-start-column="74" selection-end-line="44" selection-end-column="74" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -104,8 +107,9 @@
         <option value="$PROJECT_DIR$/css/cover.css" />
         <option value="$PROJECT_DIR$/createProducto.php" />
         <option value="$PROJECT_DIR$/producto.php" />
-        <option value="$PROJECT_DIR$/productoView.php" />
         <option value="$PROJECT_DIR$/head.php" />
+        <option value="$PROJECT_DIR$/productoReview.php" />
+        <option value="$PROJECT_DIR$/productoView.php" />
       </list>
     </option>
   </component>
@@ -303,8 +307,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1443951635744" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
-            <marker date="1443951635744" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
+            <marker date="1443952549668" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
+            <marker date="1443952549668" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
           </folding>
         </state>
       </provider>
@@ -363,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tandasSelect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tandasController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -413,6 +410,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4468085">
           <caret line="76" column="75" selection-start-line="76" selection-start-column="75" selection-end-line="76" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -450,41 +448,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="6" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/createProducto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4568869">
           <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="27" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/producto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productoView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.0">
-          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-          <folding>
-            <marker date="1443951635744" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
-            <marker date="1443951635744" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,11 +464,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/producto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.03846">
+          <caret line="49" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7525196">
           <caret line="44" column="74" selection-start-line="44" selection-start-column="74" selection-end-line="44" selection-end-column="74" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9638555">
+          <caret line="50" column="6" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tandasSelect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3135499">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1443951561274" expanded="true" signature="-1:-1" placeholder="SELECT id_ta..Tanda..." />
+            <marker date="1443951561274" expanded="true" signature="-1:-1" placeholder="SELECT nombr..UsuariosTanda..." />
+            <marker date="1443951561274" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productoReview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.076923">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#6#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productoView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6689189">
+          <caret line="69" column="78" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
+          <folding>
+            <marker date="1443952549668" expanded="true" signature="357:456" placeholder="SELECT name,..Product..." />
+            <marker date="1443952549668" expanded="true" signature="1012:1111" placeholder="SELECT name,..Product..." />
+          </folding>
         </state>
       </provider>
     </entry>
