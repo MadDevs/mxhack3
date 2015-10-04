@@ -92,8 +92,8 @@
 
         <button type="submit" class="btn btn-default">Guardar</button>
     </form>
-    <p class="bg-success hidden" id="success">Producto agregado correctamente</p>
-    <p class="bg-success hidden" id="error">Error al agregar producto</p>
+    <p class="bg-success" style="display: none; " id="success">Producto agregado correctamente</p>
+    <p class="bg-success" style="display: none; " id="error">Error al agregar producto</p>
 </div><!-- /.container -->
  <script>
 
