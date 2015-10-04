@@ -137,7 +137,7 @@
             $row .=       "Agrega dinero a ".getMonth($i);
             $row .=     "</a>";
             $row .=   "</div>";
-            $row .= "</div>".
+            $row .= "</div>";
               #button     
             
           }
