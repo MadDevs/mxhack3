@@ -177,7 +177,7 @@
       success: function (json) {
           alert(json);
 
-      }
+      },
       error: function (json) {
           alert("error");
 
