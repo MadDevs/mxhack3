@@ -6,21 +6,22 @@
 
     $id = 1;
     $smtp = $mysqli->prepare("SELECT t.amount, t.monthly,
-      EXTRACT(MONTH FROM t.created), t.created
+      EXTRACT(MONTH FROM t.created), t.created, t.id_trans
       FROM Transaction t
       WHERE t.id_user = ? AND t.is_active = 1");
 
     $smtp->bind_param("i", $id);
     $smtp->execute();
     $smtp->store_result();
-    $smtp->bind_result($amount, $monthly, $month, $date);
+    $smtp->bind_result($amount, $monthly, $month, $date, $idt);
 
     while ($smtp->fetch()) {
       if($monthly == 1){
          $retM[$countM][0] =  $amount;
+         $retM[$countM][1] =  $idt;
          $countM++;
       } elseif($monthly == 0){
-         $retI[$month][] =  $amount;
+         $retI[$month][] =  array($amount, $idt);
       }
     }
     $smtp->free_result();
@@ -105,7 +106,7 @@
   <?php
     for($i = 0; $i < count($retM); $i++){
       echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0]).
-        "<button class='remove' data-id='1' value='remove' style='color:red;'>Quitar ganancia</button>".
+        "<button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button>".
         "</div>";
     }
   ?>
