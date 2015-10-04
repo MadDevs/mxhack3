@@ -16,7 +16,11 @@
     echo "\n " . $cantidad . "\n";
     echo "\n " . $intervalo . "\n";
     echo "\n " . $nameTanda . "\n";
-    echo date("Y-m-d");
+    $now = time();
+    $d = $now["mday"];
+    $m = $now["mon"];
+    $y = $now["year"];
+    echo "$y-$m-$d"; //getdate converted day
 
     $mysqli = con_start();
     $ret = [];
