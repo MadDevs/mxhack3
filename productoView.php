@@ -123,7 +123,7 @@ $smtp->close();
           data: {funcion: "addFav", idprod: id},
           success: function(dtx){
            console.log(dtx);
-           var price = $("td #" + dtx).text();
+           var price = $("td #" + dtx).html();
            $("#heading").text("Tu objetivo actual es comprar: " + dtx + " con precio de " + price);
        },
        error: function (json) {
