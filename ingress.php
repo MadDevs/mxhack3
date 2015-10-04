@@ -178,6 +178,10 @@
           alert(json);
 
       }
+      error: function (json) {
+          alert("error");
+
+      }
   });
 
 });
