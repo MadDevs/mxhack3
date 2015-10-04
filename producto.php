@@ -108,7 +108,7 @@
             data: $('#addTanda').serialize(),
             success: function (json) {
                     
-                    if (trim(json)=="correct") {
+                    if ($.trim(json)=="correct") {
 
                         setTimeout(function() {$("#success").show();}, 1000);
                         setTimeout(function() {$("#success").hide();}, 5000);
