@@ -76,7 +76,7 @@
 
         <!-- body -->
   <?php
-    for($i = 0; $i <= count($retM); $i++){
+    for($i = 0; $i < count($retM); $i++){
         echo "<div class='row'>+ ".$retM[$i][0]."</div>";
     }
   ?>
@@ -95,7 +95,7 @@
   <div class="col-md-6">
 
   <?php
-    for($i = 0; $i <= count($retI); $i++){
+    for($i = 0; $i < count($retI); $i++){
       echo
       "<div class='mdl-card mdl-shadow--2dp'>".
         "<div class='mdl-card__title mdl-card--expand'>".
