@@ -138,6 +138,32 @@
 
 <body>
 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home.php">Tu cochinito</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="home.php">Inicio</a></li>
+                <li><a href="ingress.php">Ingresos</a></li>
+                <li><a href="egress.php">Egresos</a></li>
+                <li><a href="#">Resumen</a></li>
+                <li><a href="tandasView.php">Tanda</a></li>
+                <li><a href="productoView.php">Productos deseados</a></li>
+                <li><a href="deudas.php">Deudas</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
 <div class="site-wrapper">
     <div class="site-wrapper-inner">
         <div class="cover-container">
