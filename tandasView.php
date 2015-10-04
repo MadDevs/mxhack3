@@ -60,7 +60,7 @@ while ($smtp->fetch()) {
 $smtp->free_result();
 $smtp->close();
 
-//var_dump($ret);
+var_dump($ret);
 // */
 
 // */
@@ -127,8 +127,9 @@ $smtp->close();
     <p>&nbsp;</p>
 
     <?php
+    //echo '<button type="button" class="btn btn-primary btn-lg btn-block">$ret[0]</button>';
     foreach($ret as $ok){
-        echo '<button type="button" class="btn btn-primary btn-lg btn-block">$ok[0]</button>';
+        echo '<button type="button" class="btn btn-primary btn-lg btn-block"> ' +$ok[0] +'</button>';
     }
 
 
