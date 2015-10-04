@@ -12,12 +12,13 @@
     $mysqli = con_start();
     $notYet = [];
     $done = [];
+    $favorite = [];
     $count1 = 0;
     $count2 = 0;
     //$id = 1;
-    $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1");
+    $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1
+        AND id_trans = 0");
 
-    //$smtp->bind_param("i", $id);
     $smtp->execute();
 
     $smtp->store_result();
@@ -39,6 +40,21 @@
     }
 
     $smtp->free_result();
+
+
+    $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1
+        AND id_trans = 1");
+    $smtp->execute();
+    $smtp->store_result();
+    $smtp->bind_result($name, $info, $cost, $completed);
+
+    while($smtp->fetch()){
+        $favorite[0][0] =  $name;
+        $favorite[0][1] =  $info;
+        $favorite[0][2] =  $cost;
+    }
+
+    $smtp->free_result();
     $smtp->close();
 
     //var_dump($ret);
@@ -48,6 +64,10 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
+
+    <h2>Tu objetivo actual es comprar: <?php echo $favorite[0]?> con precio de $ <?php
+        echo $favorite[2]?></h2><br>
+
     <h2>Estos son los productos que estan marcados como objetivos pr&oacute;ximos</h2>
     <table class="table">
         <tr>
@@ -66,7 +86,7 @@
         ?>
     </table>
 
-    <h2>Estos son los productos que has comprado, &iexcl;Felicidades!</h2>
+    <br><h2>Estos son los productos que has comprado, &iexcl;Felicidades!</h2>
     <table class="table">
         <tr>
             <th>Producto</th>
