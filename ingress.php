@@ -141,8 +141,9 @@
             #body
             for($j = 0; $j < count($retI[$i]); $j++){
               echo
-                "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0])."</div>".
-                "<button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:red;'>Quitar ganancia</button>";
+                "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0]).
+                  "<button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:red;'>Quitar ganancia</button>".
+                  "</div>";
             }
         echo
           "</div>".
@@ -162,4 +163,24 @@
 </div>
 
 </body>
+
+<script>
+  $('.remove').on('click', function (e) {
+
+    alert("works");
+    console.log(this);
+    e.preventDefault();
+
+    /*
+    $.ajax({
+      type: 'post',
+      url: 'createTanda.php',
+      data: $('#addTanda').serialize(),
+      success: function (json) {
+          alert(json);
+
+      }
+     */
+  });
+</script>
 </html>
