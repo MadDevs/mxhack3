@@ -197,7 +197,7 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
             if($turno1[$i]==($j))
                 echo    '<td style="color: #468847; background-color: #DFF0D8;">'.$ret[0][5].'</td>';
             else
-                '<td>'.$ret[0][5].'</td>';
+                echo '<td>'.$ret[0][5].'</td>';
 
         }
         echo        '</tr>';
