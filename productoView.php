@@ -102,6 +102,7 @@
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
             echo "<td>".$ok[2]."</td>";
+            echo "<td><span class='glyphicon glyphicon-search' aria-hidden='true'></span></td>";
             echo "</tr>";
         }
         ?>
