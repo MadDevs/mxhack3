@@ -62,7 +62,8 @@
     <h1>Nueva objetivo de compra</h1>
     <h2>&iexcl;Quieres una nuevo art&iacute;culo, es momento de ahorrar!</h2>
     <br>
-
+    <p class="bg-success" style="display: none; " id="success">Producto agregado correctamente</p>
+    <p class="bg-error" style="display: none; " id="error">Error al agregar producto</p>
     <form id="addProducto" name="newProduct" class="form-horizontal" action="createProducto.php" method="POST">
         <div class="form-group">
             <label for="nameProducto" class="col-sm-2 control-label">Nombre del art&iacute;culo</label>
@@ -91,8 +92,7 @@
         <p>&nbsp;</p>
 
         <button type="submit" class="btn btn-default">Guardar</button>
-        <p class="bg-success" style="display: none; " id="success">Producto agregado correctamente</p>
-        <p class="bg-success" style="display: none; " id="error">Error al agregar producto</p>
+        
     </form>
 </div><!-- /.container -->
  <script>
@@ -107,7 +107,7 @@
             url: 'createProducto.php',
             data: $('#addProducto').serialize(),
             success: function (json) {
-                    alert(json);
+ 
                     if ($.trim(json)=="correct") {
 
                         setTimeout(function() {$("#success").show();}, 1000);
