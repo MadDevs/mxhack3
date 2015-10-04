@@ -7,38 +7,28 @@
     $numPeople = $_POST['numPeople'];
     $cantidad = $_POST['cantidad'];
 
-    var_dump($namePersona);
     foreach( $namePersona as $key => $value ) {
-      echo $value;
+      //echo $value;
     }
-    echo "\n " . $namePersona . "\n";
-    echo "\n " . $numPeople . "\n";
-    echo "\n " . $cantidad . "\n";
-    echo "\n " . $intervalo . "\n";
-    echo "\n " . $nameTanda . "\n";
 
-    echo date("Y-m-d"); //getdate converted day
+
+    $today = date("Y-m-d"); //getdate converted day
 
     $mysqli = con_start();
-    $ret = [];
-    $count = 0;
-
-    $id = 1;
-    $smtp = $mysqli->prepare("INSERT INTO ");
+    $id_user = 1;
+    $smtp = $mysqli->prepare("INSERT INTO Tanda(id_user, name, intervalo_dias, num_personas, num_repeticiones, cantidad, fecha_inicial) VALUES (?,?,?,?,?,?,?) ");
     
-    $smtp->bind_param("i", $id);
+    $smtp->bind_param("isiiiis", $id_user, $intervalo, $numPeople, $numRep, $cantidad, $today);
     $smtp->execute();
-    $smtp->store_result();   
-    $smtp->bind_result($id, $first_name);
-    while ($smtp->fetch()) {
-         $ret[$count][0] =  $id;
-         $ret[$count][1] =  $first_name;
-         $count++;
+ 
+    if (!$smtp->error) {
+      echo "correct";
     }
-    echo "test 3";
-    $smtp->free_result();
+    else {
+      echo "error";
+    }
     $smtp->close();
-    var_dump($ret);
+    
     
 
   ?>  
