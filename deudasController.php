@@ -16,7 +16,7 @@ $nombre = $_GET['nombre'];
 $descripcion = $_GET['descripcion'];
 $time = date("Y-m-d");
 $type = 1;
-$created = 0;
+$created = 1;
 $hidden = 1;
 $nombremejor =  $nombre." pago su deuda";
 //echo $tipo.$id_usuario.$id_deudor.$cantidad.$nombre.$descripcion.$time.$type.$time.$created;
