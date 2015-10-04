@@ -157,7 +157,7 @@
 
         e.preventDefault();
         var idu = $(this).attr('data-idu');
-        var row = $('.tbodyIngresos');
+        var row = $('#tbodyIngresos');
         var amount = $('#ingresoFijo').val();
         var button = $(this);
         $.ajax({
