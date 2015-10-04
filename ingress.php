@@ -156,8 +156,8 @@
             
             if ($.trim(json)!=0) {
               var addition = "<div class='row'>+ "+ amount+".00 <button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button></div>";
-              alert(addition);
-              $(row).append(row);
+              
+              $(row).append(addition);
               
              
             }
@@ -168,7 +168,7 @@
     });
 
       $('.remove').on('click', function (e) {
-
+        console.log("clicked", this);
         e.preventDefault();
         var id = $(this).attr('data-id');
         var button = $(this);
@@ -179,7 +179,7 @@
           data: {id:id},
           success: function (json) {
               $(button).parent().hide();
-              console.log(button);
+              
 
           },
           error: function (json) {

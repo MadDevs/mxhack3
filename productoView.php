@@ -77,7 +77,7 @@
             <th>Descripci&oacute;n</th>
             <th>Costo</th>
             <th>Marcar como favorito</th>
-            <th>Eliminae</th>
+            <th>Eliminar</th>
         </tr>
         <?php
         foreach($notYet as $ok){
@@ -85,8 +85,8 @@
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
             echo "<td>".$ok[2]."</td>";
-            echo "<td><span class='glyphicon glyphicon-star' aria-hidden='true'></span></td>";
-            echo "<td><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></td>";
+            echo "<td><button type='button' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>";
+            echo "<td><span class='glyphicon glyphicon-trash text-center' aria-hidden='true'></span></td>";
             echo "</tr>";
         }
         ?>
