@@ -16,12 +16,11 @@
     $smtp->bind_result($amount, $monthly, $month, $date);
 
     while ($smtp->fetch()) {
-      $toZero = $month;
       if($monthly == 1){
          $retM[$countM][0] =  $amount;
          $countM++;
       } elseif($monthly == 0){
-         $retI[$month-$toZero][] =  $amount;
+         $retI[$month][] =  $amount;
       }
     }
     $smtp->free_result();
@@ -101,7 +100,12 @@
           #title
           "<h2 class='mdl-card__title-text'>Mes ".$i+1."</h2>".
         "</div>".
-        "<div class='mdl-card__supporting-text'>".
+        "<div class='mdl-card__supporting-text'>";
+          #body
+          for($j = 0; $j < count($retI[$i]); $j++){
+            echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
+          }
+      echo
         "</div>".
         #button
         "<div class='mdl-card__actions mdl-card--border'>".
