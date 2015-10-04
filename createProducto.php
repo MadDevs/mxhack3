@@ -3,10 +3,15 @@
     $nameProducto = "";
     $info = "";
     $cost = "";
+    $star = "";
 
     $nameProducto = $_POST['nameProducto'];
     $info = $_POST['description'];
     $cost = $_POST['amount'];
+    $star = $_POST['star'];
+
+    echo "HEREEEEE " .$star." HERRRE";
+
     $mysqli = con_start();
     $id_user = 1;
     $notCompleted = 0;

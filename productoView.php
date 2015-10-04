@@ -48,7 +48,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <h2>Estos son los productos que estan marcados como objetivos</h2>
+    <h2>Estos son los productos que estan marcados como objetivos pr&oacute;ximos</h2>
     <table class="table">
         <tr>
             <th>Producto</th>

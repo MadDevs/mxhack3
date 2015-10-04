@@ -35,6 +35,13 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label for="star" class="col-sm-2 control-label">Marcar como objetivo actual</label>
+            <div class="col-sm-10">
+                <input type="checkbox" name="star" value="favorite"><p>Si, marcar como objetivo actual</p><br>
+            </div>
+        </div>
+
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
@@ -43,7 +50,7 @@
         
     </form>
 </div><!-- /.container -->
- <script>
+<!-- <script>
 
 
     $('#addProducto').on('submit', function (e) {
@@ -74,7 +81,7 @@
             });
 
     });
-   </script>
+   </script>-->
 <?php  include("foot.php") ?>
 
 
