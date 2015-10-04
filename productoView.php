@@ -70,10 +70,11 @@ $smtp->close();
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <?php if ($count == 0) {?>
-        <h2 id="heading" class="text-center">Favor de establecer producto objetivo</h2> 
+    <h2 id="heading" class="text-center">Favor de establecer producto objetivo</h2> 
+    <p><a id="chart" style={ display:none;} class="btn btn-lg btn-success center-block" href="productoChart.php" role="button">&iquest;Cuanto me falta?</a></p>
     <?php }else{ ?>
     <h2 id="heading" class="text-center">Tu objetivo actual es comprar: <?php echo $favorite[0][0]?> con precio de $<?php echo $favorite[0][2]?></h2>
-    <p><a class="btn btn-lg btn-success center-block" href="productoChart.php" role="button">&iquest;Cuanto me falta?</a></p>
+    <p><a id="chart" class="btn btn-lg btn-success center-block" href="productoChart.php" role="button">&iquest;Cuanto me falta?</a></p>
     <?php } ?>
     <br>
 
@@ -121,9 +122,9 @@ $smtp->close();
     </table>
     <script type="text/javascript">
 
-      $(document).ready(function() {
+    $(document).ready(function() {
         $('#productoView').addClass("active");
-      });
+    });
 
     $('.addFav').on('click', function (e) {
         var id = this.id;
@@ -132,15 +133,16 @@ $smtp->close();
           url: './productoFunciones.php',
           data: {funcion: "addFav", idprod: id},
           success: function(dtx){
-             console.log(dtx);
-             var price = $("td#" + dtx.replace(" ", "")).html();
-             $("#heading").text("Tu objetivo actual es comprar: " + dtx + " con precio de " + price);
-         },
-         error: function (json) {
-            console.log(json);
+           console.log(dtx);
+           var price = $("td#" + dtx.replace(" ", "")).html();
+           $("#heading").text("Tu objetivo actual es comprar: " + dtx + " con precio de " + price);
+           $("#chart").show();
+       },
+       error: function (json) {
+        console.log(json);
 
-        }
-    });
+    }
+});
     });
 
     $('.deleteProd').on('click', function (e) {
@@ -152,14 +154,14 @@ $smtp->close();
           data: {funcion: "deleteProd", idprod: id},
           success: function(dtx){
 
-             $(row).parent().parent().hide();
-             console.log(dtx);
-         },
-         error: function (json) {
-            console.log(json);
+           $(row).parent().parent().hide();
+           console.log(dtx);
+       },
+       error: function (json) {
+        console.log(json);
 
-        }
-    });
+    }
+});
     });
     </script>
 </div><!-- /.container -->
