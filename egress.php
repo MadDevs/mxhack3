@@ -94,7 +94,7 @@
                   for($i = 0; $i < count($retM); $i++){
 
                     echo "<tr>";
-                    echo "<td style='background-color: #C24E47;' >- " . money_format('%(#5n',$retM[$i][0]) . "</td>";
+                    echo "<td style='background-color: #D47D7D;' >- " . money_format('%(#5n',$retM[$i][0]) . "</td>";
                     echo "<td>".$retM[$i][2]."</td>";
                     echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:green;'>Quitar perdida</button></td>";
                     echo "</tr>";
@@ -130,7 +130,7 @@
                 #body
                 for($j = 0; $j < count($retI[$i]); $j++){
             $row .=    "<tr>";
-            $row .=      "<td style='background-color: #C24E47;'>- ". money_format('%(#5n',$retI[$i][$j][0]). "</td>";
+            $row .=      "<td style='background-color: #D47D7D;'>- ". money_format('%(#5n',$retI[$i][$j][0]). "</td>";
             $row .=      "<td> Descripcion</td>";
             $row .=      "<td><button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:green;'>Quitar adeudo</button></td>";
             $row .=    "</tr>";
@@ -173,7 +173,7 @@
             if ($.trim(json)!=0) {
               
               var newRow = "<tr>";
-                  newRow += "<td style='background-color: #C24E47;'>- " + amount + ".00</td>";
+                  newRow += "<td style='background-color: #D47D7D;'>- " + amount + ".00</td>";
                   newRow += "<td>"+desc+"</td>";
                   newRow += "<td><button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button>";
                   newRow += "</tr>";
