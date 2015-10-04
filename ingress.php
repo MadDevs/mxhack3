@@ -176,6 +176,7 @@
       data: {id:id},
       success: function (json) {
           alert(json);
+          $(this).parent.hide;
 
       },
       error: function (json) {
