@@ -167,9 +167,9 @@
 <script>
   $('.remove').on('click', function (e) {
 
+    alert(this);
     e.preventDefault();
     var id = $(this).attr('data-id');
-    alert(id);
 
     $.ajax({
       type: 'post',
