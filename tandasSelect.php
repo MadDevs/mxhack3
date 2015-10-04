@@ -158,7 +158,7 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
 
         echo '<h1>Es turno de '.$nombre1[$usrActual].'</h1>';
 
-        echo '<h2>Dia # '.$diasEnCicloActual.' del ciclo actual </h2>';
+        echo '<h2>Dia # '.($diasEnCicloActual + 1).' del ciclo actual </h2>';
 
 
         if($continua) {
@@ -197,7 +197,11 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
     for($i = 0; $i< $ret[0][3]; $i++){
 
         echo        '<tr>';
-        echo       '<td>Dia '.$cuentaDias.' - '.$cuentaDiasFin.'</td>';
+        if(($diasEnCicloActual + 1) >= $cuentaDias && ($diasEnCicloActual + 1) <= $cuentaDiasFin)
+            echo       '<td style="background-color: #84CCDC;>Dia '.$cuentaDias.' - '.$cuentaDiasFin.'</td>';
+        else
+            echo       '<td>Dia '.$cuentaDias.' - '.$cuentaDiasFin.'</td>';
+
         for($j = 0; $j< $ret[0][3]; $j++){
             if($turno1[$i]==($j + 1 ))
                 echo    '<td style="color: #468847; background-color: #DFF0D8;">'.($ret[0][5] * $ret[0][3] ).'</td>';
@@ -208,7 +212,7 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
         echo        '</tr>';
 
         $cuentaDias = $cuentaDiasFin + 1;
-        $cuentaDiasFin = $cuentaDias;
+        $cuentaDiasFin = $cuentaDias + $cuentaDiasFin;
 
     }
 
