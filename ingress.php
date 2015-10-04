@@ -129,6 +129,7 @@
   <div class="col-md-6">
 
   <?php
+    var_dump(retI);
     for($i = 0; $i < 13; $i++){
       if(count($retI[$i]) > 0){
         echo
@@ -141,7 +142,7 @@
           "<div class='mdl-card__supporting-text'>";
             #body
             for($j = 0; $j < count($retI[$i]); $j++){
-              echo "<div class='row'>+ ".money_format('%(#5n',100)."</div>";
+              echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0])."</div>";
             }
         echo
           "</div>".
