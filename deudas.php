@@ -40,13 +40,9 @@ $smtp->free_result();
 $smtp->close();
 
 
-/*
-session_start();
-$_SESSION["id_deudor"]=$id_deudor;
-$_SESSION["id_usuario"]=$id_usuario;
-$_SESSION["cantidad"]=$amount;
-$_SESSION["nombre"]=$;
-*/
+
+
+
 //unset($_SESSION["newsession"]);
 //session_unset();
 // echo&cantidad='$amount'&nombre='$nombre'&descripcion='$description'";
@@ -105,7 +101,8 @@ $_SESSION["nombre"]=$;
                  echo '<td>' . $personas[2] . '</td>';
                  echo '<td>' . $personas[3] . '</td>';
                  echo '<td>' . $personas[4] . '</td>';
-                 echo '<td><form action="deudasController.php?id_deudor='.$personas[0].'&id_usuario='.$personas[1].'&cantidad='.$personas[4].'&nombre='.$personas[2].'&descripcion='.$personas[3].'"> <button name="tipo" value="pagado" type="submit" class="btn btn-primary">Pagado</button>   <button name="tipo" value="hide" type="submit" class="btn btn-primary">Eliminar X</button></form></td>';
+                 echo '<td><form action="deudasController.php"><input type="hidden" name="descripcion" value="'.$personas[3].'" /><input type="hidden" name="nombre" value="'.$personas[2].'" /><input type="hidden" name="cantidad" value="'.$personas[4].'" /><input type="hidden" name="id_usuario" value="'.$personas[1].'" /><input type="hidden" name="id_deudor" value="'.$personas[0].'" /><button name="tipo" value="pagado" type="submit" class="btn btn-primary">Pagado</button><button name="tipo" value="hide" type="submit" class="btn btn-primary">Eliminar X</button></form></td>';
+
                  echo '</tr>';
              }
          }

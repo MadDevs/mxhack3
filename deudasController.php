@@ -18,6 +18,7 @@ $time = date("Y-m-d");
 $type = 1;
 $created = 0;
 
+$nombremejor =  $nombre." pago su deuda";
 echo $tipo.$id_usuario.$id_deudor.$cantidad.$nombre.$descripcion.$time.$type.$time.$created;
 
 
@@ -26,7 +27,7 @@ if($tipo == "pagado"){
     $mysqli = con_start();
     $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description)
       VALUES(?,?,?,?,?,?)");
-    $smtp->bind_param("iiiiss",$id_usuario,$type, $cantidad,$created, $created, $nombre." pago su deuda");
+    $smtp->bind_param("iiiiss",$id_usuario,$type, $cantidad,$created, $created,$nombremejor);
     $smtp->execute();
     $smtp->free_result();
     $smtp->close();
