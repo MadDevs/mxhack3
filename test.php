@@ -1,4 +1,5 @@
   <?php include('./includes/conn.php'); 
+    echo "test";
     $mysqli = con_start();
        $ret = [];
     $count = 0;
