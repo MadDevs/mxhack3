@@ -17,9 +17,11 @@
 
     $smtp = $mysqli->prepare("INSERT INTO Product(id_user, name,
               description, amount, completed, id_trans) VALUES (?,?,?,?,?,?) ");
-
+    var_dump( $smtp->error);
     $smtp->bind_param("issiii", $id_user, $nameProducto, $info, $cost, 1, 1);
+    var_dump( $smtp->error);
     $smtp->execute();
+    var_dump( $smtp->error);
 
     if (!$smtp->error) {
         echo "correct"  ;
