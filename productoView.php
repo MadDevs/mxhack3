@@ -118,6 +118,11 @@ $smtp->close();
         ?>
     </table>
     <script type="text/javascript">
+    
+      $(document).ready(function() {
+        $('#productoView').addClass("active");
+      });
+
     $('.addFav').on('click', function (e) {
         var id = this.id;
         $.ajax({

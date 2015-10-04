@@ -156,6 +156,9 @@
 </div>
 
     <script>
+    $(document).ready(function() {
+        $('#egress').addClass("active");
+      });
       $('.insertMonthly').on('click', function (e) {
 
         e.preventDefault();
