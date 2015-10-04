@@ -21,16 +21,41 @@ while($smtp->fetch()){
 }
 
 $smtp->free_result();
+
+$finance = [];
+
+$smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a 
+	LEFT JOIN mxhacks.Transaction b 
+	ON a.id_trans = b.id_trans 
+	AND b.type = 1
+	LEFT JOIN mxhacks.Transaction c 
+	on a.id_trans = c.id_trans
+	AND c.type = 2");
+echo "sql";
+$smtp->execute();
+$smtp->store_result();
+$smtp->bind_result($income, $outcome);
+
+while($smtp->fetch()){
+	$finance[0] =  $income;
+	$finance[1] =  $outcome;
+}
+
+$smtp->free_result();
+
 $smtp->close();
 
 var_dump(error_get_last());
 ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<div id="chart_div"></div>
+<div id="chart_div"></div>
 <script type="text/javascript">
 
 google.load('visualization', '1', {packages: ['corechart', 'line']});
 google.setOnLoadCallback(drawBasic);
+
+var productoCosto = <?php echo $favorite[0][2]?>;
+var dineroAhorrado = <?php echo ($finance[0] - $finance[1])?>;
 
 function drawBasic() {
 
@@ -67,10 +92,10 @@ function drawBasic() {
 	];
 
 	var dataArray = new Array();
-
+	var costoSemanal = dineroAhorrado / 24;
 	for (var i = 0; i < dataDate.length; i++) {
 		if (i <= dataDate.length / 4){
-			var temp = new Array(dataDate[i], i * 10, i * 9 + 4.5 * Math.pow(-1, i));
+			var temp = new Array(dataDate[i], i * costoSemanal, i * costoSemanal + costoSemanal / 2 * Math.pow(-1, i));
 		}
 		else{
 			var temp = new Array(dataDate[i], i * 10, null);
