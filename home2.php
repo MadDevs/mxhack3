@@ -20,7 +20,7 @@
          $retM[$countM][0] =  $amount;
          $countM++;
       } elseif($monthly == 0){
-         $retI[$month][] =  $amount;
+         $retI[$month][0] =  $amount;
       }
     }
     $smtp->free_result();
