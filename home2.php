@@ -5,24 +5,23 @@
     $countI = 0;
 
     $id = 1;
-    $smtp = $mysqli->prepare("SELECT t.amount, t.monthly, t.created
+    $smtp = $mysqli->prepare("SELECT t.amount, t.monthly,
+      EXTRACT(MONTH FROM t.created), t.created
       FROM Transaction t
       WHERE t.id_user = ? AND t.is_active = 1");
 
     $smtp->bind_param("i", $id);
     $smtp->execute();
     $smtp->store_result();
-    $smtp->bind_result($amount, $monthly, $created);
+    $smtp->bind_result($amount, $monthly, $month, $date);
 
     while ($smtp->fetch()) {
+      $toZero = $month;
       if($monthly == 1){
          $retM[$countM][0] =  $amount;
-         $retM[$countM][1] =  $created;
          $countM++;
       } elseif($monthly == 0){
-         $retI[$countI][0] =  $amount;
-         $retI[$countI][1] =  $created;
-         $countI++;
+         $retI[$month-$toZero][] =  $amount;
       }
     }
     $smtp->free_result();
@@ -100,11 +99,14 @@
       "<div class='mdl-card mdl-shadow--2dp'>".
         "<div class='mdl-card__title mdl-card--expand'>".
           #title
-          "<h2 class='mdl-card__title-text'>Mes ".$i."</h2>".
+          "<h2 class='mdl-card__title-text'>Mes ".$i+1."</h2>".
         "</div>".
-        "<div class='mdl-card__supporting-text'>".
+        "<div class='mdl-card__supporting-text'>";
           #body
-          "<div class='row'>+ ".$retI[$i][0]."</div>".
+          for($j = 0; $j < count($retI[$i]); $j++){
+            echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
+          }
+      echo
         "</div>".
         #button
         "<div class='mdl-card__actions mdl-card--border'>".
