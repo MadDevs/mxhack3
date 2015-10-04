@@ -49,9 +49,9 @@
         <?php
         foreach($ret as $ok){
             echo "<tr>";
-            echo "<td>".$ok[0]."<td>";
-            echo "<td>".$ok[1]."<td>";
-            echo "<td>".$ok[2]."<td>";
+            echo "<td>".$ok[0]."</td>";
+            echo "<td>".$ok[1]."</td>";
+            echo "<td>".$ok[2]."</td>";
             echo "</tr>";
         }
         ?>
