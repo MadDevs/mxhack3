@@ -86,7 +86,7 @@ $smtp->close();
             echo "<tr>";
             echo "<td>".$ok[0]."</td>";
             echo "<td>".$ok[1]."</td>";
-            echo "<td id='".$ok[0]."'>$".$ok[2]."</td>";
+            echo "<td id='".str_replace(" ", "", $ok[0])."'>$".$ok[2]."</td>";
             echo "<td><button id='".$ok[0]."' type='button' class='btn btn-default btn-lg center-block addFav'><span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>";
             echo "<td><button id='".$ok[0]."' type='button' class='btn btn-default btn-lg center-block deleteProd'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>";
             echo "</tr>";
@@ -123,7 +123,7 @@ $smtp->close();
           data: {funcion: "addFav", idprod: id},
           success: function(dtx){
            console.log(dtx);
-           var price = $("td#" + dtx).html();
+           var price = $("td#" + dtx.replace(" ", "")).html();
            $("#heading").text("Tu objetivo actual es comprar: " + dtx + " con precio de " + price);
        },
        error: function (json) {
