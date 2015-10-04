@@ -27,7 +27,19 @@
   </head>
   <?php include('./includes/conn.php'); 
     $mysqli = con_start();
-    var_dump($mysqli);
+
+    $smtp = $mysqli->prepare("SELECT count(*) FROM User");
+    
+    $smtp->execute();
+    $smtp->store_result();    
+    $smtp->bind_result($count);
+    while ($smtp->fetch()) {
+         echo $count . " tessttttt ";
+    }
+    $smtp->free_result();
+    $smtp->close();
+
+
 
   ?>  
   <body>
