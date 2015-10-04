@@ -12,22 +12,18 @@
     $mysqli = con_start();
     $ret = [];
     $count = 0;
-
-
     //$id = 1;
     $smtp = $mysqli->prepare("SELECT name, description, amount FROM Product WHERE id_user = 1");
 
-
     //$smtp->bind_param("i", $id);
     $smtp->execute();
-
 
     $smtp->store_result();
     $smtp->bind_result($name, $info, $cost);
 
 
     while ($smtp->fetch()) {
-        $ret[$count][0] =  $id_tanda;
+        $ret[$count][0] =  $name;
         $ret[$count][1] =  $info;
         $ret[$count][2] =  $cost;
         $count++;
@@ -42,3 +38,19 @@
     // */
 
 ?>
+
+<div class="container">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <?php
+    foreach($ret as $ok){
+        echo $ok[0];
+    }
+
+
+    ?>
+</div>
+
+<?php  include("foot.php") ?>
