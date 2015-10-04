@@ -56,7 +56,7 @@ var_dump(error_get_last());
 </div>
 <div class="col-sm-2"></div>
 <div class="text-center col-sm-12">
-	<button id="<?php $favorite[0][0]?>" class="completed">Producto adquirido</button>
+	<button id="<?php echo $favorite[0][0]?>" class="completed">Producto adquirido</button>
 </div>
 
 <script type="text/javascript">
@@ -161,7 +161,7 @@ function getWeekNumber(d) {
 	return weekNo;
 }
 
-$('#completed').on('click', function (e) {
+$('.completed').on('click', function (e) {
 	var id = this.id;
 	$.ajax({
 		type: 'POST',
