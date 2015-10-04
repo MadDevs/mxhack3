@@ -101,7 +101,7 @@ $smtp->close();
                  echo '<td>' . $personas[2] . '</td>';
                  echo '<td>' . $personas[3] . '</td>';
                  echo '<td>' . $personas[4] . '</td>';
-                 echo '<td><form action="deudasController.php"><input type="hidden" name="descripcion" value="'.$personas[3].'" /><input type="hidden" name="nombre" value="'.$personas[2].'" /><input type="hidden" name="cantidad" value="'.$personas[4].'" /><input type="hidden" name="id_usuario" value="'.$personas[1].'" /><input type="hidden" name="id_deudor" value="'.$personas[0].'" /><button name="tipo" value="pagado" type="submit" class="btn btn-primary">Pagado</button><button name="tipo" value="hide" type="submit" class="btn btn-primary">Eliminar X</button></form></td>';
+                 echo '<td><form action="deudasController.php"><input type="hidden" name="descripcion" value="'.$personas[3].'" /><input type="hidden" name="nombre" value="'.$personas[2].'" /><input type="hidden" name="cantidad" value="'.$personas[4].'" /><input type="hidden" name="id_usuario" value="'.$personas[1].'" /><input type="hidden" name="id_deudor" value="'.$personas[0].'" /><button name="tipo" value="pagado" type="submit" class="btn btn-primary">Pagado</button> &nbsp; &nbsp;<button name="tipo" value="hide" type="submit" class="btn btn-primary">Eliminar X</button></form></td>';
 
                  echo '</tr>';
              }

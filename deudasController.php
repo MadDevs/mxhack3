@@ -29,7 +29,7 @@ if($tipo == "pagado"){
     //echo "entro a pagar";
     $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description) VALUES(?,?,?,?,?,?)");
     //echo "entro a pagar";
-    $smtp->bind_param("iiiiss",$id_usuario,$type, $cantidad,$created, $created,$nombremejor);
+    $smtp->bind_param("iiiiss",$id_usuario,$type, $cantidad,$time, $created,$nombremejor);
     //echo "entro a pagar";
     $smtp->execute();
     //echo "entro a pagar";
