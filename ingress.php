@@ -88,9 +88,9 @@
                 for($i = 0; $i < count($retM); $i++){
 
                   echo "<tr>";
-                  echo "<td>" . money_format('%(#5n',$retM[$i][0]) . "</td>";
+                  echo "<td>+ " . money_format('%(#5n',$retM[$i][0]) . "</td>";
                   echo "<td>" . "Descripcion" . "</td>";
-                  echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
+                  echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='background-color: #DFF0D8; color:red;'>Quitar ganancia</button></td>";
                   echo "</tr>";
                 }
               ?>
@@ -171,7 +171,7 @@
               var newRow = "<tr>";
                   newRow += "<td>+ " + amount + ".00</td>";
                   newRow += "<td>Descripcion</td>";
-                  newRow += "<td><button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button>";
+                  newRow += "<td><button class='remove' data-id='"+$.trim(json)+"' value='remove' style='background-color: #84CCDC; color:red;'>Quitar ganancia</button>";
                   newRow += "</tr>";
               $(row).append(newRow);
               
