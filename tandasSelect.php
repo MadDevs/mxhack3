@@ -115,7 +115,7 @@ $data[] = array('volume' => 98, 'edition' => 2);
 $data[] = array('volume' => 86, 'edition' => 6);
 $data[] = array('volume' => 67, 'edition' => 7);
 */
-$data[] = array('nombre' => $ret[0][1], 'turno' => $ret[0][8]);
+$data[] = array('nombre' => "Juan", 'turno' => $ret[0][8]);
 foreach($ret2 as $adusr) {
     $data[] = array('nombre' => $adusr[0], 'turno' => $adusr[1]);
 }
