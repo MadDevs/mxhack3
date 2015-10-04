@@ -62,7 +62,7 @@
       $smtp->close();
     }
 
-    $mysqli = con_start();
+    
 
     echo $return;
       

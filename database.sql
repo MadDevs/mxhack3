@@ -14,15 +14,15 @@ current_savings int NOT NULL DEFAULT 0,
 has_partner int NOT NULL DEFAULT 0 ,
 PRIMARY KEY (id_user)
 );
-INSERT INTO User(first_name, last_name, address, credit_candidate, monthly_earnings) VALUES ("Emilio", "Flores", "Monterrey", 1, 10000);
-INSERT INTO User(first_name, last_name, address, credit_candidate, monthly_earnings) VALUES ("Enrique", "Hernandez", "Chihuahua", 0, 10000);
+INSERT INTO User(first_name, last_name, address, credit_candidate, current_savings, monthly_earnings) VALUES ("Emilio", "Flores", "Monterrey", 1, 0, 10000);
+INSERT INTO User(first_name, last_name, address, credit_candidate, current_savings, monthly_earnings) VALUES ("Enrique", "Hernandez", "Chihuahua", 0, 0, 10000);
 DROP TABLE Transaction;
-CREATE TABLE Transaction
+CREATE TABLE Transaction 
 (
 id_trans int NOT NULL AUTO_INCREMENT ,
 id_user int NOT NULL ,
 type int NOT NULL ,
-amount float NOT NULL ,
+amount int NOT NULL ,
 monthly int NOT NULL ,
 created date NOT NULL ,
 is_active int NOT NULL DEFAULT 1,
