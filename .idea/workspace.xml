@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="caea6bbc-42a6-4236-be56-2471b7636f36" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ingress.php" afterPath="$PROJECT_DIR$/ingress.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mxhack3 (GitHub Desktop).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,24 +28,19 @@
       <file leaf-file-name="ingress.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ingress.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74244124">
-              <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.7614782">
+              <caret line="148" column="53" selection-start-line="148" selection-start-column="53" selection-end-line="148" selection-end-column="53" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1443968372710" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
-                <marker date="1443968372710" expanded="true" signature="2557:2583" placeholder="..." />
-                <marker date="1443968372710" expanded="true" signature="2794:2804" placeholder="..." />
-                <marker date="1443968372710" expanded="true" signature="3940:3966" placeholder="..." />
-                <marker date="1443968372710" expanded="true" signature="4178:4188" placeholder="..." />
-                <marker date="1443968372710" expanded="true" signature="4561:4573" placeholder="..." />
-                <marker date="1443968372710" expanded="true" signature="4618:4630" placeholder="..." />
-                <marker date="1443968372710" expanded="true" signature="4921:5423" placeholder="..." />
-                <marker date="1443968372710" expanded="true" signature="4974:5423" placeholder="{...}" />
-                <marker date="1443968372710" expanded="true" signature="5179:5423" placeholder="{&quot;type&quot;: 'post'...}" />
-                <marker date="1443968372710" expanded="true" signature="5332:5423" placeholder="{...}" />
-                <marker date="1443968372710" expanded="true" signature="5380:5423" placeholder="{...}" />
-                <marker date="1443968372710" expanded="true" signature="5472:5498" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1443968526728" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
+                <marker date="1443968526728" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
+                <marker date="1443968526728" expanded="true" signature="2557:2583" placeholder="..." />
+                <marker date="1443968526728" expanded="true" signature="2794:2804" placeholder="..." />
+                <marker date="1443968526728" expanded="true" signature="3940:3966" placeholder="..." />
+                <marker date="1443968526728" expanded="true" signature="4178:4188" placeholder="..." />
+                <marker date="1443968526728" expanded="true" signature="4561:4573" placeholder="..." />
+                <marker date="1443968526728" expanded="true" signature="4618:4630" placeholder="..." />
+                <marker date="1443968526728" expanded="true" signature="5531:5557" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -134,7 +130,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -169,7 +165,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,17 +250,50 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/productoChart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productoView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="44" selection-start-column="4" selection-end-line="56" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <marker date="1443962245643" expanded="true" signature="-1:-1" placeholder="UPDATE Produ..." />
+            <marker date="1443962245643" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT name,..Product..." />
+            <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT count..Tanda..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
             <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT Sum(b..Transaction..." />
             <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT name,..Product..." />
             <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT count..Tanda..." />
@@ -295,11 +324,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="51" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="51" />
-          <folding>
-            <marker date="1443953964320" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1443953964320" expanded="true" signature="-1:-1" placeholder="SELECT id_ta..Tanda..." />
-            <marker date="1443953964320" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -315,7 +340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="6" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
@@ -335,12 +359,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT Sum(b..Transaction..." />
             <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT name,..Product..." />
             <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT count..Tanda..." />
@@ -371,11 +389,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="51" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="51" />
-          <folding>
-            <marker date="1443953964320" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1443953964320" expanded="true" signature="-1:-1" placeholder="SELECT id_ta..Tanda..." />
-            <marker date="1443953964320" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -391,7 +405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="6" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
@@ -434,7 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="6" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
@@ -454,12 +466,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT Sum(b..Transaction..." />
             <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT name,..Product..." />
             <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT count..Tanda..." />
@@ -531,9 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22844344">
           <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -549,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -565,10 +567,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1443962756342" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1443962756342" expanded="true" signature="-1:-1" placeholder="SELECT id_tr..Transaction..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -576,10 +575,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1443966144308" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1443966144308" expanded="true" signature="-1:-1" placeholder="UPDATE Deudo..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -595,11 +591,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="51" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="51" />
-          <folding>
-            <marker date="1443953964320" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1443953964320" expanded="true" signature="-1:-1" placeholder="SELECT id_ta..Tanda..." />
-            <marker date="1443953964320" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -615,7 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39354068">
           <caret line="51" column="6" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
@@ -634,44 +625,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22844344">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#6#99#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28248587">
-          <caret line="181" column="29" selection-start-line="181" selection-start-column="29" selection-end-line="181" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT Sum(b..Transaction..." />
-            <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT name,..Product..." />
-            <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT count..Tanda..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/productoChart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11422172">
+        <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <marker date="1443962232974" expanded="true" signature="-1:-1" placeholder="SELECT name,..Product..." />
-            <marker date="1443962232974" expanded="true" signature="-1:-1" placeholder="SELECT Sum(b..Transaction..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/productoView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7043673">
+        <state vertical-scroll-proportion="0.0">
           <caret line="49" column="0" selection-start-line="44" selection-start-column="4" selection-end-line="56" selection-end-column="25" />
           <folding />
         </state>
@@ -679,7 +646,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/createProducto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9039548">
+        <state vertical-scroll-proportion="0.581187">
           <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding>
             <marker date="1443962245643" expanded="true" signature="-1:-1" placeholder="UPDATE Produ..." />
@@ -688,26 +655,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7995521">
+          <caret line="198" column="39" selection-start-line="198" selection-start-column="39" selection-end-line="198" selection-end-column="39" />
+          <folding>
+            <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT Sum(b..Transaction..." />
+            <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT name,..Product..." />
+            <marker date="1443966772720" expanded="true" signature="-1:-1" placeholder="SELECT count..Tanda..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ingress.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74244124">
-          <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.7614782">
+          <caret line="148" column="53" selection-start-line="148" selection-start-column="53" selection-end-line="148" selection-end-column="53" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1443968372710" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
-            <marker date="1443968372710" expanded="true" signature="2557:2583" placeholder="..." />
-            <marker date="1443968372710" expanded="true" signature="2794:2804" placeholder="..." />
-            <marker date="1443968372710" expanded="true" signature="3940:3966" placeholder="..." />
-            <marker date="1443968372710" expanded="true" signature="4178:4188" placeholder="..." />
-            <marker date="1443968372710" expanded="true" signature="4561:4573" placeholder="..." />
-            <marker date="1443968372710" expanded="true" signature="4618:4630" placeholder="..." />
-            <marker date="1443968372710" expanded="true" signature="4921:5423" placeholder="..." />
-            <marker date="1443968372710" expanded="true" signature="4974:5423" placeholder="{...}" />
-            <marker date="1443968372710" expanded="true" signature="5179:5423" placeholder="{&quot;type&quot;: 'post'...}" />
-            <marker date="1443968372710" expanded="true" signature="5332:5423" placeholder="{...}" />
-            <marker date="1443968372710" expanded="true" signature="5380:5423" placeholder="{...}" />
-            <marker date="1443968372710" expanded="true" signature="5472:5498" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1443968526728" expanded="true" signature="238:265" placeholder="SELECT t.amo..Transaction..." />
+            <marker date="1443968526728" expanded="true" signature="238:425" placeholder="SELECT t.amo..Transaction..." />
+            <marker date="1443968526728" expanded="true" signature="2557:2583" placeholder="..." />
+            <marker date="1443968526728" expanded="true" signature="2794:2804" placeholder="..." />
+            <marker date="1443968526728" expanded="true" signature="3940:3966" placeholder="..." />
+            <marker date="1443968526728" expanded="true" signature="4178:4188" placeholder="..." />
+            <marker date="1443968526728" expanded="true" signature="4561:4573" placeholder="..." />
+            <marker date="1443968526728" expanded="true" signature="4618:4630" placeholder="..." />
+            <marker date="1443968526728" expanded="true" signature="5531:5557" placeholder="..." />
           </folding>
         </state>
       </provider>

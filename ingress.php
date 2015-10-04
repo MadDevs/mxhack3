@@ -94,7 +94,7 @@
 
                     echo "<tr>";
                     echo "<td style='background-color: #DFF0D8;' >+ " . money_format('%(#5n',$retM[$i][0]) . "</td>";
-                    echo "<td>".$retM[$i][1]."</td>";
+                    echo "<td>".$retM[$i][2]."</td>";
                     echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
                     echo "</tr>";
                   }
@@ -146,6 +146,7 @@
         }
       ?>
 
+          <h2>Tu total de ingresos es: $ 440000 pesos</h2>
 
 
       </div>
