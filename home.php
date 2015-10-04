@@ -275,5 +275,6 @@
         $('#home').addClass("active");
       });
 </script>
-</body>
-</html>
+<?php
+include ("foot.php")
+?>
