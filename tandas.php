@@ -132,7 +132,7 @@
 
             <div class="form-group text-center">
                 <div>
-                    <button type="submit" class="btn btn-default">Sign in</button>
+                    <button type="submit" class="btn btn-default">Agregar tanda</button>
                 </div>
             </div>
         </form>
