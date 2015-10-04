@@ -116,7 +116,11 @@ $smtp->close();
 
 
 </div>
-
+<script type="text/javascript">
+      $(document).ready(function() {
+        $('#deudas').addClass("active");
+      });
+</script>
 
 <?php
 include ("foot.php")

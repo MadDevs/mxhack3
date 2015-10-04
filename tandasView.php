@@ -104,7 +104,11 @@ include ("head.php")
 
 </div>
 
-
+<script type="text/javascript">
+      $(document).ready(function() {
+        $('#tandasView').addClass("active");
+      });
+</script>
 
 <?php
 include ("foot.php")

@@ -214,7 +214,12 @@ $smtp->close();
 
 
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#resumen').addClass("active");
+      });
 
+</script>
 <?php
 
 include ("foot.php")
