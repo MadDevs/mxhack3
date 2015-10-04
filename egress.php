@@ -1,6 +1,6 @@
     <?php include('./includes/conn.php');
 
-    $titulo = "Ingresos";
+    $titulo = "Egress";
     include ("head.php");
 
     setlocale(LC_MONETARY, 'en_US');
@@ -12,7 +12,7 @@
     $smtp = $mysqli->prepare("SELECT t.amount, t.monthly,
       EXTRACT(MONTH FROM t.created), t.created, t.id_trans
       FROM Transaction t
-      WHERE t.id_user = ? AND t.is_active = 1 AND t.type = 1");
+      WHERE t.id_user = ? AND t.is_active = 1 AND t.type = 2");
 
     $smtp->bind_param("i", $id);
     $smtp->execute();
@@ -28,6 +28,7 @@
          $retI[$month][] =  array($amount, $idt);
       }
     }
+
     $smtp->free_result();
     $smtp->close();
 
@@ -68,7 +69,7 @@
          <div class="mdl-card__title mdl-card--expand">
 
           <!-- title -->
-          <h2 class="mdl-card__title-text">Ganancia de cada mes</h2>
+          <h2 class="mdl-card__title-text">Perdida de cada mes</h2>
 
         </div>
       </div>
@@ -92,9 +93,9 @@
                   for($i = 0; $i < count($retM); $i++){
 
                     echo "<tr>";
-                    echo "<td style='background-color: #DFF0D8;' >+ " . money_format('%(#5n',$retM[$i][0]) . "</td>";
+                    echo "<td style='background-color: #DFF0D8;' >- " . money_format('%(#5n',$retM[$i][0]) . "</td>";
                     echo "<td>" . "Descripcion" . "</td>";
-                    echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
+                    echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:green;'>Quitar perdida</button></td>";
                     echo "</tr>";
                   }
                 ?>
@@ -106,8 +107,8 @@
 
             <!-- button -->
             <input id="ingresoFijo" class="monthlyInput"  type="text" name="amount" placeholder="100" style="color:black;">
-            <button style="color:green;" class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
-              data-idu='1'>Agrega dinero mensual</button>
+            <button style="color:red;" class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
+              data-idu='1'>Registra deuda mensual</button>
 
         </div>
       </div>
@@ -127,9 +128,9 @@
                 #body
                 for($j = 0; $j < count($retI[$i]); $j++){
             $row .=    "<tr>";
-            $row .=      "<td style='background-color: #DFF0D8;'>+ ". money_format('%(#5n',$retI[$i][$j][0]). "</td>";
+            $row .=      "<td style='background-color: #DFF0D8;'>- ". money_format('%(#5n',$retI[$i][$j][0]). "</td>";
             $row .=      "<td> Descripcion</td>";
-            $row .=      "<td><button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
+            $row .=      "<td><button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:green;'>Quitar adeudo</button></td>";
             $row .=    "</tr>";
                       
                 }
@@ -137,7 +138,7 @@
             $row .=   "</table>";
             $row .=   "<div class='mdl-card__actions mdl-card--border'>";
             $row .=     "<input id='ingresoFijo' class='monthlyInput'  type='text' name='amount' placeholder='100' style='color:black;'>";
-            $row .=     "<button style='color:green;' class='insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect' data-idu='1'>Agrega dinero a ".getMonth($i) . "</button>";
+            $row .=     "<button style='color:red;' class='insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect' data-idu='1'>Pagaste dinero en ".getMonth($i) . "</button>";
             $row .=   "</div>";
               #button     
             echo $row;
@@ -162,14 +163,14 @@
         var button = $(this);
         $.ajax({
           type: 'post',
-          url: './createMonthlyTransaction.php',
+          url: './createMonthlyDebt.php',
           data: {idu:idu, amount: amount},
           success: function (json) {
             
             if ($.trim(json)!=0) {
               
               var newRow = "<tr>";
-                  newRow += "<td style='background-color: #DFF0D8;'>+ " + amount + ".00</td>";
+                  newRow += "<td style='background-color: #DFF0D8;'>- " + amount + ".00</td>";
                   newRow += "<td>Descripcion</td>";
                   newRow += "<td><button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button>";
                   newRow += "</tr>";

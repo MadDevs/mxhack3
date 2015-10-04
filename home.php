@@ -1,3 +1,64 @@
+<?php
+
+    include ("includes/conn.php");
+    $saldos = [];
+    $saldo = 0;
+    $numTandas = [];
+    $favorite = [];
+    $deudas = 0;
+
+    $mysqli = con_start();
+
+    /* REGRESA INGRESO TOTAL Y EGRESO TOTAL*/
+    $smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a
+	LEFT JOIN mxhacks.Transaction b
+	ON a.id_trans = b.id_trans
+	AND b.type = 1
+	LEFT JOIN mxhacks.Transaction c
+	on a.id_trans = c.id_trans
+	AND c.type = 2");
+    $smtp->execute();
+    $smtp->store_result();
+
+    $smtp->bind_result($ingresos, $egresos);
+
+    while($smtp->fetch()){
+        $saldos[0][0] =  $ingresos;
+        $saldos[0][1] =  $egresos;
+    }
+    $saldo = $saldos[0][0] - $saldos[0][1];
+    $smtp->free_result();
+
+    /*Consegir el favorito*/
+    $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1
+            AND id_trans = 1 AND hidden = 0");
+    $smtp->execute();
+    $smtp->store_result();
+    $smtp->bind_result($name, $info, $cost, $completed);
+
+    while($smtp->fetch()){
+        $favorite[0][0] =  $name;
+        $favorite[0][1] =  $info;
+        $favorite[0][2] =  $cost;
+    }
+
+    $smtp->free_result();
+
+    /*Conseguir el numero de tandas*/
+    $smtp = $mysqli->prepare("SELECT count(id_tanda) FROM Tanda;");
+    $smtp->execute();
+    $smtp->store_result();
+    $smtp->bind_result($tandas);
+
+    while($smtp->fetch()){
+        $numTandas[0][0] = $tandas;
+    }
+
+    $smtp->free_result();
+    $smtp->close();
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +91,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <style>
+        h4{
+            color:#fff;
+        }
+
         .demo-card-event.mdl-card {
             width: 240px;
             height: 240px;
@@ -41,6 +106,7 @@
         .demo-card-event > .mdl-card__actions {
             border-color: rgba(255, 255, 255, 0.2);
         }
+
         .demo-card-event > .mdl-card__title {
             align-items: flex-start;
         }
@@ -67,7 +133,7 @@
         <div class="cover-container">
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h3 class="masthead-brand">Inicio</h3>
+                    <h3 class="masthead-brand">Inicio - Bienvenido a tu cochinito</h3>
                     <nav>
                         <ul class="nav masthead-nav">
                             <li><a href="#">Ayuda</a></li>
@@ -81,15 +147,14 @@
                         <div class="mdl-card__title mdl-card--expand">
                             <h4>Ingresos<br>
                                 Tienes <br>
-                                $ 2,000
+                                $ <?php echo $saldos[0][0]?>
                             </h4>
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
-                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            <a href="ingress.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                                 Ir a ingresos
                             </a>
                             <div class="mdl-layout-spacer"></div>
-                            <i class="material-icons">event</i>
                         </div>
                 </div>
 
@@ -97,15 +162,14 @@
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>Egresos<br>
                             Debes<br>
-                            $ 500
+                            $ <?php echo $saldos[0][1]?>
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        <a href="egress.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                             Ir a egresos
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 
@@ -114,15 +178,14 @@
                         <h4>
                             Resumen<br>
                             Tu saldo real<br>
-                            $ 1,500
+                            $ <?php echo $saldo?>
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        <a href="resumen.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                             Ir a resumen
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 
@@ -132,16 +195,15 @@
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>
                             Tanda<br>
-                            Te toca el<br>
-                            4 de octubre
+                            Actualmente estas en<br>
+                            <?php echo $numTandas[0][0] ?> tandas
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        <a href="tandasView.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                            Ir a tanda
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 
@@ -150,32 +212,30 @@
                         <h4>
                             Productos<br>
                             Actualmente quieres<br>
-                            Bicicleta mono
+                            <?php echo $favorite[0][0]?>
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        <a href="productoView.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                             Ir a productos
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 
                 <div class="demo-card-event mdl-card mdl-shadow--2dp" style="background:#CDDC39">
                     <div class="mdl-card__title mdl-card--expand">
                         <h4>
-                            ???<br>
-                            May 24, 2016<br>
-                            7-11pm
+                            Deudas<br>
+                            Dinero que me deben<br>
+                            $ 3,000
                         </h4>
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            ???
+                        <a href="deudas.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            Ir a deudas
                         </a>
                         <div class="mdl-layout-spacer"></div>
-                        <i class="material-icons">event</i>
                     </div>
                 </div>
 

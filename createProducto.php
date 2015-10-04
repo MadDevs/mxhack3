@@ -8,16 +8,17 @@
     $notCompleted = 0;
     $fav = -1;
     $semanas = 0;
-    $today = date("Y-m-d"); //getdate converted day
+    $today = "0000-00-00"; //getdate converted day
 
     $nameProducto = $_POST['nameProducto'];
     $info = $_POST['description'];
     $cost = $_POST['amount'];
     $star = $_POST['star'];
-    $semanas = $_POST['weeks'];
 
     if($star == 'f'){
         $fav = 1;
+        $today = date("Y-m-d"); //getdate converted day
+        $semanas = $_POST['weeks'];
     } else {
         $fav = 0;
     }
@@ -25,7 +26,8 @@
     $mysqli = con_start();
 
     if($fav == 1){
-        $smtp = $mysqli->prepare("UPDATE Product SET id_trans = 0 WHERE id_trans = 1");
+        $smtp = $mysqli->prepare("UPDATE Product SET id_trans = 0, semanas = 0,
+                  fechaInicio = '0000-00-00'  WHERE id_trans = 1");
         $smtp->execute();
         $smtp->free_result();
         $smtp->close();

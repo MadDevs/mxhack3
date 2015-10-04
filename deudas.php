@@ -14,16 +14,13 @@ include('./includes/conn.php');
 
 $mysqli = con_start();
 
-var_dump(error_get_last());
-
 $smtp = $mysqli->prepare("SELECT id_deudor, id_user, name, description, amount, completed, hidden FROM Deudores WHERE id_user = 1");
 
-var_dump(error_get_last());
 $smtp->execute();
-var_dump(error_get_last());
+
 
 $smtp->store_result();
-var_dump(error_get_last());
+
 $smtp->bind_result($id_deudor, $id_user, $name, $description, $amount, $completed, $hidden);
 
 while ($smtp->fetch()) {
@@ -53,6 +50,15 @@ $smtp->close();
     <p>&nbsp;</p>
 
 
+    <h1>Nueva Deuda</h1>
+
+    <form action="nuevaDeuda.php">
+
+        <button name="tipo" value="nueva" type="submit" class="btn btn-primary btn-lg btn-block">Nueva Deuda</button>
+
+    </form>
+
+
     <h1>Deudas</h1>
 
     <table class="table table-striped">
@@ -65,18 +71,22 @@ $smtp->close();
         </tr>
         </thead>
         <tbody>
-        <tr>
+
          <?php
 
          foreach($ret as $personas){
-             echo '<td>'.$personas[2].'</td>';
-             echo '<td>'.$personas[3].'</td>';
-             echo '<td>'.$personas[4].'</td>';
-             echo '<td><form action="deudasController.php"><button name="tipo" value="pagado" type="submit" >Pagado</button><button name="tipo" value="hide" type="submit" >Eliminar X</button></form></td>';
+             if($personas[6] == "0") {
+
+                 echo '<td>' . $personas[2] . '</td>';
+                 echo '<td>' . $personas[3] . '</td>';
+                 echo '<td>' . $personas[4] . '</td>';
+                 echo '<td><form action="deudasController.php?id_deudor='.$id_deudor.'&id_usuario='.$id_user.'&cantidad='.$amount.'&nombre='.$nombre.'&descripcion='.$description.'"> <button name="tipo" value="pagado" type="submit" class="btn btn-primary">Pagado</button>   <button name="tipo" value="hide" type="submit" class="btn btn-primary">Eliminar X</button></form></td>';
+                 echo '</tr>';
+             }
          }
 
          ?>
-         </tr>
+
 
         </tbody>
     </table>

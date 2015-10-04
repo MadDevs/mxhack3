@@ -42,10 +42,10 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="weeks" class="col-sm-2 control-label">Semanas en las que deseas comprarlo</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control"  name="weeks" id="amount" placeholder="7">
+        <div class='form-group' id="objetivo">
+            <label for='weeks' class='col-sm-2 control-label'>Semanas en las que deseas comprarlo</label>
+            <div class='col-sm-10'>
+                <input type='number' class='form-control'  name='weeks' id='amount' placeholder='7'>
             </div>
         </div>
 
@@ -59,6 +59,18 @@
 </div><!-- /.container -->
  <script>
 
+     var countChecked = function() {
+         var n = $( "input:checked" ).length;
+         if(n == 0){
+             $("#objetivo").hide()
+         } else {
+             $("#objetivo").show()
+         }
+     };
+
+     countChecked();
+
+     $( "input[type=checkbox]" ).on( "click", countChecked );
 
     $('#addProducto').on('submit', function (e) {
 

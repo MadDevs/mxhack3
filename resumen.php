@@ -57,41 +57,72 @@
                 return "Diciembre";
         }
     }
+  $finance = [];
+
+  $smtp = $mysqli->prepare("SELECT Sum(b.amount), Sum(c.amount) FROM mxhacks.Transaction a 
+    LEFT JOIN mxhacks.Transaction b 
+    ON a.id_trans = b.id_trans 
+    AND b.type = 1
+    LEFT JOIN mxhacks.Transaction c 
+    on a.id_trans = c.id_trans
+    AND c.type = 2");
+  echo "sql";
+  $smtp->execute();
+  $smtp->store_result();
+  $smtp->bind_result($income, $outcome);
+
+  while($smtp->fetch()){
+    $finance[0] =  $income;
+    $finance[1] =  $outcome;
+  }
+
+  $smtp->free_result();
+
+  $smtp->close();
   ?>
 
 
 <div class="container">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
 
     <?php
     for($i = 1; $i < 13; $i++){
       if((count($arrI[$i]) > 0) || (count($arrE[$i]) > 0)){
         echo
-        "<div class='row'>".
-          "<div class='row'>".$i."</div>".
-          "<div class='row'>".
-            "<div class='col-md-6' style='color:green;'>Ingreso</div>".
-            "<div class='col-md-6' style='color:red;'>Egreso:</div>".
-          "</div>".
-          "<div class='row'>".
-            "<div class='col-md-6' style='color:green;'>";
-            for($j = 0; $j < count($arrI[$i]); $j++){
-              echo
-                "<div class='row' style='color:green;'>+ ".
-                  $arrI[$i][$j]."</div>";
-            }
+        "<div class='row' style='padding:80px 0 0;'>".
+          "<table class='table'><thead><th>".getMonth($i)."</th></thead>".
+          "<tbody>".
+            "<div class='row'>".
 
-          echo
-            "</div>".
-            "<div class='col-md-6' style='color:red;'>";
-            for($j = 0; $j < count($arrE[$i]); $j++){
+              "<div class='col-md-6'>".
+                "<table class='table'><thead><th style='color:green;'>Ingreso</th></thead>".
+                "<tbody>";
+                  for($j = 0; $j < count($arrI[$i]); $j++){
+                    echo
+                      "<td style='color:green;'>+ ".
+                        $arrI[$i][$j]."</td>";
+                  }
               echo
-                "<div class='row' style='color:red;'>- ".
-                  $arrE[$i][$j]."</div>";
-            }
-          echo
+                "</tbody>".
+              "</div>".
+
+              "<div class='col-md-6'>".
+                "<table class='table'><thead><th style='color:red;'>Egreso</th></thead>".
+                "<tbody>";
+                  for($j = 0; $j < count($arrE[$i]); $j++){
+                    echo
+                      "<td style='color:red;'>+ ".
+                        $arrE[$i][$j]."</td>";
+                  }
+              echo
+                "</tbody>".
+              "</div>".
             "</div>".
-          "</div>".
-        "</div>";
+          "</tbody>".
+        "</table>".
+      "</div>";
       }
     }
     ?>
