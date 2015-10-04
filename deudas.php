@@ -54,7 +54,7 @@ $smtp->close();
 
     <form action="nuevaDeuda.php">
 
-        <button name="tipo" value="nueva" type="submit" class="btn btn-primary btn-lg btn-block">Bueva Deuda</button>
+        <button name="tipo" value="nueva" type="submit" class="btn btn-primary btn-lg btn-block">Nueva Deuda</button>
 
     </form>
 

@@ -24,7 +24,7 @@ include('./includes/conn.php');
     <h1>Nueva Deuda</h1>
 
     <div class="form-group">
-        <form class="form-horizontal" action="nuevaDeudaControlador.php>
+        <form class="form-horizontal" action="nuevaDeudaControlador.php">
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">Nombre</label>
                 <div class="col-sm-10">
