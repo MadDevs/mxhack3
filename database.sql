@@ -46,7 +46,7 @@ id_product int NOT NULL AUTO_INCREMENT ,
 id_user int NOT NULL ,
 name varchar(255) NOT NULL ,
 description varchar(255) ,
-amount float NOT NULL ,
+amount int NOT NULL ,
 completed boolean NOT NULL DEFAULT 0 ,
 id_trans int ,
 PRIMARY KEY (id_product)
