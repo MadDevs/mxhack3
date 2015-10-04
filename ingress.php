@@ -6,23 +6,21 @@
 
     $id = 1;
     $smtp = $mysqli->prepare("SELECT t.amount, t.monthly,
-      EXTRACT(MONTH FROM t.created), t.created, t.id
+      EXTRACT(MONTH FROM t.created), t.created
       FROM Transaction t
       WHERE t.id_user = ? AND t.is_active = 1");
 
     $smtp->bind_param("i", $id);
     $smtp->execute();
     $smtp->store_result();
-    $smtp->bind_result($amount, $monthly, $month, $date, $idt);
+    $smtp->bind_result($amount, $monthly, $month, $date);
 
     while ($smtp->fetch()) {
       if($monthly == 1){
-         $retM[$countM][0] = $amount;
-         $retM[$countM][1] = $idt;
+         $retM[$countM][0] =  $amount;
          $countM++;
       } elseif($monthly == 0){
-         #$retI[$month][] =  $amount;
-         $retI[$month][] =  array($amount, $idt);
+         $retI[$month][] =  $amount;
       }
     }
     $smtp->free_result();
@@ -106,9 +104,7 @@
         <!-- body -->
   <?php
     for($i = 0; $i < count($retM); $i++){
-      echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0]).
-        "<button class='remove' data-id='1' value='Quitar ganancia'>".
-        "</div>";
+        echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0])."</div>";
     }
   ?>
 
@@ -127,55 +123,38 @@
   </div>
 
   <div class="col-md-6">
+
   <?php
-     for($i = 0; $i < 13; $i++){
-       if(count($retI[$i]) > 0){
-         echo
-         "<div class='mdl-card mdl-shadow--2dp'>".
-           "<div class='mdl-card__title mdl-card--expand'>".
-             #title
-           "<h2 class='mdl-card__title-text'>".getMonth($i).
-           "</h2>".
-           "</div>".
-           "<div class='mdl-card__supporting-text'>";
-             #body
-             for($j = 0; $j < count($retI[$i]); $j++){
-               echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0])."</div>";
-             }
-         echo
-           "</div>".
-           #button
-           "<div class='mdl-card__actions mdl-card--border'>".
-             "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
-               "Agrega dinero a ".getMonth($i).
-             "</a>".
-           "</div>".
-         "</div>";
-       }
-     }
-   ?>
+    for($i = 0; $i < 13; $i++){
+      if(count($retI[$i]) > 0){
+        echo
+        "<div class='mdl-card mdl-shadow--2dp'>".
+          "<div class='mdl-card__title mdl-card--expand'>".
+            #title
+          "<h2 class='mdl-card__title-text'>".getMonth($i).
+          "</h2>".
+          "</div>".
+          "<div class='mdl-card__supporting-text'>";
+            #body
+            for($j = 0; $j < count($retI[$i]); $j++){
+              echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j])."</div>";
+            }
+        echo
+          "</div>".
+          #button
+          "<div class='mdl-card__actions mdl-card--border'>".
+            "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
+              "Agrega dinero a ".getMonth($i).
+            "</a>".
+          "</div>".
+        "</div>";
+      }
+    }
+  ?>
 
 
   </div>
 </div>
 
 </body>
-    <script>
-    $('.remove').on('click', function (e) {
-
-      console.log(this);
-      e.preventDefault();
-
-      /*
-      $.ajax({
-        type: 'post',
-        url: 'removeTransaction.php',
-        data: $('#addTanda').serialize(),
-        success: function (json) {
-            alert(json);
-
-        }
-       */
-    });
-    </script>
 </html>
