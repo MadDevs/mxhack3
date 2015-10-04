@@ -198,13 +198,13 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
 
         echo        '<tr>';
         if(($diasEnCicloActual + 1) >= $cuentaDias && ($diasEnCicloActual + 1) <= $cuentaDiasFin)
-            echo       '<td style="background-color: #84CCDC;>Dia '.$cuentaDias.' - '.$cuentaDiasFin.'</td>';
+            echo       '<td style="background-color: #84CCDC;">Dia '.$cuentaDias.' - '.$cuentaDiasFin.'</td>';
         else
             echo       '<td>Dia '.$cuentaDias.' - '.$cuentaDiasFin.'</td>';
 
         for($j = 0; $j< $ret[0][3]; $j++){
             if($turno1[$i]==($j + 1 ))
-                echo    '<td style="color: #468847; background-color: #DFF0D8;">'.($ret[0][5] * $ret[0][3] ).'</td>';
+                echo    '<td style="color: #468847; background-color: #DFF0D8;"> '.($ret[0][5] * $ret[0][3] ).'</td>';
             else
                 echo '<td>-'.$ret[0][5].'</td>';
 
@@ -212,7 +212,7 @@ array_multisort($turno1, SORT_ASC, $nombre1, SORT_ASC, $data);
         echo        '</tr>';
 
         $cuentaDias = $cuentaDiasFin + 1;
-        $cuentaDiasFin = $cuentaDias + $cuentaDiasFin;
+        $cuentaDiasFin = $cuentaDias + $ret[0][2];
 
     }
 
