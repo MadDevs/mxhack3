@@ -67,7 +67,7 @@
 
     <h2 class="text-center">Tu objetivo actual es comprar: <?php echo $favorite[0][0]?> con precio de $ <?php
         echo $favorite[0][2]?></h2>
-    <p><a class="btn btn-lg btn-success" href="#" role="button">&iquest;Cuanto me falta?</a></p>
+    <p><a class="btn btn-lg btn-success center-block" href="productoReview.php" role="button">&iquest;Cuanto me falta?</a></p>
     <br>
 
     <h2>Estos son los productos que estan marcados como objetivos pr&oacute;ximos</h2>
@@ -87,7 +87,7 @@
         }
         ?>
     </table>
-    <p><a class="btn btn-lg btn-primary" href="#" role="button">Agregar nuevo</a></p>
+    <p><a class="btn btn-lg btn-primary" href="producto.php" role="button">Agregar nuevo</a></p>
 
     <br><h2>Estos son los productos que has comprado, &iexcl;Felicidades!</h2>
     <table class="table">
