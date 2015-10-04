@@ -8,20 +8,22 @@
 
     $id = 1;
     $smtp = $mysqli->prepare("SELECT t.amount, t.monthly,
-      EXTRACT(MONTH FROM t.created), t.created, t.id_trans
+      EXTRACT(MONTH FROM t.created)
       FROM Transaction t
       WHERE t.id_user = ? AND t.is_active = 1");
 
     $smtp->bind_param("i", $id);
     $smtp->execute();
     $smtp->store_result();
-    $smtp->bind_result($amount, $monthly, $month, $date, $idt);
+    $smtp->bind_result($amount, $monthly, $month);
 
     while ($smtp->fetch()) {
       if($monthly == 1){
          $arrI[$month][] =  $amount;
+
       } elseif($monthly == 0){
          $arrE[$month][] =  $amount;
+
       }
     }
     $smtp->free_result();
@@ -62,7 +64,35 @@
 
     <?php
     for(int $i = 1; $i < 13; $i++){
-      echo 'hola'
+      if((count($arrI[$i]) > 0) || (count($arrE[$i]) > 0)){
+        echo
+        "<div class='row'>".
+          "<div class='row'>".$i."</div>".
+          "<div class='row'>".
+            "<div class='col-md-6' style='color:green;'>Ingreso</div>".
+            "<div class='col-md-6' style='color:red;'>Egreso:</div>".
+          "</div>".
+          "<div class='row'>".
+            "<div class='col-md-6' style='color:green;'>";
+            for(int $j = 0; $j < count($arrI[$i]); $j++){
+              echo
+                "<div class='row' style='color:green;'>+ ".
+                  $arrI[$i][$j]."</div>"
+            }
+
+          echo
+            "</div>".
+            "<div class='col-md-6' style='color:red;'>";
+            for(int $j = 0; $j < count($arrE[$i]); $j++){
+              echo
+                "<div class='row' style='color:red;'>- ".
+                  $arrE[$i][$j]."</div>"
+            }
+          echo
+            "</div>".
+          "</div>".
+        "</div>";
+      }
     }
     ?>
 
