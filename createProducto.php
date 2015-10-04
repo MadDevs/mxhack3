@@ -8,7 +8,7 @@
     $info = $_POST['description'];
     $cost = $_POST['amount'];
 
-    var_dump($nameProducto, $info, $cost);
+
 
     $mysqli = con_start();
     $id_user = 1;
@@ -26,7 +26,7 @@
         echo "correct"  ;
     }
     else {
-        echo "error" . $smtp->error . $name; 
+        echo "error" . $smtp->error; 
     }
     $smtp->close();
 

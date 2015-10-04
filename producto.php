@@ -104,7 +104,7 @@
 
           $.ajax({
             type: 'post',
-            url: 'createTanda.php',
+            url: 'createProducto.php',
             data: $('#addTanda').serialize(),
             success: function (json) {
                     alert(json);
