@@ -100,9 +100,9 @@
           #title
           "<h2 class='mdl-card__title-text'>Mes ".($i+1)."</h2>".
         "</div>".
-        "<div class='mdl-card__supporting-text'><div class='row'>h</div>";
+        "<div class='mdl-card__supporting-text'>";
           #body
-          for($j = 0; $j < count($retI[$i]); $j++){
+          for($j = 0; $j < (count($retI[$i])+10); $j++){
             echo "<div class='row'>+ ".$retI[$i][$j]."</div>";
           }
       echo
