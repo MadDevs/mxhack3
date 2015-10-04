@@ -4,6 +4,9 @@ include ("includes/conn.php");
 $titulo = "Nuevo objetivo";
 include ("head.php")
 
+$mysqli = con_start();
+$favorite = [];
+
 $smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1 id_trans = 1");
 $smtp->execute();
 $smtp->store_result();
