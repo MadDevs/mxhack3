@@ -85,7 +85,7 @@ $smtp->close();
         <?php
         foreach($notYet as $ok){
             echo "<tr>";
-            echo "<td>".$ok[0]."</td>";
+            echo "<td>".$ok[0].$ok[3]."</td>";
             echo "<td>".$ok[1]."</td>";
             echo "<td>".$ok[2]."</td>";
             echo "<td><button type='button' class='btn btn-default btn-lg center-block' onclick='addFav(".$ok[3].")'><span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>";
