@@ -41,7 +41,7 @@
                 <li><a href="#">Ingresos</a></li>
                 <li><a href="#">Egresos</a></li>
                 <li><a href="#">Resumen</a></li>
-                <li><a href="#">Tanda</a></li>
+                <li><a href="tandasView.php">Tanda</a></li>
                 <li><a href="#">Productos deseados</a></li>
                 <li><a href="#">??</a></li>
                 <li><a href="#">Ayuda</a></li>
