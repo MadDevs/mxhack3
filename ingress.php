@@ -153,6 +153,7 @@
           url: './createMonthlyTransaction.php',
           data: {idu:idu},
           success: function (json) {
+            alert(json);
               $(row).innerHTML += "<div class='row'>+ "+
               $(button).parent().hide();
               console.log(button);
