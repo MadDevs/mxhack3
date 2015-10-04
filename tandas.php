@@ -118,7 +118,7 @@
 
 
 
-$('addTanda').on('submit', function (e) {
+$('#addTanda').on('submit', function (e) {
 
   e.preventDefault();
 

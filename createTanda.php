@@ -16,7 +16,7 @@
     
 
     $mysqli = con_start();
-    $smtp = $mysqli->prepare("INSERT INTO Tanda(id_user, turno, name, intervalo_dias, num_personas, num_repeticiones, cantidad, fecha_inicial) VALUES (?,?,?,?,?,?,?) ");
+    $smtp = $mysqli->prepare("INSERT INTO Tanda(id_user, turno, name, intervalo_dias, num_personas, num_repeticiones, cantidad, fecha_inicial) VALUES (?,?,?,?,?,?,?,?) ");
     $smtp->bind_param("iisiiiis", $id_user, $turnoPersona, $nameTanda, $intervalo, $numPeople, $numRep, $cantidad, $today);
     $smtp->execute();
     if (!$smtp->error) {
@@ -28,7 +28,7 @@
     $smtp->close();
     
 
-    var_dump(error_get_last());
+    
     $id_tanda = 1;
     // Id de tanda que se acaba de insertar
     $mysqli = con_start();
@@ -44,7 +44,6 @@
 
 
 
-    var_dump(error_get_last());
     foreach( $namePersona as $key => $value ) {
       $mysqli = con_start();
 
