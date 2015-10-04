@@ -169,14 +169,15 @@
 
     e.preventDefault();
     var id = $(this).attr('data-id');
+    var button = $(this);
 
     $.ajax({
       type: 'post',
       url: './removeTransaction.php',
       data: {id:id},
       success: function (json) {
-          $(this).parent().hide();
-          console.log(this);
+          $(button).parent().hide();
+          console.log(button);
 
       },
       error: function (json) {
