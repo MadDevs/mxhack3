@@ -153,6 +153,7 @@
           url: './createMonthlyTransaction.php',
           data: {idu:idu, amount: amount},
           success: function (json) {
+            alert(json);
             if ($.trim(json)!=0) {
 
               $(row).innerHTML += "<div class='row'>+ "+ amount+".00 <button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button></div>";
