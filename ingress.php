@@ -76,22 +76,35 @@
           <div class="mdl-card__supporting-text monthly_ingress">
 
             <!-- body -->
-      <?php
-        for($i = 0; $i < count($retM); $i++){
-          echo "<div class='row'>+ ".money_format('%(#5n',$retM[$i][0]).
-            "<button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button>".
-            "</div>";
-        }
-      ?>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <th>Cantidad</th>
+                  <th>Descripcion</th>
+                  <th>Acción</th>
+                </thead>
+                <tbody id="tbodyIngresos">
+                  
+                <?php
+                  for($i = 0; $i < count($retM); $i++){
 
+                    echo "<tr>";
+                    echo "<td style='background-color: #DFF0D8;' >+ " . money_format('%(#5n',$retM[$i][0]) . "</td>";
+                    echo "<td>" . "Descripcion" . "</td>";
+                    echo "<td><button class='remove' data-id='".$retM[$i][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
+                    echo "</tr>";
+                  }
+                ?>
+                </tbody>
+              </table>  
+            </div>
           </div>
           <div class="mdl-card__actions mdl-card--border">
 
             <!-- button -->
             <input id="ingresoFijo" class="monthlyInput"  type="text" name="amount" placeholder="100" style="color:black;">
-            <button value="Agrega dinero mensual" style="color:green;"
-              class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
-              data-idu='1'>
+            <button style="color:green;" class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
+              data-idu='1'>Agrega dinero mensual</button>
 
         </div>
       </div>
@@ -101,39 +114,37 @@
       <?php
         for($i = 0; $i < 13; $i++){
           if(count($retI[$i]) > 0){
-            echo
-            "<div class='mdl-card mdl-shadow--2dp'>".
-              "<div class='mdl-card__title mdl-card--expand'>".
-                #title
-              "<h2 class='mdl-card__title-text'>".getMonth($i).
-              "</h2>".
-              "</div>".
-              "<div class='mdl-card__supporting-text'>";
+            $row = "<div class='table-responsive'>";
+            $row .=  "<table class='table'";
+            $row .=    "<thead>";
+            $row .=      "<th colspan='3'>" . getMonth($i). "</th>";
+            $row .=    "</thead>";
+            $row .=    "<tbody>";
+
                 #body
                 for($j = 0; $j < count($retI[$i]); $j++){
-                  echo
-                    "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0]).
-                      "<button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:red;'>Quitar ganancia</button>".
-                      "</div>";
+            $row .=    "<tr>";
+            $row .=      "<td>+ ". money_format('%(#5n',$retI[$i][$j][0]). "</td>";
+            $row .=      "<td> Descripcion</td>";
+            $row .=      "<td><button class='remove' data-id='".$retI[$i][$j][1]."' value='remove' style='color:red;'>Quitar ganancia</button></td>";
+            $row .=    "</tr>";
+                      
                 }
-            echo
-              "</div>".
-              #button
-              "<div class='mdl-card__actions mdl-card--border'>".
-                "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>".
-                  "Agrega dinero a ".getMonth($i).
-                "</a>".
-              "</div>".
-            "</div>";
+            $row .=     "</tbody>";
+            $row .=   "</table>";
+            $row .=   "<div class='mdl-card__actions mdl-card--border'>";
+            $row .=     "<a class='mdl-button mdl-js-button mdl-js-ripple-effect' style='color:green;'>";
+            $row .=       "Agrega dinero a ".getMonth($i);
+            $row .=     "</a>";
+            $row .=   "</div>";
+            $row .= "</div>";
+              #button     
+            echo $row;
           }
         }
       ?>
 
-        <!-- button -->
-        <input class="monthly_input" type="text" name="money" placeholder="100" style="color:black;">
-        <button value="Agrega dinero mensual" style="color:green;"
-          class="insertMonthly mdl-button mdl-js-button mdl-js-ripple-effect"
-          data-idu='1'>
+
 
       </div>
     </div>
@@ -145,7 +156,7 @@
 
         e.preventDefault();
         var idu = $(this).attr('data-idu');
-        var row = $('.monthly_ingress');
+        var row = $('#tbodyIngresos');
         var amount = $('#ingresoFijo').val();
         var button = $(this);
         $.ajax({
@@ -155,9 +166,13 @@
           success: function (json) {
             
             if ($.trim(json)!=0) {
-              var addition = "<div class='row'>+ "+ amount+".00 <button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button></div>";
               
-              $(row).append(addition);
+              var newRow = "<tr>";
+                  newRow += "<td style='background-color: #DFF0D8;'>+ " + amount + ".00</td>";
+                  newRow += "<td>Descripcion</td>";
+                  newRow += "<td><button class='remove' data-id='"+$.trim(json)+"' value='remove' style='color:red;'>Quitar ganancia</button>";
+                  newRow += "</tr>";
+              $(row).append(newRow);
               
              
             }
@@ -178,7 +193,7 @@
           url: './removeTransaction.php',
           data: {id:id},
           success: function (json) {
-              $(button).parent().hide();
+              $(button).parent().parent().hide("slow");
               
 
           },
