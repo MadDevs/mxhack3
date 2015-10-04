@@ -17,23 +17,28 @@ $descripcion = $_GET['descripcion'];
 $time = date("Y-m-d");
 $type = 1;
 $created = 0;
-
+$hidden = 1;
 $nombremejor =  $nombre." pago su deuda";
 echo $tipo.$id_usuario.$id_deudor.$cantidad.$nombre.$descripcion.$time.$type.$time.$created;
 
 
 if($tipo == "pagado"){
 
+   // echo "entro a pagar";
     $mysqli = con_start();
-    $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description)
-      VALUES(?,?,?,?,?,?)");
+    //echo "entro a pagar";
+    $smtp = $mysqli->prepare("INSERT INTO Transaction (id_user, type, amount, monthly, created, description) VALUES(?,?,?,?,?,?)");
+    //echo "entro a pagar";
     $smtp->bind_param("iiiiss",$id_usuario,$type, $cantidad,$created, $created,$nombremejor);
+    //echo "entro a pagar";
     $smtp->execute();
+    //echo "entro a pagar";
     $smtp->free_result();
+   // echo "entro a pagar";
     $smtp->close();
 
     $mysqli = con_start();
-    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = '.$id_deudor.'");
+    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = '.$hidden.' WHERE id_deudor = '.$id_deudor.'");
     $smtp->execute();
     $smtp->free_result();
     $smtp->close();
@@ -42,10 +47,17 @@ if($tipo == "pagado"){
 }
 else{
 
+
+    echo "borrar";
+
     $mysqli = con_start();
-    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = '.$id_deudor.'");
+    echo "borrar";
+    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = '.$hidden.' WHERE id_deudor = '.$id_deudor.'");
+    echo "borrar";
     $smtp->execute();
+    echo "borrar";
     $smtp->free_result();
+    echo "borrar";
     $smtp->close();
 
 }
