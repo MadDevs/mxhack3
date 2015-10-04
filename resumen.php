@@ -60,13 +60,11 @@
   ?>
 
 
-<div class="container">
 
     <?php
     echo "hello";
     ?>
 
-</div>
 
 <?php  include("foot.php") ?>
 
