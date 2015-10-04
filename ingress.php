@@ -1,7 +1,7 @@
     <?php include('./includes/conn.php');
 
     $titulo = "Ingresos";
-    include ("head.php")
+    include ("head.php");
 
     setlocale(LC_MONETARY, 'en_US');
     $mysqli = con_start();
