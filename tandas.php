@@ -19,7 +19,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Bienvenido</title>
+    <title>Tandas</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -36,7 +36,7 @@
     <link href="css/cover.css" rel="stylesheet">
 
 </head>
-<style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</style>
+
 
 <body>
 
@@ -132,7 +132,7 @@
         </form>
 
         <script>
-        $("#numPeople").change(function() {
+        $("#numPeople").keyDown(function() {
             var number =  $("#numPeople").val();
             $("#personas").empty();
             var strDiv = "";

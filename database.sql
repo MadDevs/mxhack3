@@ -24,6 +24,7 @@ type int NOT NULL ,
 amount float NOT NULL ,
 monthly int NOT NULL ,
 created date NOT NULL ,
+is_active int NOT NULL DEFAULT 1,
 PRIMARY KEY (id_trans)
 );
 INSERT INTO Transaction(id_user, type, amount, monthly, created) VALUES (1, 1, 666, 0, '2015/10/06');
@@ -55,6 +56,7 @@ CREATE TABLE Tanda
 (
 id_tanda int NOT NULL AUTO_INCREMENT ,
 id_user int NOT NULL ,
+name varchar(255) NOT NULL,
 intervalo_dias int NOT NULL,
 num_personas int NOT NULL, 
 num_repeticiones int NOT NULL,
