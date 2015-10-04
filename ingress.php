@@ -76,7 +76,6 @@
     <div class="row">
       <div class="col-md-6 mdl-card mdl-shadow--2dp">
 
-       
           <div class="mdl-card__supporting-text monthly_ingress">
 
             <!-- body -->
