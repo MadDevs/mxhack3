@@ -28,6 +28,13 @@ if($tipo == "pagado"){
     $smtp->free_result();
     $smtp->close();
 
+    $mysqli = con_start();
+    $smtp = $mysqli->prepare("UPDATE Deudores SET hidden = 1 WHERE id_deudor = '.$id_deudor.'");
+    $smtp->execute();
+    $smtp->free_result();
+    $smtp->close();
+
+
 }
 else{
 
