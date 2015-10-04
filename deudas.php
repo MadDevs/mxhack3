@@ -40,6 +40,18 @@ $smtp->free_result();
 $smtp->close();
 
 
+/*
+session_start();
+$_SESSION["id_deudor"]=$id_deudor;
+$_SESSION["id_usuario"]=$id_usuario;
+$_SESSION["cantidad"]=$amount;
+$_SESSION["nombre"]=$;
+*/
+//unset($_SESSION["newsession"]);
+//session_unset();
+// echo&cantidad='$amount'&nombre='$nombre'&descripcion='$description'";
+
+
 
 ?>
 
@@ -74,19 +86,32 @@ $smtp->close();
 
          <?php
 
+        // echo "deudasController.php?id_deudor='$id_deudor'&id_usuario='$id_user'&cantidad='$amount'&nombre='$nombre'&descripcion='$description'";
+
+
+         /*
+          *
+          *  $ret[$count][0] =  $id_deudor;
+    $ret[$count][1] =  $id_user;
+    $ret[$count][2] =  $name;
+    $ret[$count][3] =  $description;
+    $ret[$count][4] =  $amount;
+    $ret[$count][5] =  $completed;
+    $ret[$count][6] =  $hidden;
+          */
          foreach($ret as $personas){
              if($personas[6] == "0") {
 
                  echo '<td>' . $personas[2] . '</td>';
                  echo '<td>' . $personas[3] . '</td>';
                  echo '<td>' . $personas[4] . '</td>';
-                 echo '<td><form action="deudasController.php?id_deudor=' . $id_deudor . '&id_usuario=' . $id_user . '&cantidad=' . $amount . '&nombre=' . $nombre . '&descripcion=' . $description . '"> <button name="tipo" value="pagado" type="submit" class="btn btn-primary">Pagado</button>   <button name="tipo" value="hide" type="submit" class="btn btn-primary">Eliminar X</button></form></td>';
+                 echo '<td><form action="deudasController.php?id_deudor='.$personas[0].'&id_usuario='.$personas[1].'&cantidad='.$personas[4].'&nombre='.$personas[2].'&descripcion='.$personas[3].'"> <button name="tipo" value="pagado" type="submit" class="btn btn-primary">Pagado</button>   <button name="tipo" value="hide" type="submit" class="btn btn-primary">Eliminar X</button></form></td>';
                  echo '</tr>';
              }
          }
 
          ?>
-         
+
 
         </tbody>
     </table>
