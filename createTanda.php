@@ -1,6 +1,7 @@
   <?php include('./includes/conn.php'); 
 
     $namePersona = $_POST['namePersona'];
+    $turnoPersona = $_POST['turnoPersona'];
     $intervalo = $_POST['intervalo'];
     $nameTanda = $_POST['nameTanda'];
     $numRep = $_POST['numRep'];
@@ -15,8 +16,8 @@
 
 
     $mysqli = con_start();
-    $smtp = $mysqli->prepare("INSERT INTO Tanda(id_user, name, intervalo_dias, num_personas, num_repeticiones, cantidad, fecha_inicial) VALUES (?,?,?,?,?,?,?) ");
-    $smtp->bind_param("isiiiis", $id_user,$nameTanda, $intervalo, $numPeople, $numRep, $cantidad, $today);
+    $smtp = $mysqli->prepare("INSERT INTO Tanda(id_user, turno, name, intervalo_dias, num_personas, num_repeticiones, cantidad, fecha_inicial) VALUES (?,?,?,?,?,?,?) ");
+    $smtp->bind_param("iisiiiis", $id_user, $turnoPersona, $nameTanda, $intervalo, $numPeople, $numRep, $cantidad, $today);
     $smtp->execute();
     if (!$smtp->error) {
       $return += 0;
@@ -61,6 +62,8 @@
       $smtp->close();
     }
 
-    echo $return;
+    $mysqli = con_start();
+
+      
 
   ?>  
