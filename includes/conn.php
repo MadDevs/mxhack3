@@ -4,7 +4,7 @@ function con_start() {
      
     $host = "104.236.217.175";
     $user = "root";
-    $pass = "mxhacks3";
+    $pass = "";
     $db = "mxhacks";
      
     $mysqli = new mysqli($host, $user, $pass, $db);
