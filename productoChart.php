@@ -2,6 +2,20 @@
 <?php
 $titulo = "Nuevo objetivo";
 include ("head.php")
+$smtp = $mysqli->prepare("SELECT name, description, amount, completed FROM Product WHERE id_user = 1
+        AND id_trans = 1");
+    $smtp->execute();
+    $smtp->store_result();
+    $smtp->bind_result($name, $info, $cost, $completed);
+
+    while($smtp->fetch()){
+        $favorite[0][0] =  $name;
+        $favorite[0][1] =  $info;
+        $favorite[0][2] =  $cost;
+    }
+
+    $smtp->free_result();
+    $smtp->close();
 ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<center>
@@ -63,7 +77,8 @@ function drawBasic() {
 	data.addRows(dataArray);		
 
 	var options = {
-		title: 'Faltante para comprar [PRODUCTO]',
+		title: '<h2 class="text-center">Tu objetivo actual es comprar:' + <?php echo $favorite[0][0]?> + ' con precio de $ ' +
+		<?php echo $favorite[0][2]?> + '</h2>',
 		hAxis: {
 			title: 'Time',
 			ticks: dataDate
