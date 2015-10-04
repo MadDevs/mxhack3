@@ -74,6 +74,8 @@ $smtp->close();
 
          <?php
 
+         echo "deudasController.php?id_deudor='.$id_deudor.'&id_usuario='.$id_user.'&cantidad='.$amount.'&nombre='.$nombre.'&descripcion='.$description.'";
+
          foreach($ret as $personas){
              if($personas[6] == "0") {
 
