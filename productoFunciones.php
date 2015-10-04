@@ -25,7 +25,7 @@ if($funcion == "addFav"){
     $smtp->close();
 	echo $id;
 }elseif ($funcion == "completed") {
-	$smtp = $mysqli->prepare("UPDATE Product SET completed = 1 WHERE name like ?");
+	$smtp = $mysqli->prepare("UPDATE Product SET completed = 1, id_trans = 0 WHERE name like ?");
     $smtp->bind_param("s",$id);
     $smtp->execute();
     $smtp->close();
