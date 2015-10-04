@@ -10,8 +10,9 @@
 $titulo = "Tandas";
 include ("head.php");
 
-
 include('./includes/conn.php');
+
+
 $tipo = $_GET['tipo'];
 
 var_dump(error_get_last());
@@ -25,7 +26,7 @@ $count = 0;
 //$id = 1;
 
 var_dump(error_get_last());
-$smtp = $mysqli->prepare("SELECT id_tanda, name, intervalo_dias, num_personas, num_repeticiones, cantidad, id_active, fecha_inicial, turno FROM Tanda WHERE id_user = 1 and id_tanda ='$tipo'");
+$smtp = $mysqli->prepare("SELECT id_tanda, name, intervalo_dias, num_personas, num_repeticiones, cantidad, is_active, fecha_inicial, turno FROM Tanda WHERE id_user = 1 and id_tanda ='$tipo'");
 
 
 var_dump(error_get_last());
