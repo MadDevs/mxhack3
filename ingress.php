@@ -130,7 +130,6 @@
 
   <?php
     for($i = 0; $i < 13; $i++){
-      echo "<div class='mdl-card mdl-shadow--2dp'></div>"
       if(count($retI[$i]) > 0){
         echo
         "<div class='mdl-card mdl-shadow--2dp'>".
@@ -142,7 +141,7 @@
           "<div class='mdl-card__supporting-text'>";
             #body
             for($j = 0; $j < count($retI[$i]); $j++){
-              echo "<div class='row'>+ ".money_format('%(#5n',$retI[$i][$j][0])."</div>";
+              echo "<div class='row'>+ ".money_format('%(#5n',100)."</div>";
             }
         echo
           "</div>".
