@@ -142,7 +142,7 @@ $smtp->close();
           data: {funcion: "deleteProd", idprod: id},
           success: function(dtx){
            
-           $(row).parent().parent().parent().hide();
+           $(row).parent().parent().hide();
            console.log(dtx);
        },
        error: function (json) {
