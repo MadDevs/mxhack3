@@ -27,7 +27,7 @@ echo $row['prediccion'];
 
 // /*
 
-/*
+// /*
 
 include('./includes/conn.php');
 $mysqli = con_start();
@@ -55,7 +55,8 @@ while ($smtp->fetch()) {
 $smtp->free_result();
 $smtp->close();
 
-*/
+var_dump($ret);
+// */
 
 // */
 
