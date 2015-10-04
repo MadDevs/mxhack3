@@ -31,7 +31,7 @@
         <div class="form-group">
             <label for="amount" class="col-sm-2 control-label">Costo $</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control" min="10" max="10000000" step="50" name="amount" id="amount" placeholder="3,499">
+                <input type="number" class="form-control"  name="amount" id="amount" placeholder="3,499">
             </div>
         </div>
 
@@ -42,11 +42,18 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label for="weeks" class="col-sm-2 control-label">Semanas en las que deseas comprarlo</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control"  name="weeks" id="amount" placeholder="7">
+            </div>
+        </div>
+
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
 
-        <button type="submit" class="btn btn-default">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
         
     </form>
 </div><!-- /.container -->
