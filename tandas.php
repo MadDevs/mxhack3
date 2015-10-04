@@ -193,7 +193,7 @@ $('#addTanda').on('submit', function (e) {
             $('#numRep').val("");
             $('#cantidad').val("");
             $('#numPeople').val("");
-
+            $('#numPeople').trigger('keyup');    
         }
         else {
             setTimeout(function() {$("#error").show();}, 1000);
