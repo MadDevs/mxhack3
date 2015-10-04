@@ -55,6 +55,9 @@ var_dump(error_get_last());
 	</div>
 </div>
 <div class="col-sm-2"></div>
+<div class="text-center">
+	<button id="completed" class="">Producto adquirido</button>
+</div>
 
 <script type="text/javascript">
 
@@ -157,5 +160,22 @@ function getWeekNumber(d) {
 	var weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
 	return weekNo;
 }
+
+$('#completed').on('click', function (e) {
+	var id = this.id;
+	$.ajax({
+		type: 'POST',
+		url: './productoFunciones.php',
+		data: {funcion: "completed", idprod: id},
+		success: function(dtx){
+			console.log(dtx);
+			window.location.assign("productoView.php");
+		},
+		error: function (json) {
+			console.log(json);
+
+		}
+	});
+});
 </script>
 <?php  include("foot.php") ?>
